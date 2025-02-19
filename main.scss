@@ -1,2 +1,126 @@
-$primary: #468585;
+$primary: #2B3A55;
+$success: #FFC8C8;
+$light: #FFFFFF;
+$danger: #E2F1E7;
+
+body {
+    background-color: $success;
+}
+
+header {
+    background-color: $primary;
+    color: $light;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    color: $light;
+}
+
+.navbar {
+    .form-control {
+        border: 1px solid $light;
+    }
+
+    .btn-light {
+        background-color: $light;
+        color: $primary;
+    }
+
+    .nav-item {
+        .text-light {
+            color: $light;
+        }
+    }
+}
+
+h2,
+h3 {
+    color: $primary;
+}
+
+table {
+    thead {
+        background-color: $primary;
+        color: $light;
+    }
+
+    tbody {
+        tr:nth-child(even) {
+            background-color: $danger;
+        }
+
+        tr:hover {
+            background-color: lighten($danger, 10%);
+        }
+
+        td,
+        th {
+            vertical-align: middle;
+        }
+
+        .btn {
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .btn-success {
+            background-color: $primary;
+            border-color: $primary;
+        }
+
+        .btn-danger {
+            background-color: darken($danger, 10%);
+            border-color: darken($danger, 10%);
+        }
+    }
+}
+
+form {
+    .form-control {
+        border: 1px solid $primary;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background-color: $primary;
+        color: $light;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: lighten($primary, 10%);
+        }
+    }
+}
+
+footer {
+    background-color: $primary;
+    color: $light;
+
+    p {
+        margin-bottom: 0.5rem;
+
+        a {
+            color: darken($light, 20%);
+
+            &:hover {
+                color: $light;
+                text-decoration: underline;
+            }
+        }
+
+        .bi {
+            margin-right: 5px;
+
+            &:hover {
+                color: lighten($light, 10%);
+            }
+        }
+    }
+}
+
+
 @import "./node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Recharge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/css/main.min.css" rel=stylesheet>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-success" data-bs-spy="scroll" data-bs-target="#navbarContent" data-bs-offset="50" tabindex="0">
+
+    <header class="text-light bg-primary">
+        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <i class="bi bi-phone-flip fs-4"></i>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <!--Home-->
+                        <li class="nav-item">
+                            <a class="text-light text text-decoration-none fs-4" href="HomePage.html"><i
+                                    class="bi bi-house-door"></i></a>
+                        </li>
+                        <!-- Search Filter -->
+                        <li class="nav-item d-flex align-items-center ms-3">
+                            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-light">Search</button>
+                        </li>
+
+                        <!-- Account Option Dropdown -->
+                        <li class="nav-item dropdown ms-3 ">
+                            <a class="nav-link dropdown-toggle btn" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle text-light fs-4"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="UserPage.html">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="HomePage.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container mt-4">
+        <h1 class="mb-3 text-primary">Recharge Packs</h1>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#popular-plans">Popular Plans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#data-plans">Data Plans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#unlimited-plans">Unlimited Plans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#validity-plans">Validity Plans</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- Popular Plans Section -->
+    <div class=" py-4">
+        <div class="container">
+            <!-- Popular Plans -->
+            <h3 id="popular-plans" class="text-start text-primary">Popular Plans</h3>
+
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- 1st Popular Plan -->
+                <div class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 3999</b></h5>
+                            <p class="fw-bold">Data: 2.5GB/Day</p>
+                            <p class="fw-bold">Validity: 365 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 3999', '2.5GB/Day', '365 days', 'Unlimited calling and free SMS')">
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Popular Plan -->
+                <div id="popular-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 3599</b></h5>
+                            <p class="fw-bold">Data: 2GB/Day</p>
+                            <p class="fw-bold">Validity: 200 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 3599', '2GB/Day', '200 days', 'Unlimited calling and free SMS')">
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--3rd Popular Plan-->
+                <div id="popular-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 2025</b></h5>
+                            <p class="fw-bold">Data: 2.5GB/Day</p>
+                            <p class="fw-bold">Validity: 200 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 2025', '2.5GB/Day', '200 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--4th Popular Plan-->
+                <div id="popular-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 349</b></h5>
+                            <p class="fw-bold">Data: 2GB/Day</p>
+                            <p class="fw-bold">Validity: 28 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 349', '2GB/Day', '28 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Data Plans Section-->
+    <div class=" bg-danger py-3 mt-4">
+        <div class="container">
+            <!-- Data Plans -->
+            <h3 id="data-plans" class="text-start mt-5">Data Plans</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- 1st Data Plan -->
+                <div id="data-plans" class="col">
+                    <div class="card shadow-sm rounded-3 " style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 69</b></h5>
+                            <p class="fw-bold">Data: 6 GB</p>
+                            <p class="fw-bold ">Validity: 7 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 69', '6GB', '7 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Data Plan -->
+                <div id="data-plans" class="col">
+                    <div class="card shadow-sm rounded-3 " style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 49</b></h5>
+                            <p class="fw-bold">Data: 3 GB</p>
+                            <p class="fw-bold ">Validity: 1 day</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 49', '3GB', '1 day', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Data Plan -->
+                <div id="data-plans" class="col">
+                    <div class="card shadow-sm rounded-3 " style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 139</b></h5>
+                            <p class="fw-bold">Data: 12 GB</p>
+                            <p class="fw-bold ">Validity: 7 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 139', '12GB', '7 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Data Plan -->
+                <div id="data-plans" class="col">
+                    <div class="card shadow-sm rounded-3 " style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 29</b></h5>
+                            <p class="fw-bold">Data: 2 GB</p>
+                            <p class="fw-bold ">Validity: 2 days</p>
+
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 29', '2GB', '2 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Unlimited Plans Section-->
+    <div class=" py-4 mt-4">
+        <div class="container">
+            <!-- Unlimited Plans -->
+            <h3 id="unlimited-plans" class="text-start my-3">Unlimited Plans</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- 1st Unlimited Plan -->
+                <div id="unlimited-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 3999</b></h5>
+                            <p class="fw-bold">Data: Unlimited</p>
+                            <p class="fw-bold">Validity: 365 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 3999', 'Unlimited', '365 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2nd Unlimited Plan -->
+                <div id="unlimited-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 1799</b></h5>
+                            <p class="fw-bold">Data: Unlimited</p>
+                            <p class="fw-bold">Validity: 84 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 1799', 'Unlimited', '84 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--3rd Unlimited Plan -->
+                <div id="unlimited-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 1029</b></h5>
+                            <p class="fw-bold">Data: Unlimited</p>
+                            <p class="fw-bold">Validity: 90 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 1029', 'Unlimited', '90 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4thd Unlimited Plan -->
+                <div id="unlimited-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 949</b></h5>
+                            <p class="fw-bold">Data: Unlimited</p>
+                            <p class="fw-bold">Validity: 84 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 949', 'Unlimited', '84 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Validity Plans Section -->
+    <div class=" bg-danger  py-4 mt-4">
+        <div class="container">
+            <!-- Validity Plans -->
+            <h3 id="validity-plans" class="text-start text-primary">Validity Plans</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <!-- 1st Validity Plan -->
+                <div class="col">
+                    <div class="card shadow-sm rounded-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 3599</b></h5>
+                            <p class="fw-bold">Data: 2.5GB/Day</p>
+                            <p class="fw-bold">Validity: 365 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 3599', '2.5GB/Day', '365 days', 'Unlimited calling and free SMS')">
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Validity Plan -->
+                <div id="validity-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style=" width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 1799</b></h5>
+                            <p class="fw-bold">Data: Unlimited</p>
+                            <p class="fw-bold">Validity: 84 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 1799', 'Unlimited', '84 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--3rd Validity Plan -->
+                <div id="validity-plans" class="col">
+                    <div class="card shadow-sm rounded-3" style=" width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 445</b></h5>
+                            <p class="fw-bold">Data: 2GB/Day</p>
+                            <p class="fw-bold">Validity: 84 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 445', '2GB/Day', '84 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Validity Plan -->
+                <div id="validity-plans" class="col">
+                    <div class="card shadow-sm rounded-3 " style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>₹ 198</b></h5>
+                            <p class="fw-bold">Data: 2GB/Day</p>
+                            <p class="fw-bold">Validity: 28 days</p>
+                            <a href="PaymentPage.html" class="btn btn-success">
+                                Recharge
+                            </a>
+
+                            <hr class="my-2" />
+                            <div class="text-end">
+                                <!-- Button  to trigger modal -->
+                                <a href="#" class="text-primary fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#planDetailsModal"
+                                    onclick="showPlanDetails('₹ 198', '2GB/Day', '28 days', 'Unlimited calling and free SMS')">
+
+                                    VIEW DETAILS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div><br>
+
+
+
+
+
+    <!-- Modal for Plan Details -->
+    <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="planDetailsModalLabel">Plan Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Price:</strong> <span id="planPrice"></span></p>
+                    <p><strong>Data:</strong> <span id="planData"></span></p>
+                    <p><strong>Validity:</strong> <span id="planValidity"></span></p>
+                    <p><strong>Additional Benefits:</strong> <span id="planBenefits"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="PaymentPage.html" class="btn btn-primary">Proceed to Recharge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="text-center bg-primary text-white mt-auto py-3">
+        <footer class="text-center bg-primary text-white mt-auto py-3 ">
+            <p>&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
+            <p>Customer Support: 1800-123-456 | Email: support@mobi-comm.com</p>
+            <p>
+                <a href="#" class="text-black text-decoration-none">Privacy Policy</a> |
+                <a href="#" class="text-black text-decoration-none">Terms & Conditions</a> |
+                <a href="#" class="text-black text-decoration-none">Refund Policy</a>
+            </p>
+            <p>Follow us:
+                <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            </p>
+
+        </footer>
+    </footer>
+
+    <script>
+        // Function to populate modal content dynamically
+        function showPlanDetails(price, data, validity, benefits) {
+            document.getElementById('planPrice').textContent = price;
+            document.getElementById('planData').textContent = data;
+            document.getElementById('planValidity').textContent = validity;
+            document.getElementById('planBenefits').textContent = benefits;
+        }
+    </script>
+
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="/css/main.min.css" rel="stylesheet">
+
+    <style>
+        .payment-image img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: -20px;
+        }
+    </style>
+</head>
+
+<body class="bg-success d-flex flex-column min-vh-100">
+
+    <header class="text-light bg-primary">
+        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm">
+        </nav>
+    </header><br>
+
+    <!-- Payment Options Heading -->
+    <div class="container">
+        <h3 class="text-primary">Payment Options</h3>
+    </div><br>
+
+    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-start">
+        <!-- Accordion Section -->
+        <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Credit/Debit/ATM Card
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="cardNumber" class="form-label">Enter Card Number</label>
+                                    <input type="text" class="form-control" id="cardNumber"
+                                        placeholder="XXXX XXXX XXXX XXXX">
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="expiryDate" class="form-label">Valid thru - MM/YY</label>
+                                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="col">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="password" class="form-control" id="cvv" placeholder="CVV">
+                                        <small class="text-muted"><a href="#" class="text-decoration-none">What is
+                                                CVV?</a></small>
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="button" class="btn btn-primary"
+                                        onclick="redirectToPaymentSuccess()">Make Payment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Accordion Items -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Net Banking
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <i class="bi bi-bank" onclick="redirectToPaymentSuccess()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            UPI
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <i class="bi bi-google" onclick="redirectToPaymentSuccess()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Wallets
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <i class="bi bi-wallet2" onclick="redirectToPaymentSuccess()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="col-lg-5 col-md-4 col-sm-12 text-center text-lg-end mb-5">
+            <div class="payment-image">
+                <img src="/Assets/Images/scan.jpg" class="img-fluid" alt="Payment Image"
+                    style="max-height: 400px; width: auto;">
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-primary text-white mt-auto py-3">
+        <p>&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
+        <p>Customer Support: 1800-123-456 | Email: support@mobi-comm.com</p>
+        <p>
+            <a href="#" class="text-black text-decoration-none">Privacy Policy</a> |
+            <a href="#" class="text-black text-decoration-none">Terms & Conditions</a> |
+            <a href="#" class="text-black text-decoration-none">Refund Policy</a>
+        </p>
+        <p>Follow us:
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
+        </p>
+    </footer>
+
+    <script>
+        function redirectToPaymentSuccess() {
+            // Redirect to the Payment Successful page
+            window.location.href = "ConfirmationPage.html";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

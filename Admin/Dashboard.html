@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/css/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .row.align-items-center {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+</head>
+
+<body class="bg-success">
+
+    <header class="text-light bg-primary shadow-sm">
+        <h2 class="text-center pt-3 pb-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <i class="bi bi-phone-flip fs-4 text-light"></i>
+                    <h4 class="ms-4">Dashboard</h4>
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Search Filter -->
+                        <li class="nav-item d-flex align-items-center">
+                            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-light">Search</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="UserManagementPage.html">User Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="PlanManagementPage.html">Plans Management</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Assets/Images/admin.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block text-primary text-start "
+                    style="top: 10%; left: 5%; transform: none; text-align: left;">
+                    <h5><b>Welcome to the Admin Panel</b></h5>
+                    <p>Select a section from the navigation bar to manage users or plans.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/Assets/Images/admin1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block text-primary text-end"
+                    style="top: 10%;right: 5%; transform: none; text-align: right;">
+                    <h5><b>Welcome to the Admin Panel</b></h5>
+                    <p>Select a section from the navigation bar to manage users or plans.</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+
+
+        <!-- Cards Section -->
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="card shadow-sm mt-5" style="width: 100%;">
+                    <img src="/Assets/Images/expiryplan.jpg" class="card-img-top" alt="Expiry Plan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><b>Subscribers Plan Expiring Soon</b></h5>
+                        <p class="card-text">Number of subscribers whose plans expire within 3 days: <strong>5</strong>
+                        </p>
+                        <a href="/Admin/UserManagementPage.html" class="btn btn-primary">Show</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="card shadow-sm mt-5" style="width: 100%;">
+                    <img src="/Assets/Images/plan.jpg" class="card-img-top" alt="Plan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><b>Total Active Plans</b></h5>
+                        <p class="card-text">Currently active prepaid plans: <strong>4</strong></p>
+                        <a href="/Admin/PlanManagementPage.html" class="btn btn-primary">Show</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    <!-- Graphs Section with Zig-Zag Layout -->
+    <div class="container-fluid mt-5">
+        <!-- First Graph: Recharge Plans Overview -->
+        <div class="row align-items-center mb-5 bg-danger" style="padding: 2rem; height: auto;">
+            <h5 class="text-center text-primary fw-bold">Analytics: Recharge Plans Overview</h5>
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div class="card shadow-sm p-3 bg-light rounded" style="width: 90%; height: 400px;">
+                    <div style="height: 100%; overflow: hidden;">
+                        <canvas id="rechargePlansChart" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div style="width: 90%;">
+                    <h6><strong>Subscriber Distribution Across Recharge Plans</strong></h6>
+                    <ul>
+                        <li><strong>Popular Plan:</strong> Most preferred with ~45% of users.</li>
+                        <li><strong>Data Plan:</strong> Chosen by ~35% for internet needs.</li>
+                        <li><strong>Unlimited Plan:</strong> Appeals to ~30% for heavy usage.</li>
+                        <li><strong>Validity Plan:</strong> Least favored with ~20% of subscribers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Graph: Plan-Specific Analytics -->
+        <div class="row align-items-center mb-5 flex-lg-row-reverse" style="padding: 2rem; height: auto;">
+            <h5 class="text-center text-primary fw-bold">Plan-Specific Analytics</h5>
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div class="card shadow-sm p-3 bg-light rounded mt-5" style="width: 90%; height: 400px;">
+                    <div style="height: 100%; overflow: hidden;">
+                        <canvas id="planSpecificChart" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div style="width: 90%;">
+                    <h6><strong>Weekly Subscriber Growth for Data Plan</strong></h6>
+                    <ul>
+                        <li><strong>Week 1:</strong> 15 subscribers</li>
+                        <li><strong>Week 2:</strong> 25 subscribers</li>
+                        <li><strong>Week 3:</strong> 35 subscribers</li>
+                    </ul>
+                    <p>This upward trend suggests growing demand for the Data Plan over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="text-center bg-primary text-white mt-auto py-3">
+        <p>&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
+        <p>Customer Support: 1800-123-456 | Email: support@mobi-comm.com</p>
+        <p>
+            <a href="#" class="text-black text-decoration-none">Privacy Policy</a> |
+            <a href="#" class="text-black text-decoration-none">Terms & Conditions</a> |
+            <a href="#" class="text-black text-decoration-none">Refund Policy</a>
+        </p>
+        <p>Follow us:
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Data for the bar chart
+        const data = {
+            labels: ['Popular Plan', 'Data Plan', 'Unlimited Plan', 'Validity Plan'],
+            datasets: [{
+                label: 'Number of Subscribers',
+                data: [47, 35, 25, 15], // Example data for plans
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)',
+                    'rgba(255, 99, 132, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Bar chart configuration
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Subscriber Distribution Across Recharge Plans'
+                    }
+                },
+                onClick: (e, elements) => {
+                    if (elements.length > 0) {
+                        const chart = elements[0];
+                        const planIndex = chart.index;
+                        const planName = data.labels[planIndex];
+                        showPlanAnalytics(planName);
+                    }
+                }
+            },
+        };
+
+        // Render the bar chart
+        const rechargePlansChart = new Chart(
+            document.getElementById('rechargePlansChart'),
+            config
+        );
+
+        // Plan data for the line chart
+        const planData = {
+            'Popular Plan': [10, 20, 30],
+            'Data Plan': [15, 25, 35],
+            'Unlimited Plan': [12, 18, 25],
+            'Validity Plan': [5, 8, 12]
+        };
+
+        // Function to display plan-specific analytics
+        function showPlanAnalytics(planName) {
+            const planSpecificChartContainer = document.getElementById('planSpecificChart').getContext('2d');
+
+            // Clear the container
+            planSpecificChartContainer.clearRect(0, 0, planSpecificChartContainer.canvas.width, planSpecificChartContainer.canvas.height);
+
+            // Destroy any existing chart instance
+            if (window.planChartInstance) {
+                window.planChartInstance.destroy();
+            }
+
+            window.planChartInstance = new Chart(planSpecificChartContainer, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3'], // Example weeks
+                    datasets: [{
+                        label: `${planName} Subscribers`,
+                        data: planData[planName],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: `Weekly Subscriber Trend for ${planName}`
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

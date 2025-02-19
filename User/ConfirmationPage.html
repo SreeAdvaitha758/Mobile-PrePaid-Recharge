@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="/css/main.min.css" rel=stylesheet>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-success">
+
+    <header class="text-light bg-primary ">
+        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm">
+        </nav>
+    </header>
+
+    <div class="container-fluid bg-light d-flex align-items-center justify-content-center vh-100">
+        <!-- Image Section -->
+        <div class="col-lg-6 col-md-6 text-center">
+            <img src="/Assets/Images/confirmPay.jpg" class="img-fluid" alt="Confirmation Image">
+        </div>
+
+        <!-- Confirmation Message Section -->
+        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="bi bi-check-circle text-primary" style="font-size: 4rem;"></i>
+            <h1 class="mt-3 text-primary">Payment Successful!</h1>
+            <p class="text-muted">Your payment has been processed successfully.</p>
+            <button class="btn btn-primary mt-3" onclick="redirectToHome()">Go to Home</button>
+        </div>
+    </div>
+
+
+    <footer class="text-center bg-primary text-white mt-auto py-3 ">
+        <p>&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
+        <p>Customer Support: 1800-123-456 | Email: support@mobi-comm.com</p>
+        <p>
+            <a href="#" class="text-black text-decoration-none">Privacy Policy</a> |
+            <a href="#" class="text-black text-decoration-none">Terms & Conditions</a> |
+            <a href="#" class="text-black text-decoration-none">Refund Policy</a>
+        </p>
+        <p>Follow us:
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
+        </p>
+
+    </footer>
+
+    <script>
+        function redirectToHome() {
+            // Redirect to the Home page
+            window.location.href = "HomePage.html";
+        }
+    </script>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+</html>
