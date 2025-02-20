@@ -12,13 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="/css/main.min.css" rel="stylesheet">
 
-    <style>
-        .payment-image img {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: -20px;
-        }
-    </style>
+
 </head>
 
 <body class="bg-success d-flex flex-column min-vh-100">
@@ -34,122 +28,267 @@
         <h3 class="text-primary">Payment Options</h3>
     </div><br>
 
-    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-start">
-        <!-- Accordion Section -->
-        <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Credit/Debit/ATM Card
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="cardNumber" class="form-label">Enter Card Number</label>
-                                    <input type="text" class="form-control" id="cardNumber"
-                                        placeholder="XXXX XXXX XXXX XXXX">
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col">
-                                        <label for="expiryDate" class="form-label">Valid thru - MM/YY</label>
-                                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+    <!-- Main Content -->
+    <div class="container mt-5 bg-light rounded-4 p-4">
+        <div class="row">
+
+            <!-- Payment Options Section -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">
+                        <h5 class="mb-0">Make Payment</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Credit/Debit/ATM Card
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="cardNumber" class="form-label">Enter Card Number</label>
+                                                <input type="text" class="form-control" id="cardNumber"
+                                                    placeholder="XXXX XXXX XXXX XXXX">
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <label for="expiryDate" class="form-label">Valid thru -
+                                                        MM/YY</label>
+                                                    <input type="text" class="form-control" id="expiryDate"
+                                                        placeholder="MM/YY">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="cvv" class="form-label">CVV</label>
+                                                    <input type="password" class="form-control" id="cvv"
+                                                        placeholder="CVV">
+                                                    <small class="text-muted"><a href="#"
+                                                            class="text-decoration-none">What is CVV?</a></small>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-primary"
+                                                    onclick="openEmailModal()">Make Payment</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="col">
-                                        <label for="cvv" class="form-label">CVV</label>
-                                        <input type="password" class="form-control" id="cvv" placeholder="CVV">
-                                        <small class="text-muted"><a href="#" class="text-decoration-none">What is
-                                                CVV?</a></small>
+                                </div>
+                            </div>
+                            <!-- Additional Accordion Items -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Net Banking
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <i class="bi bi-bank" onclick="openEmailModal()"></i>
                                     </div>
                                 </div>
-                                <div class="d-grid">
-                                    <button type="button" class="btn btn-primary"
-                                        onclick="redirectToPaymentSuccess()">Make Payment</button>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        UPI
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <i class="bi bi-google" onclick="openEmailModal()"></i>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Additional Accordion Items -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Net Banking
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <i class="bi bi-bank" onclick="redirectToPaymentSuccess()"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            UPI
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <i class="bi bi-google" onclick="redirectToPaymentSuccess()"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Wallets
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <i class="bi bi-wallet2" onclick="redirectToPaymentSuccess()"></i>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        Wallets
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <i class="bi bi-wallet2" onclick="openEmailModal()"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Left Image and Payment Summary Section -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <!-- Left Image Section -->
+                    <div class="col-md-6 text-center">
+                        <img src="/Assets/Images/scan.jpg" class="img-fluid rounded-4" alt="Recharge Image"
+                            style="max-height: 400px; width: 100%;">
+                    </div>
 
-        <!-- Image Section -->
-        <div class="col-lg-5 col-md-4 col-sm-12 text-center text-lg-end mb-5">
-            <div class="payment-image">
-                <img src="/Assets/Images/scan.jpg" class="img-fluid" alt="Payment Image"
-                    style="max-height: 400px; width: auto;">
+                    <!-- Payment Summary Section -->
+                    <div class="col-md-6">
+                        <div class="card payment-summary">
+                            <div class="card-header bg-primary text-light">
+                                <h5 class="mb-0">Payment Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Price:</strong> <span id="payment-price"></span></p>
+                                <p><strong>Validity:</strong> <span id="payment-validity"></span></p>
+                                <p><strong>Data:</strong> <span id="payment-data"></span></p>
+                                <p><strong>Description:</strong> <span id="payment-description"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><br><br>
+
+    <!-- Email Collection Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalLabel">Enter Email Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="emailForm">
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="example@mail.com"
+                                required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary" onclick="submitEmail()">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="text-center bg-primary text-white mt-auto py-3">
-        <p>&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
-        <p>Customer Support: 1800-123-456 | Email: support@mobi-comm.com</p>
-        <p>
-            <a href="#" class="text-black text-decoration-none">Privacy Policy</a> |
-            <a href="#" class="text-black text-decoration-none">Terms & Conditions</a> |
-            <a href="#" class="text-black text-decoration-none">Refund Policy</a>
-        </p>
-        <p>Follow us:
-            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-white text-decoration-none me-2"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
-        </p>
+    <!-- Success Message Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <i class="bi bi-check-circle-fill text-primary" style="font-size: 4rem;"></i>
+                    <h5 class="mt-3">Payment Successful!</h5>
+                    <p class="text-muted">A confirmation email has been sent to <span id="userEmail"></span>.</p>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="content-container">
+                <div class="row d-flex align-items-start">
+                    <div class="col-md-4 text-start">
+                        <h5>Mobi-Comm Service Pvt Ltd</h5>
+                        <p>Connecting People, Anytime, Anywhere.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <h5>Connect With Us</h5>
+                        <p>Follow us on social media for the latest updates.</p>
+                        <div class="social-icons">
+                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+            <div class="content-container text-center">
+                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+
     </footer>
 
     <script>
-        function redirectToPaymentSuccess() {
-            // Redirect to the Payment Successful page
-            window.location.href = "ConfirmationPage.html";
+        function openEmailModal() {
+            // Show the email modal
+            const emailModal = new bootstrap.Modal(document.getElementById('emailModal'));
+            emailModal.show();
         }
+
+        function submitEmail() {
+            // Get email input value
+            const email = document.getElementById('emailInput').value;
+
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Simulate successful email submission
+            const emailModal = bootstrap.Modal.getInstance(document.getElementById('emailModal'));
+            emailModal.hide();
+
+            // Update the success modal with the email
+            document.getElementById('userEmail').textContent = email;
+
+            // Show the success modal
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
+        }
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const price = urlParams.get('price');
+            const validity = urlParams.get('validity');
+            const data = urlParams.get('data');
+            const description = urlParams.get('description');
+
+            // Populate the payment summary with the retrieved details
+            document.getElementById('payment-price').textContent = price;
+            document.getElementById('payment-validity').textContent = validity;
+            document.getElementById('payment-data').textContent = data;
+            document.getElementById('payment-description').textContent = description;
+        });
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

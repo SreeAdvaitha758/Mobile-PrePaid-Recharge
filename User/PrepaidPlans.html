@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepaid Plans</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/main.min.css" rel=stylesheet>
+
+</head>
+
+<body class="bg-success">
+    <header class="text-light bg-primary">
+        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <i class="bi bi-phone-flip fs-4"></i>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="text-light text-decoration-none fs-4" href="HomePage.html"><i
+                                    class="bi bi-house-door"></i></a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center ms-3">
+                            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-light">Search</button>
+                        </li>
+                        <li class="nav-item dropdown ms-3">
+                            <a class="nav-link dropdown-toggle btn" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle text-light fs-4"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="UserPage.html">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="HomePage.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid p-0 ">
+        <div class="banner d-flex align-items-end justify-content-center">
+            <div class="text-center mb-5">
+                <h1 class="display-4">Explore Various Plans</h1>
+                <p class="lead">Discover amazing Plans and Offers tailored for you.</p>
+            </div>
+        </div>
+        <div class="row mt-4 ms-2 me-2">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="plan-category">
+                    <h5>Plan Category</h5>
+                    <ul>
+                        <li><a href="#" onclick="showPlans('popular', 'Popular Plans')">Popular Plans</a></li>
+                        <li><a href="#" onclick="showPlans('data', 'Data Packs')">Data Packs</a></li>
+                        <li><a href="#" onclick="showPlans('unlimited', 'Unlimited Plans')">Unlimited Plans</a></li>
+                        <li><a href="#" onclick="showPlans('validity', 'Validity Plans')">Validity Plans</a></li>
+                        <li><a href="#" onclick="showPlans('entertainment', 'Entertainment Plans')">Entertainment
+                                Plans</a></li>
+                        <li><a href="#" onclick="showPlans('annual', 'Annual Plans')">Annual Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Plans Section -->
+            <div class="col-md-9">
+                <h3 id="plan-heading" class="mb-4 ">Popular Plans</h3>
+                <div id="plans-container" class="row">
+                    <!-- Default plans (Popular) will display here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for View Details -->
+    <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="planDetailsLabel">Plan Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Price:</strong> <span id="modal-price"></span></p>
+                    <p><strong>Validity:</strong> <span id="modal-validity"></span></p>
+                    <p><strong>Data:</strong> <span id="modal-data"></span></p>
+                    <p><strong>Description:</strong> <span id="modal-description"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                    <button id="proceed-to-payment" class="btn btn-danger">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="content-container">
+                <div class="row d-flex align-items-start">
+                    <div class="col-md-4 text-start">
+                        <h5>Mobi-Comm Service Pvt Ltd</h5>
+                        <p>Connecting People, Anytime, Anywhere.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <h5>Connect With Us</h5>
+                        <p>Follow us on social media for the latest updates.</p>
+                        <div class="social-icons">
+                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="content-container text-center">
+                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const plansData = {
+            popular: [
+                { price: '₹199', validity: '28 Days', data: '1GB/Day', description: 'Unlimited calls included' },
+                { price: '₹299', validity: '28 Days', data: '1.5GB/Day', description: 'Affordable data pack' },
+                { price: '₹399', validity: '56 Days', data: '1GB/Day', description: 'Best-selling plan' },
+                { price: '₹599', validity: '84 Days', data: '1.5GB/Day', description: 'Long-term savings' },
+                { price: '₹799', validity: '365 Days', data: '2GB/Day', description: 'Year-long benefits' },
+                { price: '₹99', validity: '15 Days', data: '500MB/Day', description: 'Budget plan for light users' },
+                { price: '₹159', validity: '14 Days', data: '1GB Total', description: 'Short-term plan' },
+                { price: '₹1099', validity: '90 Days', data: '2.5GB/Day', description: 'High-speed plan' }
+            ],
+            data: [
+                { price: '₹249', validity: '30 Days', data: '3GB Total', description: 'High-speed data pack' },
+                { price: '₹499', validity: '90 Days', data: '6GB Total', description: 'For occasional users' },
+                { price: '₹99', validity: '14 Days', data: '2GB Total', description: 'Budget-friendly data pack' },
+                { price: '₹349', validity: '45 Days', data: '4GB Total', description: 'Affordable for medium users' },
+                { price: '₹699', validity: '180 Days', data: '12GB Total', description: 'Perfect for long-term data usage' },
+                { price: '₹59', validity: '10 Days', data: '1GB Total', description: 'Low-cost short-term data' },
+                { price: '₹1699', validity: '365 Days', data: '24GB Total', description: 'Year-long data plan' },
+                { price: '₹849', validity: '90 Days', data: '10GB Total', description: 'Great for mid-term needs' }
+            ],
+            unlimited: [
+                { price: '₹999', validity: '28 Days', data: 'Unlimited', description: 'Unlimited data and calls' },
+                { price: '₹1499', validity: '56 Days', data: 'Unlimited', description: 'With premium OTT access' },
+                { price: '₹1999', validity: '84 Days', data: 'Unlimited', description: 'Long-term unlimited usage' },
+                { price: '₹2499', validity: '90 Days', data: 'Unlimited', description: 'With 5G access' },
+                { price: '₹2999', validity: '120 Days', data: 'Unlimited', description: 'Extended unlimited usage' },
+                { price: '₹3499', validity: '180 Days', data: 'Unlimited', description: 'Half-year of freedom' },
+                { price: '₹1099', validity: '40 Days', data: 'Unlimited', description: 'Ideal for heavy users' },
+                { price: '₹199', validity: '7 Days', data: 'Unlimited', description: 'Affordable unlimited week' }
+            ],
+            validity: [
+                { price: '₹199', validity: '28 Days', data: 'No Data', description: 'Talktime recharge' },
+                { price: '₹149', validity: '24 Days', data: 'No Data', description: 'Basic plan' },
+                { price: '₹49', validity: '7 Days', data: 'No Data', description: 'Short-term validity' },
+                { price: '₹299', validity: '60 Days', data: 'No Data', description: 'Affordable long-term validity' },
+                { price: '₹499', validity: '120 Days', data: 'No Data', description: 'Great for regular users' },
+                { price: '₹50', validity: '5 Days', data: 'No Data', description: 'Short validity, low cost' },
+                { price: '₹999', validity: '180 Days', data: 'No Data', description: 'Extended validity pack' },
+                { price: '₹25', validity: '3 Days', data: 'No Data', description: 'Ultra-low cost short term' }
+            ],
+            entertainment: [
+                { price: '₹899', validity: '84 Days', data: '1GB/Day', description: 'With OTT subscriptions' },
+                { price: '₹1199', validity: '56 Days', data: '2GB/Day', description: 'Netflix and Prime Video' },
+                { price: '₹1599', validity: '90 Days', data: '3GB/Day', description: 'OTT + Sports packages' },
+                { price: '₹1899', validity: '120 Days', data: '2GB/Day', description: 'Streaming benefits' },
+                { price: '₹1299', validity: '100 Days', data: '2.5GB/Day', description: 'Binge-watch plan' },
+                { price: '₹1999', validity: '365 Days', data: '1GB/Day', description: 'Year-long OTT benefits' },
+                { price: '₹2599', validity: '180 Days', data: '3GB/Day', description: 'Premium OTT and Sports pack' },
+                { price: '₹999', validity: '60 Days', data: '1.5GB/Day', description: 'Entertainment on a budget' }
+            ],
+            annual: [
+                { price: '₹2999', validity: '365 Days', data: '2GB/Day', description: 'Annual pack' },
+                { price: '₹3599', validity: '365 Days', data: '2.5GB/Day', description: 'Premium annual plan' },
+                { price: '₹4199', validity: '365 Days', data: '3GB/Day', description: 'Ultimate yearly plan' },
+                { price: '₹2499', validity: '365 Days', data: '1.5GB/Day', description: 'Affordable yearly plan' },
+                { price: '₹2199', validity: '365 Days', data: '1GB/Day', description: 'Budget-friendly yearly plan' },
+                { price: '₹4999', validity: '365 Days', data: 'Unlimited', description: 'Year-long unlimited pack' },
+                { price: '₹2899', validity: '365 Days', data: '1.5GB/Day', description: 'Balanced yearly usage' },
+                { price: '₹3299', validity: '365 Days', data: '2.25GB/Day', description: 'Intermediate yearly plan' }
+            ]
+        };
+
+
+
+        // Function to dynamically update plans and heading
+        function showPlans(category, heading) {
+            const plans = plansData[category];
+            const plansContainer = document.getElementById('plans-container');
+            const planHeading = document.getElementById('plan-heading');
+
+            // Update the heading text
+            planHeading.textContent = heading;
+
+            // Clear and populate the plans container
+            plansContainer.innerHTML = '';
+
+            if (plans) {
+                plans.forEach(plan => {
+                    const planCard = `
+                        <div class="col-md-4">
+                            <div class="plan-card">
+                                <div class="plan-header">${plan.price}</div><br>
+                                <p>Validity: ${plan.validity}</p>
+                                <p>Data: ${plan.data}</p>
+                                <p class="text-muted">${plan.description}</p>
+                                <button class="btn btn-success btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.description}')">Recharge</button>
+                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.description}')">View Details</button>
+                            </div>
+                        </div>
+                    `;
+                    plansContainer.innerHTML += planCard;
+                });
+            } else {
+                plansContainer.innerHTML = '<h5>No plans available for this category.</h5>';
+            }
+
+            // Scroll to the plan heading
+            planHeading.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        function goToPayment(price, validity, data, description) {
+            const url = `paymentPage.html?price=${encodeURIComponent(price)}&validity=${encodeURIComponent(validity)}&data=${encodeURIComponent(data)}&description=${encodeURIComponent(description)}`;
+            window.location.href = url;
+        }
+
+
+        function viewDetails(price, validity, data, description) {
+            document.getElementById('modal-price').textContent = price;
+            document.getElementById('modal-validity').textContent = validity;
+            document.getElementById('modal-data').textContent = data;
+            document.getElementById('modal-description').textContent = description;
+
+            const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
+            proceedToPaymentBtn.onclick = () => {
+                goToPayment(price);
+            };
+
+
+            const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
+            modal.show();
+        }
+
+        // Display Popular Plans by default on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showPlans('popular', 'Popular Plans');
+        });
+    </script>
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
