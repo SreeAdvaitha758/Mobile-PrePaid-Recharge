@@ -6,68 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
-    <link href="/css/main.min.css" rel=stylesheet>
+    <!-- Custom CSS -->
+    <link href="/css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container-fluid {
+            padding: 0 15px;
+        }
+
+        .section-spacing {
+            padding: 80px 0;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .text-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .accordion-button {
+            font-weight: bold;
+        }
+
+        .Mobi-comm {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .carousel-caption {
+                top: 5%;
+                left: 5%;
+                right: 5%;
+                text-align: center;
+            }
+
+            .text-container {
+                text-align: center;
+            }
+
+            .section-spacing {
+                padding: 40px 0;
+            }
+
+            .footer-top .col-md-4 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .footer-top .col-md-4.text-end {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-success d-flex flex-column min-vh-100">
-
-    <header class="text-light bg-primary shadow-sm">
-        <h2 class="text-center pt-3 pb-3">Mobi-Comm Prepaid Recharge</h2>
-        <nav class="navbar navbar-expand-sm">
+<body class="d-flex flex-column min-vh-100 bg-success">
+    <header class="text-light bg-primary">
+        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
             <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-phone-flip fs-4"></i>
+                </a>
+
+                <!-- Navbar Toggler Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Collapsible Navbar Content -->
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <i class="bi bi-phone-flip fs-4 text-light"></i>
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Search Filter -->
-                        <li class="nav-item d-flex align-items-center">
-                            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-light">Search</button>
-                        </li>
-                        <!-- Account Option Dropdown -->
-                        <li class="nav-item dropdown ms-3 text-light">
-                            <a class="nav-link dropdown-toggle btn" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-person-circle text-light fs-4"></i>
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-4" href="HomePage.html">
+                                <i class="bi bi-house-door"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal">Login</button></li>
-                            </ul>
                         </li>
+
+                        <!-- Search Box (Wrapped in Form) -->
+                        <li class="nav-item d-flex align-items-center ms-3">
+                            <form class="d-flex">
+                                <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-light" type="submit">Search</button>
+                            </form>
+                        </li>
+
+                        <!-- Account Login Button -->
+                        <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle text-light fs-4"></i>
+                        </button>
+
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: -1px;">
+
+
+    <!-- Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/Assets/Images/carousel.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;">
-                <div class="carousel-caption d-none d-md-block text-primary text-start "
-                    style="top: 10%; left: 5%; transform: none; text-align: left;">
+                <div class="carousel-caption d-none d-md-block">
                     <h5><b>Stay connected anytime, anywhere</b></h5>
                     <p>Recharge your mobile prepaid instantly and hassle-free!</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="/Assets/Images/carousel1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;">
-                <div class="carousel-caption d-none d-md-block text-light text-end"
-                    style="top: 10%;right: 5%; transform: none; text-align: right;">
+                <div class="carousel-caption d-none d-md-block">
                     <h5><b>Stay connected anytime, anywhere</b></h5>
                     <p>Recharge your mobile prepaid instantly and hassle-free!</p>
                 </div>
             </div>
-
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
@@ -81,74 +178,48 @@
         </button>
     </div>
 
-    <section>
-        <div class="container-fluid m-4 pt-4 bg-danger pb-5">
-            <!-- Add a margin-top to account for the fixed header and image -->
-            <div class="row">
-                <div class="col-12 col-md-6 mt-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Popular Plan</h5>
-                            <p class="card-text">A commonly used plan that offers a balance of data, talk time, and
-                                sometimes SMS at an affordable rate, popular among a wide range of users.</p>
-                            <a href="/User/PrepaidPlans.html" class="btn btn-primary">View Plan</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Prepaid Packs Section -->
+    <section id="prepaid-packs" class="section-spacing bg-danger">
+        <div class="container text-center">
+            <h2 class="mb-4 text-white">Best Prepaid Packs</h2>
 
-                <div class="col-12 col-md-6 mt-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Plan</h5>
-                            <p class="card-text">A plan that focuses primarily on providing a specific amount of data
-                                (mobile internet) for a fixed period, without much emphasis on talk time or SMS.</p>
-                            <a href="/User/PrepaidPlans.html" class="btn btn-primary">View Plan</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="prepaidCarousel" class="carousel slide ms-3" data-bs-ride="carousel">
+                <div class="carousel-inner" id="carouselContent"></div>
 
-                <div class="col-12 col-md-6 mt-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Unlimited Plan</h5>
-                            <p class="card-text">A plan that provides unlimited talk time, text messages, and/or data
-                                usage, usually with some fair usage limits or restrictions after a certain data
-                                threshold.</p>
-                            <a href="/User/PrepaidPlans.html" class="btn btn-primary">View Plan</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#prepaidCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#prepaidCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
 
-                <div class="col-12 col-md-6 mt-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Validity Plan</h5>
-                            <p class="card-text">A plan that defines the duration for which the recharge is valid, i.e.,
-                                how long the balance or benefits will last before they expire, regardless of usage.</p>
-                            <a href="/User/PrepaidPlans.html" class="btn btn-primary">View Plan</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- View All Plans Button -->
+            <div class="mt-5">
+                <a href="/User/PrepaidPlans.html" class="btn btn-light rounded-pill w-25">View All Plans</a>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="container py-5">
+    <!-- Features Section -->
+    <section class="section-spacing">
+        <div class="container">
             <div class="row g-4">
                 <!-- First Feature -->
-                <div class="col-md-6 order-md-2 d-flex justify-content-center">
+                <div class="col-md-6 order-md-2 d-flex justify-content-center align-items-center">
                     <img src="/Assets/Images/speed.jpg" alt="Unlimited entertainment"
                         class="img-fluid rounded shadow w-75">
                 </div>
-                <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center">
-                    <h2 class="h2 fw-bold mb-3">Unlimited Data and Entertainment</h2>
-                    <!-- Increased font size with h2 -->
-                    <p class="fs-6 text-muted mb-3"> <!-- Larger font size for paragraph -->
+                <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-container">
+                    <h2 class="fw-bold mb-3">Unlimited Data and Entertainment</h2>
+                    <p class="fs-6 text-muted mb-3">
                         Experience the freedom of unlimited data with 5G connectivity, empowering you to explore,
-                        stream, and enjoy without interruptions.
-                        Whether it's watching your favorite shows in high-definition or exploring the vast world of the
-                        internet, you’ll never run out of possibilities.
+                        stream, and enjoy without interruptions. Whether it's watching your favorite shows in
+                        high-definition
+                        or exploring the vast world of the internet, you’ll never run out of possibilities.
                     </p>
                     <p class="fs-6 text-muted">
                         Say goodbye to data limits and hello to seamless entertainment. Stay connected to what matters
@@ -157,18 +228,16 @@
                 </div>
 
                 <!-- Second Feature -->
-                <div class="col-md-6 order-md-1 d-flex justify-content-center">
+                <div class="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
                     <img src="/Assets/Images/home1.jpg" alt="Reliable connectivity"
                         class="img-fluid rounded shadow w-75">
                 </div>
-                <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center">
-                    <h2 class="h2 fw-bold mb-3">High-speed, Reliable Connectivity</h2>
-                    <!-- Increased font size with h2 -->
-                    <p class="fs-6 text-muted mb-3"> <!-- Larger font size for paragraph -->
+                <div class="col-md-6 order-md-2 d-flex flex-column justify-content-center text-container">
+                    <h2 class="fw-bold mb-3">High-speed, Reliable Connectivity</h2>
+                    <p class="fs-6 text-muted mb-3">
                         With 5G technology, enjoy high-speed internet like never before. Say goodbye to buffering and
-                        slow download speeds.
-                        Stay ahead with fast, reliable connectivity that keeps you linked to family, friends, and the
-                        digital world.
+                        slow download speeds. Stay ahead with fast, reliable connectivity that keeps you linked to
+                        family, friends, and the digital world.
                     </p>
                     <p class="fs-6 text-muted">
                         Alongside blazing-fast internet, take advantage of unlimited data, free calls, and SMS for
@@ -178,16 +247,13 @@
             </div>
         </div>
     </section>
-
-    <section class="flex-grow-1">
-        <div class="container-fluid bg-danger py-4" style="min-height: calc(50vh - 50px);">
-            <!-- FAQ Section -->
-            <div class="row align-items-center d-flex flex-column">
-                <div class="col-md-10 d-flex flex-column">
-                    <!-- FAQ Heading -->
-                    <h2 class="text-center mb-3 fw-bold text-primary">FAQ</h2>
-                    <!-- Accordion -->
-                    <div class="accordion shadow-lg rounded flex-grow-1" id="accordionExample" style="width: 100%;">
+    <!-- FAQ Section -->
+    <section class="section-spacing bg-danger ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto w-100">
+                    <h2 class="text-center mb-4 fw-bold">FAQ</h2>
+                    <div class="accordion shadow-lg " id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -199,8 +265,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     A commonly used plan that offers a balance of data, talk time, and sometimes SMS
-                                    at
-                                    an affordable rate, popular among a wide range of users.
+                                    at an affordable rate, popular among a wide range of users.
                                 </div>
                             </div>
                         </div>
@@ -220,8 +285,7 @@
                                     If the recharge status shows "Failed," the deducted amount will be automatically
                                     refunded to your payment method within 3–5 business days.
                                     For further assistance, you can contact customer support through the app's
-                                    "Help" or
-                                    "Contact Us" section.
+                                    "Help" or "Contact Us" section.
                                 </div>
                             </div>
                         </div>
@@ -236,21 +300,112 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     Yes, you can recharge for someone else. Simply enter their mobile number during
+                                    the recharge process or select it from your contacts. Choose their service provider,
+                                    select a plan, and proceed with payment as usual. The recharge will be applied to
                                     the
-                                    recharge process or select it from your contacts. Choose their service provider,
-                                    select a
-                                    plan, and proceed with payment as usual. The recharge will be applied to the
                                     entered number.
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <b>How do I check my current plan details?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        You can check your current plan details by logging into the app and navigating
+                                        to the
+                                        "My Account" section. There, you will find details about your active plan,
+                                        including
+                                        data balance, validity, and talk time.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <b>What payment methods are accepted?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        We accept a variety of payment methods, including credit/debit cards, net
+                                        banking,
+                                        UPI, and popular digital wallets like Paytm, Google Pay, and PhonePe.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <b>How do I contact customer support?</b>
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        You can contact our customer support team by visiting the "Help" or "Contact Us"
+                                        section in the app. Alternatively, you can email us at support@mobi-comm.com .
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-start">
+                        <h5>Mobi-Comm Service Pvt Ltd</h5>
+                        <p>Connecting People, Anytime, Anywhere.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <h5>Connect With Us</h5>
+                        <p>Follow us on social media for the latest updates.</p>
+                        <div class="social-icons">
+                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -264,77 +419,103 @@
                             <label for="mobileNumber" class="form-label">Mobile Number</label>
                             <input type="tel" class="form-control" id="mobileNumber"
                                 placeholder="Enter your mobile number" required>
+                            <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
                     </form>
                 </div>
             </div>
         </div>
-    </div><br>
+    </div>
 
-
-
-
-
-    <footer>
-        <!-- Footer Top -->
-        <div class="footer-top">
-            <div class="content-container">
-                <div class="row d-flex align-items-start">
-                    <div class="col-md-4 text-start">
-                        <h5>Mobi-Comm Service Pvt Ltd</h5>
-                        <p>Connecting People, Anytime, Anywhere.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h5>Quick Links</h5>
-                        <ul>
-                            <li><a href="About.html">About Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-end">
-                        <h5>Connect With Us</h5>
-                        <p>Follow us on social media for the latest updates.</p>
-                        <div class="social-icons">
-                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
+    <!-- Plan Details Modal -->
+    <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="planDetailsModalLabel">Plan Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="planDetailsBody">
+                    <!-- Plan details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="content-container text-center">
-                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 
-
-    <script>
-        // Add functionality to redirect after login
-        document.getElementById('loginForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent form submission
-            const mobileNumber = document.getElementById('mobileNumber').value;
-
-            if (mobileNumber) {
-                // Redirect to another page 
-                window.location.href = 'PlanPage.html';
-            } else {
-                alert('Please enter a valid mobile number.');
-            }
-        });
-    </script>
-
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
 
+    <!-- Custom Script -->
+    <script>
+        // Fetch and display prepaid plans
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('BestPrepaidPlans.json')
+                .then(response => response.json())
+                .then(plans => {
+                    const carouselContent = document.getElementById('carouselContent');
+                    let slides = '';
+
+                    for (let i = 0; i < plans.length; i += 3) {
+                        let activeClass = i === 0 ? 'active' : '';
+                        slides += `<div class="carousel-item ${activeClass}">
+                                  <div class="row justify-content-center">`;
+
+                        for (let j = i; j < i + 3 && j < plans.length; j++) {
+                            slides += `<div class="col-md-4">
+                                      <div class="card p-4">
+                                          <p class="Mobi-comm">Mobi-comm</p>
+                                          <h3 class="card-title">${plans[j].price}</h3>
+                                          <hr>
+                                          <p><i class="bi bi-telephone-fill"></i> ${plans[j].calls}</p>
+                                          <p><i class="bi bi-file-earmark-bar-graph"></i> ${plans[j].data}</p>
+                                          <p><i class="bi bi-chat-dots-fill"></i> ${plans[j].sms}</p>
+                                          <p><i class="bi bi-calendar-date"></i> ${plans[j].validity}</p>
+                                          <button class="btn btn-primary text-light" onclick="redirectToPayment('${plans[j].price}', '${plans[j].validity}', '${plans[j].data}', '${plans[j].calls}', '${plans[j].sms}')">Buy Now</button>
+                                          <a href="#" class="details-link mt-4" data-bs-toggle="modal" data-bs-target="#planDetailsModal" onclick="showPlanDetails('${plans[j].price}', '${plans[j].validity}', '${plans[j].data}', '${plans[j].calls}', '${plans[j].sms}')">More details</a>
+                                      </div>
+                                  </div>`;
+                        }
+
+                        slides += `</div></div>`;
+                    }
+
+                    carouselContent.innerHTML = slides;
+                })
+                .catch(error => console.error('Error loading prepaid plans:', error));
+        });
+
+        // Redirect to payment page with plan details
+        function redirectToPayment(price, validity, data, calls, sms) {
+            const queryParams = new URLSearchParams({
+                price: price,
+                validity: validity,
+                data: data,
+                calls: calls,
+                sms: sms
+            }).toString();
+
+            window.location.href = `/User/PaymentPage.html?${queryParams}`;
+        }
+
+        // Show plan details in modal
+        function showPlanDetails(price, validity, data, calls, sms) {
+            const planDetailsBody = document.getElementById('planDetailsBody');
+            planDetailsBody.innerHTML = `
+                <p><strong>Price:</strong> ${price}</p>
+                <p><strong>Validity:</strong> ${validity}</p>
+                <p><strong>Data:</strong> ${data}</p>
+                <p><strong>Calls:</strong> ${calls}</p>
+                <p><strong>SMS:</strong> ${sms}</p>
+            `;
+        }
+    </script>
 
 </body>
 

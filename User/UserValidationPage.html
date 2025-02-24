@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Mobile Recharge - Prepaid</title>
-
+    <title>User Validation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link href="/css/main.min.css" rel="stylesheet">
+    <link href="/css/main.min.css" rel=stylesheet>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .fadeIn {
@@ -18,13 +16,31 @@
 
         #emailCard {
             margin-top: none;
-            /* Adjust gap as needed */
+        }
+
+        .form-container {
+            margin: auto;
+            max-width: 800px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
     </style>
 </head>
 
-<body class="bg-success d-flex flex-column min-vh-100">
-
+<body class="bg-danger">
     <!-- Header -->
     <header class="text-light bg-primary shadow-sm">
         <h2 class="text-center pt-3 pb-3">Mobi-Comm Prepaid Recharge</h2>
@@ -57,88 +73,69 @@
                 </div>
             </div>
         </nav>
-
     </header>
 
-
-    <!-- Main Content -->
-    <div class="container mt-5 bg-light rounded-4 p-4 d-flex align-items-center" style="max-width: 800px;">
-        <!-- Left Image Section -->
-        <div class="col-lg-6 col-md-6 text-center">
-            <img src="/Assets/Images/verification.jpg" class="img-fluid rounded-4" alt="Recharge Image"
-                style="max-height: 400px; width: 100%;">
-        </div>
-
-        <!-- Right Form Section -->
-        <div class="col-lg-6 col-md-6">
-            <div class="row justify-content-center">
-                <div class="col-12 m-3">
-                    <!-- Mobile Number and Email Card Container -->
-                    <div class="card bg-light p-2 w-100 border-0">
-                        <div class="card-body">
-                            <!-- Mobile Number Card -->
-                            <h5 class="card-title text-center text-primary">Prepaid Recharge</h5>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="mobile_num" class="form-label text-primary">Mobile Number</label>
-                                    <input type="tel" id="mobile_num" class="form-control bg-light text-primary"
-                                        placeholder="Enter Mobile Number" required>
-                                </div>
-                                <div class="text-center">
-                                    <button type="button" class="btn btn-danger" id="continueButton">Continue</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Email Card -->
-                    <div class="card fadeIn p-2 w-100 border-0" id="emailCard" style="display: none;">
-                        <div class="card-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label text-primary">Email</label>
-                                    <input type="email" id="email" class="form-control bg-light text-primary"
-                                        placeholder="Enter Email" required>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-danger" id="rechargeButton">Recharge</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <!-- Container Wrapper -->
+    <div class="container-wrapper">
+        <!-- Form Container -->
+        <div class="container form-container bg-white rounded-4 p-4 d-flex align-items-center flex-column flex-md-row">
+            <!-- Left Image Section -->
+            <div class="col-lg-6 col-md-6 text-center mb-4 mb-md-0">
+                <img src="/Assets/Images/verification.jpg" class="img-fluid rounded-4" alt="Recharge Image"
+                    style="max-height: 400px; width: 100%;">
             </div>
-        </div>
-    </div><br><br>
 
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="mobileNumber" class="form-label">Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNumber"
-                                placeholder="Enter your mobile number" required>
+            <!-- Right Form Section -->
+            <div class="col-lg-6 col-md-6">
+                <div class="row justify-content-center">
+                    <div class="col-12 m-3">
+                        <div class="card bg-light p-2 w-100 border-0">
+                            <div class="card-body">
+                                <!-- Mobile Number Card -->
+                                <h5 class="card-title text-center text-primary">User Validation</h5>
+                                <form id="mobileForm">
+                                    <div class="mb-3">
+                                        <label for="mobile_num" class="form-label text-primary">Mobile Number</label>
+                                        <input type="tel" id="mobile_num" class="form-control bg-light text-primary"
+                                            placeholder="Enter Mobile Number" required>
+                                        <div id="mobileMessage" class="form-text text-secondary"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-danger"
+                                            id="continueButton">Continue</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-danger w-100">Login</button>
-                    </form>
+
+                        <!-- Email Card -->
+                        <div class="card fadeIn p-2 w-100 border-0" id="emailCard" style="display: none;">
+                            <div class="card-body">
+                                <form id="emailForm">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label text-primary">Email</label>
+                                        <input type="email" id="email" class="form-control bg-light text-primary"
+                                            placeholder="Enter Email" required>
+                                        <div id="emailMessage" class="form-text text-secondary"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-danger"
+                                            id="rechargeButton">Validate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="mt-auto">
         <!-- Footer Top -->
         <div class="footer-top">
-            <div class="content-container">
+            <div class="container">
                 <div class="row d-flex align-items-start">
                     <div class="col-md-4 text-start">
                         <h5>Mobi-Comm Service Pvt Ltd</h5>
@@ -146,7 +143,7 @@
                     </div>
                     <div class="col-md-4 text-center">
                         <h5>Quick Links</h5>
-                        <ul>
+                        <ul class="list-unstyled">
                             <li><a href="About.html">About Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms & Conditions</a></li>
@@ -168,55 +165,83 @@
         </div>
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <div class="content-container text-center">
+            <div class="container text-center">
                 <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-
     <!-- JavaScript -->
     <script>
-        // Show email card after entering mobile number with fadeIn animation
-        document.getElementById('continueButton').addEventListener('click', function () {
-            const mobileNumber = document.getElementById('mobile_num').value;
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileForm = document.getElementById('mobileForm');
+            const emailCard = document.getElementById('emailCard');
+            const emailForm = document.getElementById('emailForm');
+            const continueButton = document.getElementById('continueButton');
+            const rechargeButton = document.getElementById('rechargeButton');
 
-            if (mobileNumber.trim() === '' || mobileNumber.length !== 10 || !/^\d+$/.test(mobileNumber)) {
-                alert('Please enter a valid 10-digit mobile number.');
-            } else {
-                // Hide the "Continue" button
-                this.style.display = 'none';
+            const mobileMessage = document.getElementById('mobileMessage'); // Mobile message container
+            const emailMessage = document.getElementById('emailMessage'); // Email message container
 
-                // Show the email form with fadeIn animation
-                const emailCard = document.getElementById('emailCard');
-                emailCard.style.display = 'block';
-                emailCard.classList.add('fadeIn');
-            }
-        });
+            let usersData = []; // To store fetched user data
 
-        // Navigate to PlanPage.html after submitting email
-        document.getElementById('rechargeButton').addEventListener('click', function (event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
+            // Fetch user data from JSON file
+            fetch('users.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    usersData = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching user data:', error);
+                    mobileMessage.textContent = 'Failed to load user data. Please try again later.';
+                });
 
-            if (email.trim() === '') {
-                alert('Please enter a valid email.');
-            } else {
-                window.location.href = 'HomePage.html';
-            }
-        });
+            // Handle mobile number submission
+            mobileForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const mobileNumber = document.getElementById('mobile_num').value;
+                mobileMessage.textContent = ''; // Clear previous messages
 
-        // Add functionality to redirect after login
-        document.getElementById('loginForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent form submission
-            const mobileNumber = document.getElementById('mobileNumber').value;
+                if (mobileNumber.trim() === '' || mobileNumber.length !== 10 || !/^\d+$/.test(mobileNumber)) {
+                    mobileMessage.textContent = 'Please enter a valid 10-digit mobile number.';
+                    return;
+                }
 
-            if (mobileNumber) {
-                // Redirect to another page 
-                window.location.href = 'UserPage.html';
-            } else {
-                alert('Please enter a valid mobile number.');
-            }
+                // Check if mobile number exists in JSON
+                const user = usersData.find(user => user.mobile === mobileNumber);
+                if (user) {
+                    // Show email card
+                    emailCard.style.display = 'block';
+                    emailCard.classList.add('fadeIn');
+                    continueButton.style.display = 'none';
+                    mobileMessage.textContent = ''; // Clear error message if valid
+                } else {
+                    mobileMessage.textContent = 'This number is not a valid Mobi-Comm number.';
+                }
+            });
+
+            // Handle email submission
+            emailForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const mobileNumber = document.getElementById('mobile_num').value;
+                emailMessage.textContent = ''; // Clear previous messages
+
+                // Find the user in the JSON data
+                const user = usersData.find(user => user.mobile === mobileNumber);
+
+                if (user && user.email === email) {
+                    emailMessage.classList.replace('text-danger', 'text-success'); // Update to success message
+                    window.location.href = 'HomePage.html'; // Redirect to home page
+                } else {
+                    emailMessage.textContent = 'Invalid email. Please enter the correct email associated with this number.';
+                }
+            });
         });
     </script>
 

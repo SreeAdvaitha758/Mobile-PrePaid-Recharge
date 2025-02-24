@@ -2,6 +2,7 @@ $primary: #1E212D;
 $success: #FFF8EA;
 $light: #FFFFFF;
 $danger: #EABF9F;
+$secondary: #d72929;
 
 body {
     background-color: $success;
@@ -212,10 +213,10 @@ form {
 
 .btn-danger:hover {
     background: $primary;
-
+    color: white;
     transform: translateY(-2px);
 
-    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(1, 16, 1, 0.3);
 
 }
 

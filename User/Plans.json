@@ -1,0 +1,302 @@
+{
+    "popular": [
+        {
+            "price": "₹199",
+            "validity": "28 Days",
+            "data": "1GB/Day",
+            "description": "Unlimited calls included"
+        },
+        {
+            "price": "₹299",
+            "validity": "28 Days",
+            "data": "1.5GB/Day",
+            "description": "Affordable data pack"
+        },
+        {
+            "price": "₹399",
+            "validity": "56 Days",
+            "data": "1GB/Day",
+            "description": "Best-selling plan"
+        },
+        {
+            "price": "₹599",
+            "validity": "84 Days",
+            "data": "1.5GB/Day",
+            "description": "Long-term savings"
+        },
+        {
+            "price": "₹799",
+            "validity": "365 Days",
+            "data": "2GB/Day",
+            "description": "Year-long benefits"
+        },
+        {
+            "price": "₹99",
+            "validity": "15 Days",
+            "data": "500MB/Day",
+            "description": "Budget plan for light users"
+        },
+        {
+            "price": "₹159",
+            "validity": "14 Days",
+            "data": "1GB Total",
+            "description": "Short-term plan"
+        },
+        {
+            "price": "₹1099",
+            "validity": "90 Days",
+            "data": "2.5GB/Day",
+            "description": "High-speed plan"
+        }
+    ],
+    "data": [
+        {
+            "price": "₹249",
+            "validity": "30 Days",
+            "data": "3GB Total",
+            "description": "High-speed data pack"
+        },
+        {
+            "price": "₹499",
+            "validity": "90 Days",
+            "data": "6GB Total",
+            "description": "For occasional users"
+        },
+        {
+            "price": "₹99",
+            "validity": "14 Days",
+            "data": "2GB Total",
+            "description": "Budget-friendly data pack"
+        },
+        {
+            "price": "₹349",
+            "validity": "45 Days",
+            "data": "4GB Total",
+            "description": "Affordable for medium users"
+        },
+        {
+            "price": "₹699",
+            "validity": "180 Days",
+            "data": "12GB Total",
+            "description": "Perfect for long-term data usage"
+        },
+        {
+            "price": "₹59",
+            "validity": "10 Days",
+            "data": "1GB Total",
+            "description": "Low-cost short-term data"
+        },
+        {
+            "price": "₹1699",
+            "validity": "365 Days",
+            "data": "24GB Total",
+            "description": "Year-long data plan"
+        },
+        {
+            "price": "₹849",
+            "validity": "90 Days",
+            "data": "10GB Total",
+            "description": "Great for mid-term needs"
+        }
+    ],
+    "unlimited": [
+        {
+            "price": "₹999",
+            "validity": "28 Days",
+            "data": "Unlimited",
+            "description": "Unlimited data and calls"
+        },
+        {
+            "price": "₹1499",
+            "validity": "56 Days",
+            "data": "Unlimited",
+            "description": "With premium OTT access"
+        },
+        {
+            "price": "₹1999",
+            "validity": "84 Days",
+            "data": "Unlimited",
+            "description": "Long-term unlimited usage"
+        },
+        {
+            "price": "₹2499",
+            "validity": "90 Days",
+            "data": "Unlimited",
+            "description": "With 5G access"
+        },
+        {
+            "price": "₹2999",
+            "validity": "120 Days",
+            "data": "Unlimited",
+            "description": "Extended unlimited usage"
+        },
+        {
+            "price": "₹3499",
+            "validity": "180 Days",
+            "data": "Unlimited",
+            "description": "Half-year of freedom"
+        },
+        {
+            "price": "₹1099",
+            "validity": "40 Days",
+            "data": "Unlimited",
+            "description": "Ideal for heavy users"
+        },
+        {
+            "price": "₹199",
+            "validity": "7 Days",
+            "data": "Unlimited",
+            "description": "Affordable unlimited week"
+        }
+    ],
+    "validity": [
+        {
+            "price": "₹199",
+            "validity": "28 Days",
+            "data": "No Data",
+            "description": "Talktime recharge"
+        },
+        {
+            "price": "₹149",
+            "validity": "24 Days",
+            "data": "No Data",
+            "description": "Basic plan"
+        },
+        {
+            "price": "₹49",
+            "validity": "7 Days",
+            "data": "No Data",
+            "description": "Short-term validity"
+        },
+        {
+            "price": "₹299",
+            "validity": "60 Days",
+            "data": "No Data",
+            "description": "Affordable long-term validity"
+        },
+        {
+            "price": "₹499",
+            "validity": "120 Days",
+            "data": "No Data",
+            "description": "Great for regular users"
+        },
+        {
+            "price": "₹50",
+            "validity": "5 Days",
+            "data": "No Data",
+            "description": "Short validity, low cost"
+        },
+        {
+            "price": "₹999",
+            "validity": "180 Days",
+            "data": "No Data",
+            "description": "Extended validity pack"
+        },
+        {
+            "price": "₹25",
+            "validity": "3 Days",
+            "data": "No Data",
+            "description": "Ultra-low cost short term"
+        }
+    ],
+    "entertainment": [
+        {
+            "price": "₹899",
+            "validity": "84 Days",
+            "data": "1GB/Day",
+            "description": "With OTT subscriptions"
+        },
+        {
+            "price": "₹1199",
+            "validity": "56 Days",
+            "data": "2GB/Day",
+            "description": "Netflix and Prime Video"
+        },
+        {
+            "price": "₹1599",
+            "validity": "90 Days",
+            "data": "3GB/Day",
+            "description": "OTT + Sports packages"
+        },
+        {
+            "price": "₹1899",
+            "validity": "120 Days",
+            "data": "2GB/Day",
+            "description": "Streaming benefits"
+        },
+        {
+            "price": "₹1299",
+            "validity": "100 Days",
+            "data": "2.5GB/Day",
+            "description": "Binge-watch plan"
+        },
+        {
+            "price": "₹1999",
+            "validity": "365 Days",
+            "data": "1GB/Day",
+            "description": "Year-long OTT benefits"
+        },
+        {
+            "price": "₹2599",
+            "validity": "180 Days",
+            "data": "3GB/Day",
+            "description": "Premium OTT and Sports pack"
+        },
+        {
+            "price": "₹999",
+            "validity": "60 Days",
+            "data": "1.5GB/Day",
+            "description": "Entertainment on a budget"
+        }
+    ],
+    "annual": [
+        {
+            "price": "₹2999",
+            "validity": "365 Days",
+            "data": "2GB/Day",
+            "description": "Annual pack"
+        },
+        {
+            "price": "₹3599",
+            "validity": "365 Days",
+            "data": "2.5GB/Day",
+            "description": "Premium annual plan"
+        },
+        {
+            "price": "₹4199",
+            "validity": "365 Days",
+            "data": "3GB/Day",
+            "description": "Ultimate yearly plan"
+        },
+        {
+            "price": "₹2499",
+            "validity": "365 Days",
+            "data": "1.5GB/Day",
+            "description": "Affordable yearly plan"
+        },
+        {
+            "price": "₹2199",
+            "validity": "365 Days",
+            "data": "1GB/Day",
+            "description": "Budget-friendly yearly plan"
+        },
+        {
+            "price": "₹4999",
+            "validity": "365 Days",
+            "data": "Unlimited",
+            "description": "Year-long unlimited pack"
+        },
+        {
+            "price": "₹2899",
+            "validity": "365 Days",
+            "data": "1.5GB/Day",
+            "description": "Balanced yearly usage"
+        },
+        {
+            "price": "₹3299",
+            "validity": "365 Days",
+            "data": "2.25GB/Day",
+            "description": "Intermediate yearly plan"
+        }
+    ]
+}
