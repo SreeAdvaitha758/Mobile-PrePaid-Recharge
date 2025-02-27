@@ -1,0 +1,1780 @@
+{
+    "users": [
+        {
+            "name": "Riaan Mand",
+            "mobile": "9876515400",
+            "email": "maniaaryahi@anand-malhotra.com",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Unlimited data and calls"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Jivika Sarin",
+            "mobile": "9876554218",
+            "email": "azad70@gmail.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "7 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Affordable unlimited week"
+            },
+            "expiry_date": "2025-03-06"
+        },
+        {
+            "name": "Mehul Seth",
+            "mobile": "9876581553",
+            "email": "aradhyalad@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Great for regular users"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Damini Sehgal",
+            "mobile": "9876587277",
+            "email": "sharmaranbir@kant.info",
+            "current_plan": {
+                "price": "\u20b91499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With premium OTT access"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Umang Chaudhary",
+            "mobile": "9876539928",
+            "email": "alisha78@kapoor.com",
+            "current_plan": {
+                "price": "\u20b9699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "12GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Perfect for long-term data usage"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Aradhya Jhaveri",
+            "mobile": "9876578512",
+            "email": "ojas34@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9349",
+                "calls": "Truly Unlimited Calls",
+                "validity": "45 Days",
+                "data": "4GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Affordable for medium users"
+            },
+            "expiry_date": "2025-04-13"
+        },
+        {
+            "name": "Damini Contractor",
+            "mobile": "9876557011",
+            "email": "raghav34@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "12GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Perfect for long-term data usage"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Rati Acharya",
+            "mobile": "9876558156",
+            "email": "chadamanikya@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Unlimited data and calls"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Manikya Bobal",
+            "mobile": "9876554159",
+            "email": "heer90@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9849",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "10GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Great for mid-term needs"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Gokul Kaul",
+            "mobile": "9876590110",
+            "email": "parinaazbera@yahoo.com",
+            "current_plan": {
+                "price": "\u20b92999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Extended unlimited usage"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Sumer Hayer",
+            "mobile": "9876513274",
+            "email": "qbhavsar@gade.com",
+            "current_plan": {
+                "price": "\u20b9149",
+                "calls": "Truly Unlimited Calls",
+                "validity": "24 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Basic plan"
+            },
+            "expiry_date": "2025-03-23"
+        },
+        {
+            "name": "Oorja Kanda",
+            "mobile": "9876521160",
+            "email": "bahrijhanvi@bhat-chanda.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Unlimited calls included"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Yashvi Anand",
+            "mobile": "9876557660",
+            "email": "azadchand@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Affordable data pack"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Prisha Wali",
+            "mobile": "9876539782",
+            "email": "evakorpal@bhargava-butala.com",
+            "current_plan": {
+                "price": "\u20b91899",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Streaming benefits"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Ela Uppal",
+            "mobile": "9876529999",
+            "email": "xdalal@gmail.com",
+            "current_plan": {
+                "price": "\u20b93599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Premium annual plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Badal Uppal",
+            "mobile": "9876523717",
+            "email": "shlok57@gmail.com",
+            "current_plan": {
+                "price": "\u20b925",
+                "calls": "Truly Unlimited Calls",
+                "validity": "3 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Ultra-low cost short term"
+            },
+            "expiry_date": "2025-03-02"
+        },
+        {
+            "name": "Hiran Ratta",
+            "mobile": "9876537003",
+            "email": "ivarghese@hotmail.com",
+            "current_plan": {
+                "price": "\u20b959",
+                "calls": "Truly Unlimited Calls",
+                "validity": "10 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Low-cost short-term data"
+            },
+            "expiry_date": "2025-03-09"
+        },
+        {
+            "name": "Nitya Rattan",
+            "mobile": "9876550962",
+            "email": "ishita00@chaudhari.info",
+            "current_plan": {
+                "price": "\u20b999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "2GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Budget-friendly data pack"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Samarth Kade",
+            "mobile": "9876521501",
+            "email": "pranaydutt@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Affordable data pack"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Aarush Swamy",
+            "mobile": "9876574183",
+            "email": "lalaparinaaz@yahoo.com",
+            "current_plan": {
+                "price": "\u20b93599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Premium annual plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Manjari Som",
+            "mobile": "9876543378",
+            "email": "kashvivenkatesh@chowdhury.com",
+            "current_plan": {
+                "price": "\u20b92499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With 5G access"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Azad Shan",
+            "mobile": "9876553668",
+            "email": "thakkaradvik@ratta-bhat.com",
+            "current_plan": {
+                "price": "\u20b9159",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Short-term plan"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Kavya Buch",
+            "mobile": "9876599003",
+            "email": "lagan88@hotmail.com",
+            "current_plan": {
+                "price": "\u20b92599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Premium OTT and Sports pack"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Nitya Chaudhary",
+            "mobile": "9876586432",
+            "email": "cbarman@lata-keer.com",
+            "current_plan": {
+                "price": "\u20b9699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "12GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Perfect for long-term data usage"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Lakshit Malhotra",
+            "mobile": "9876556929",
+            "email": "xkaul@gera-bhavsar.net",
+            "current_plan": {
+                "price": "\u20b9249",
+                "calls": "Truly Unlimited Calls",
+                "validity": "30 Days",
+                "data": "3GB Total",
+                "sms": "100 SMS/Day",
+                "description": "High-speed data pack"
+            },
+            "expiry_date": "2025-03-29"
+        },
+        {
+            "name": "Indranil Setty",
+            "mobile": "9876525716",
+            "email": "xkapadia@vig.info",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Affordable long-term validity"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Umang Agarwal",
+            "mobile": "9876552271",
+            "email": "gben@halder.com",
+            "current_plan": {
+                "price": "\u20b91299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "100 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Binge-watch plan"
+            },
+            "expiry_date": "2025-06-07"
+        },
+        {
+            "name": "Aaryahi Krishnan",
+            "mobile": "9876592953",
+            "email": "indrans60@batta.net",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Affordable data pack"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Uthkarsh Dhar",
+            "mobile": "9876545408",
+            "email": "kartik13@yahoo.com",
+            "current_plan": {
+                "price": "\u20b91999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Year-long OTT benefits"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Jivika Vaidya",
+            "mobile": "9876560525",
+            "email": "zara27@thaker.com",
+            "current_plan": {
+                "price": "\u20b9149",
+                "calls": "Truly Unlimited Calls",
+                "validity": "24 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Basic plan"
+            },
+            "expiry_date": "2025-03-23"
+        },
+        {
+            "name": "Indrans Chaudhary",
+            "mobile": "9876576345",
+            "email": "katajhanvi@sheth.org",
+            "current_plan": {
+                "price": "\u20b91899",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Streaming benefits"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Tara Chana",
+            "mobile": "9876531401",
+            "email": "adviksha@aggarwal.com",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Entertainment on a budget"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Ojas Balasubramanian",
+            "mobile": "9876554411",
+            "email": "sridharbaiju@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Entertainment on a budget"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Stuvan Mander",
+            "mobile": "9876587881",
+            "email": "gatikmannan@yahoo.com",
+            "current_plan": {
+                "price": "\u20b92999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Annual pack"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Shamik Baria",
+            "mobile": "9876516741",
+            "email": "jgrewal@yahoo.com",
+            "current_plan": {
+                "price": "\u20b93299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2.25GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Intermediate yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Akarsh Ravi",
+            "mobile": "9876544000",
+            "email": "cheemapihu@gmail.com",
+            "current_plan": {
+                "price": "\u20b91299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "100 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Binge-watch plan"
+            },
+            "expiry_date": "2025-06-07"
+        },
+        {
+            "name": "Neelofar Lad",
+            "mobile": "9876566592",
+            "email": "advikbajaj@ranganathan.com",
+            "current_plan": {
+                "price": "\u20b9849",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "10GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Great for mid-term needs"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Vivaan Subramanian",
+            "mobile": "9876566125",
+            "email": "dhanush11@hotmail.com",
+            "current_plan": {
+                "price": "\u20b92199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Budget-friendly yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Rati Sani",
+            "mobile": "9876548517",
+            "email": "galaanika@sastry.com",
+            "current_plan": {
+                "price": "\u20b92999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Annual pack"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Anahita Khalsa",
+            "mobile": "9876517335",
+            "email": "tarini03@gmail.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Talktime recharge"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Vihaan Karan",
+            "mobile": "9876551494",
+            "email": "karadrishya@yahoo.com",
+            "current_plan": {
+                "price": "\u20b91499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With premium OTT access"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Amira Agate",
+            "mobile": "9876575468",
+            "email": "hunarroy@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Affordable data pack"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Drishya Sidhu",
+            "mobile": "9876565709",
+            "email": "anvibal@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9349",
+                "calls": "Truly Unlimited Calls",
+                "validity": "45 Days",
+                "data": "4GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Affordable for medium users"
+            },
+            "expiry_date": "2025-04-13"
+        },
+        {
+            "name": "Shalv Dugar",
+            "mobile": "9876545168",
+            "email": "divij46@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9159",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Short-term plan"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Taran Koshy",
+            "mobile": "9876583323",
+            "email": "thakurmiraan@hayer.com",
+            "current_plan": {
+                "price": "\u20b9159",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Short-term plan"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Saksham Chokshi",
+            "mobile": "9876554883",
+            "email": "chakrabartizeeshan@gmail.com",
+            "current_plan": {
+                "price": "\u20b91099",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "High-speed plan"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Shayak Chadha",
+            "mobile": "9876543020",
+            "email": "tmander@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9799",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Year-long benefits"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Nayantara Sani",
+            "mobile": "9876572957",
+            "email": "diya17@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Affordable long-term validity"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Elakshi Wali",
+            "mobile": "9876573207",
+            "email": "kondamanikya@iyer-sane.com",
+            "current_plan": {
+                "price": "\u20b9249",
+                "calls": "Truly Unlimited Calls",
+                "validity": "30 Days",
+                "data": "3GB Total",
+                "sms": "100 SMS/Day",
+                "description": "High-speed data pack"
+            },
+            "expiry_date": "2025-03-29"
+        },
+        {
+            "name": "Lakshay Koshy",
+            "mobile": "9876588170",
+            "email": "evarty@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9149",
+                "calls": "Truly Unlimited Calls",
+                "validity": "24 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Basic plan"
+            },
+            "expiry_date": "2025-03-23"
+        },
+        {
+            "name": "Siya Subramanian",
+            "mobile": "9876558751",
+            "email": "amiratrivedi@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9399",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Best-selling plan"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Dhanuk Golla",
+            "mobile": "9876525736",
+            "email": "kiaanmadan@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "12GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Perfect for long-term data usage"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Ayesha Tak",
+            "mobile": "9876569516",
+            "email": "riaan65@gmail.com",
+            "current_plan": {
+                "price": "\u20b92499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Affordable yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Anvi Deshpande",
+            "mobile": "9876544346",
+            "email": "baijubadami@hotmail.com",
+            "current_plan": {
+                "price": "\u20b959",
+                "calls": "Truly Unlimited Calls",
+                "validity": "10 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Low-cost short-term data"
+            },
+            "expiry_date": "2025-03-09"
+        },
+        {
+            "name": "Myra Varkey",
+            "mobile": "9876591329",
+            "email": "divij62@din-borde.com",
+            "current_plan": {
+                "price": "\u20b91599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "OTT + Sports packages"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Charvi Mandal",
+            "mobile": "9876532772",
+            "email": "tataanaya@hotmail.com",
+            "current_plan": {
+                "price": "\u20b91199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Netflix and Prime Video"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Lakshit Sibal",
+            "mobile": "9876551173",
+            "email": "shray89@gmail.com",
+            "current_plan": {
+                "price": "\u20b9599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "84 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Long-term savings"
+            },
+            "expiry_date": "2025-05-22"
+        },
+        {
+            "name": "Vanya Varma",
+            "mobile": "9876569241",
+            "email": "ysankaran@aurora-maharaj.org",
+            "current_plan": {
+                "price": "\u20b91599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "OTT + Sports packages"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Jayesh Master",
+            "mobile": "9876514210",
+            "email": "agatetejas@hotmail.com",
+            "current_plan": {
+                "price": "\u20b950",
+                "calls": "Truly Unlimited Calls",
+                "validity": "5 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Short validity, low cost"
+            },
+            "expiry_date": "2025-03-04"
+        },
+        {
+            "name": "Yashvi Deep",
+            "mobile": "9876592187",
+            "email": "wborde@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Talktime recharge"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Taimur Madan",
+            "mobile": "9876537130",
+            "email": "acomar@dave.com",
+            "current_plan": {
+                "price": "\u20b9159",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Short-term plan"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Gokul Ramaswamy",
+            "mobile": "9876565335",
+            "email": "pthakkar@sheth.com",
+            "current_plan": {
+                "price": "\u20b91199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Netflix and Prime Video"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Kabir Karnik",
+            "mobile": "9876583694",
+            "email": "bsampath@hotmail.com",
+            "current_plan": {
+                "price": "\u20b91099",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "High-speed plan"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Jhanvi Hari",
+            "mobile": "9876529022",
+            "email": "ysanghvi@walla.com",
+            "current_plan": {
+                "price": "\u20b92499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With 5G access"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Anahita Kale",
+            "mobile": "9876517006",
+            "email": "venkataramanzeeshan@gmail.com",
+            "current_plan": {
+                "price": "\u20b959",
+                "calls": "Truly Unlimited Calls",
+                "validity": "10 Days",
+                "data": "1GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Low-cost short-term data"
+            },
+            "expiry_date": "2025-03-09"
+        },
+        {
+            "name": "Kismat Bakshi",
+            "mobile": "9876567553",
+            "email": "tiya38@hotmail.com",
+            "current_plan": {
+                "price": "\u20b92499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "90 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With 5G access"
+            },
+            "expiry_date": "2025-05-28"
+        },
+        {
+            "name": "Purab Bava",
+            "mobile": "9876522228",
+            "email": "gkohli@hotmail.com",
+            "current_plan": {
+                "price": "\u20b91999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Year-long OTT benefits"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Hazel Kale",
+            "mobile": "9876557570",
+            "email": "riyasunder@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "7 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Affordable unlimited week"
+            },
+            "expiry_date": "2025-03-06"
+        },
+        {
+            "name": "Piya Joshi",
+            "mobile": "9876581269",
+            "email": "devanshrajan@hotmail.com",
+            "current_plan": {
+                "price": "\u20b94199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Ultimate yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Shamik Mangat",
+            "mobile": "9876567057",
+            "email": "arorabhavin@gola.com",
+            "current_plan": {
+                "price": "\u20b9199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Unlimited calls included"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Manikya Lad",
+            "mobile": "9876585932",
+            "email": "baradnitya@yahoo.com",
+            "current_plan": {
+                "price": "\u20b94199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Ultimate yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Ayesha Kala",
+            "mobile": "9876593833",
+            "email": "kray@gmail.com",
+            "current_plan": {
+                "price": "\u20b91999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Year-long OTT benefits"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Himmat Keer",
+            "mobile": "9876588083",
+            "email": "senadah@swaminathan.biz",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "28 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Unlimited data and calls"
+            },
+            "expiry_date": "2025-03-27"
+        },
+        {
+            "name": "Neelofar Ram",
+            "mobile": "9876584294",
+            "email": "madhupravi@hotmail.com",
+            "current_plan": {
+                "price": "\u20b9149",
+                "calls": "Truly Unlimited Calls",
+                "validity": "24 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Basic plan"
+            },
+            "expiry_date": "2025-03-23"
+        },
+        {
+            "name": "Manikya Wali",
+            "mobile": "9876569893",
+            "email": "bajwanavya@mammen-dugar.com",
+            "current_plan": {
+                "price": "\u20b9699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "12GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Perfect for long-term data usage"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Anahita Kala",
+            "mobile": "9876569877",
+            "email": "prerak11@warrior.com",
+            "current_plan": {
+                "price": "\u20b92899",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Balanced yearly usage"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Mamooty Dara",
+            "mobile": "9876563087",
+            "email": "wgolla@yahoo.com",
+            "current_plan": {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Entertainment on a budget"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Vedika Bali",
+            "mobile": "9876553751",
+            "email": "hazel35@balan.net",
+            "current_plan": {
+                "price": "\u20b91499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With premium OTT access"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Arnav Lad",
+            "mobile": "9876559326",
+            "email": "mishachandran@doshi-sami.net",
+            "current_plan": {
+                "price": "\u20b9499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Great for regular users"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Shlok Borah",
+            "mobile": "9876550332",
+            "email": "hayreshamik@ganguly.com",
+            "current_plan": {
+                "price": "\u20b93599",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Premium annual plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Kismat Mani",
+            "mobile": "9876530779",
+            "email": "adiraverma@gmail.com",
+            "current_plan": {
+                "price": "\u20b9249",
+                "calls": "Truly Unlimited Calls",
+                "validity": "30 Days",
+                "data": "3GB Total",
+                "sms": "100 SMS/Day",
+                "description": "High-speed data pack"
+            },
+            "expiry_date": "2025-03-29"
+        },
+        {
+            "name": "Tiya Shetty",
+            "mobile": "9876532272",
+            "email": "duttnirvaan@hotmail.com",
+            "current_plan": {
+                "price": "\u20b91999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "84 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Long-term unlimited usage"
+            },
+            "expiry_date": "2025-05-22"
+        },
+        {
+            "name": "Adah Brar",
+            "mobile": "9876585740",
+            "email": "hbath@rout-mammen.com",
+            "current_plan": {
+                "price": "\u20b9249",
+                "calls": "Truly Unlimited Calls",
+                "validity": "30 Days",
+                "data": "3GB Total",
+                "sms": "100 SMS/Day",
+                "description": "High-speed data pack"
+            },
+            "expiry_date": "2025-03-29"
+        },
+        {
+            "name": "Indranil Som",
+            "mobile": "9876590820",
+            "email": "taran57@yahoo.com",
+            "current_plan": {
+                "price": "\u20b94199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "3GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Ultimate yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Damini Butala",
+            "mobile": "9876583778",
+            "email": "hagate@chana-chatterjee.com",
+            "current_plan": {
+                "price": "\u20b93499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "180 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Half-year of freedom"
+            },
+            "expiry_date": "2025-08-26"
+        },
+        {
+            "name": "Damini Hayre",
+            "mobile": "9876566235",
+            "email": "sshukla@guha.com",
+            "current_plan": {
+                "price": "\u20b949",
+                "calls": "Truly Unlimited Calls",
+                "validity": "7 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Short-term validity"
+            },
+            "expiry_date": "2025-03-06"
+        },
+        {
+            "name": "Farhan Chakraborty",
+            "mobile": "9876533292",
+            "email": "ahayer@gmail.com",
+            "current_plan": {
+                "price": "\u20b92999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "120 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Extended unlimited usage"
+            },
+            "expiry_date": "2025-06-27"
+        },
+        {
+            "name": "Raunak Bedi",
+            "mobile": "9876584851",
+            "email": "fatehkala@mann-dalal.biz",
+            "current_plan": {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "60 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Affordable long-term validity"
+            },
+            "expiry_date": "2025-04-28"
+        },
+        {
+            "name": "Manjari Kumar",
+            "mobile": "9876586022",
+            "email": "bhavin42@gmail.com",
+            "current_plan": {
+                "price": "\u20b91099",
+                "calls": "Truly Unlimited Calls",
+                "validity": "40 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "Ideal for heavy users"
+            },
+            "expiry_date": "2025-04-08"
+        },
+        {
+            "name": "Biju Bhattacharyya",
+            "mobile": "9876527835",
+            "email": "kantchirag@bansal.biz",
+            "current_plan": {
+                "price": "\u20b999",
+                "calls": "Truly Unlimited Calls",
+                "validity": "14 Days",
+                "data": "2GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Budget-friendly data pack"
+            },
+            "expiry_date": "2025-03-13"
+        },
+        {
+            "name": "Taran Walia",
+            "mobile": "9876562971",
+            "email": "zainajha@yahoo.com",
+            "current_plan": {
+                "price": "\u20b91499",
+                "calls": "Truly Unlimited Calls",
+                "validity": "56 Days",
+                "data": "Unlimited",
+                "sms": "100 SMS/Day",
+                "description": "With premium OTT access"
+            },
+            "expiry_date": "2025-04-24"
+        },
+        {
+            "name": "Miraya Varma",
+            "mobile": "9876599485",
+            "email": "sanagala@gmail.com",
+            "current_plan": {
+                "price": "\u20b925",
+                "calls": "Truly Unlimited Calls",
+                "validity": "3 Days",
+                "data": "No Data",
+                "sms": "100 SMS/Day",
+                "description": "Ultra-low cost short term"
+            },
+            "expiry_date": "2025-03-02"
+        },
+        {
+            "name": "Dhruv Venkataraman",
+            "mobile": "9876530466",
+            "email": "anahithakur@barad.com",
+            "current_plan": {
+                "price": "\u20b92199",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Budget-friendly yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Advik Borra",
+            "mobile": "9876590471",
+            "email": "kartik62@gmail.com",
+            "current_plan": {
+                "price": "\u20b93299",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "2.25GB/Day",
+                "sms": "100 SMS/Day",
+                "description": "Intermediate yearly plan"
+            },
+            "expiry_date": "2026-02-27"
+        },
+        {
+            "name": "Stuvan Lad",
+            "mobile": "9876537515",
+            "email": "nitya59@hotmail.com",
+            "current_plan": {
+                "price": "\u20b91699",
+                "calls": "Truly Unlimited Calls",
+                "validity": "365 Days",
+                "data": "24GB Total",
+                "sms": "100 SMS/Day",
+                "description": "Year-long data plan"
+            },
+            "expiry_date": "2026-02-27"
+        }
+    ],
+    "plans": [
+        {
+            "popular": [
+                {
+                    "price": "\u20b9199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "28 Days",
+                    "data": "1GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Unlimited calls included"
+                },
+                {
+                    "price": "\u20b9299",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "28 Days",
+                    "data": "1.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Affordable data pack"
+                },
+                {
+                    "price": "\u20b9399",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "56 Days",
+                    "data": "1GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Best-selling plan"
+                },
+                {
+                    "price": "\u20b9599",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "84 Days",
+                    "data": "1.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Long-term savings"
+                },
+                {
+                    "price": "\u20b9799",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "2GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Year-long benefits"
+                },
+                {
+                    "price": "\u20b999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "15 Days",
+                    "data": "500MB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Budget plan for light users"
+                },
+                {
+                    "price": "\u20b9159",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "14 Days",
+                    "data": "1GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Short-term plan"
+                },
+                {
+                    "price": "\u20b91099",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "90 Days",
+                    "data": "2.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "High-speed plan"
+                }
+            ],
+            "data": [
+                {
+                    "price": "\u20b9249",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "30 Days",
+                    "data": "3GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "High-speed data pack"
+                },
+                {
+                    "price": "\u20b9499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "90 Days",
+                    "data": "6GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "For occasional users"
+                },
+                {
+                    "price": "\u20b999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "14 Days",
+                    "data": "2GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Budget-friendly data pack"
+                },
+                {
+                    "price": "\u20b9349",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "45 Days",
+                    "data": "4GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Affordable for medium users"
+                },
+                {
+                    "price": "\u20b9699",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "180 Days",
+                    "data": "12GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Perfect for long-term data usage"
+                },
+                {
+                    "price": "\u20b959",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "10 Days",
+                    "data": "1GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Low-cost short-term data"
+                },
+                {
+                    "price": "\u20b91699",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "24GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Year-long data plan"
+                },
+                {
+                    "price": "\u20b9849",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "90 Days",
+                    "data": "10GB Total",
+                    "sms": "100 SMS/Day",
+                    "description": "Great for mid-term needs"
+                }
+            ],
+            "unlimited": [
+                {
+                    "price": "\u20b9999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "28 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Unlimited data and calls"
+                },
+                {
+                    "price": "\u20b91499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "56 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "With premium OTT access"
+                },
+                {
+                    "price": "\u20b91999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "84 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Long-term unlimited usage"
+                },
+                {
+                    "price": "\u20b92499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "90 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "With 5G access"
+                },
+                {
+                    "price": "\u20b92999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "120 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Extended unlimited usage"
+                },
+                {
+                    "price": "\u20b93499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "180 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Half-year of freedom"
+                },
+                {
+                    "price": "\u20b91099",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "40 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Ideal for heavy users"
+                },
+                {
+                    "price": "\u20b9199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "7 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Affordable unlimited week"
+                }
+            ],
+            "validity": [
+                {
+                    "price": "\u20b9199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "28 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Talktime recharge"
+                },
+                {
+                    "price": "\u20b9149",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "24 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Basic plan"
+                },
+                {
+                    "price": "\u20b949",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "7 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Short-term validity"
+                },
+                {
+                    "price": "\u20b9299",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "60 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Affordable long-term validity"
+                },
+                {
+                    "price": "\u20b9499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "120 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Great for regular users"
+                },
+                {
+                    "price": "\u20b950",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "5 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Short validity, low cost"
+                },
+                {
+                    "price": "\u20b9999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "180 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Extended validity pack"
+                },
+                {
+                    "price": "\u20b925",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "3 Days",
+                    "data": "No Data",
+                    "sms": "100 SMS/Day",
+                    "description": "Ultra-low cost short term"
+                }
+            ],
+            "entertainment": [
+                {
+                    "price": "\u20b9899",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "84 Days",
+                    "data": "1GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "With OTT subscriptions"
+                },
+                {
+                    "price": "\u20b91199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "56 Days",
+                    "data": "2GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Netflix and Prime Video"
+                },
+                {
+                    "price": "\u20b91599",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "90 Days",
+                    "data": "3GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "OTT + Sports packages"
+                },
+                {
+                    "price": "\u20b91899",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "120 Days",
+                    "data": "2GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Streaming benefits"
+                },
+                {
+                    "price": "\u20b91299",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "100 Days",
+                    "data": "2.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Binge-watch plan"
+                },
+                {
+                    "price": "\u20b91999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "1GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Year-long OTT benefits"
+                },
+                {
+                    "price": "\u20b92599",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "180 Days",
+                    "data": "3GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Premium OTT and Sports pack"
+                },
+                {
+                    "price": "\u20b9999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "60 Days",
+                    "data": "1.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Entertainment on a budget"
+                }
+            ],
+            "annual": [
+                {
+                    "price": "\u20b92999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "2GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Annual pack"
+                },
+                {
+                    "price": "\u20b93599",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "2.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Premium annual plan"
+                },
+                {
+                    "price": "\u20b94199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "3GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Ultimate yearly plan"
+                },
+                {
+                    "price": "\u20b92499",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "1.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Affordable yearly plan"
+                },
+                {
+                    "price": "\u20b92199",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "1GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Budget-friendly yearly plan"
+                },
+                {
+                    "price": "\u20b94999",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "Unlimited",
+                    "sms": "100 SMS/Day",
+                    "description": "Year-long unlimited pack"
+                },
+                {
+                    "price": "\u20b92899",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "1.5GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Balanced yearly usage"
+                },
+                {
+                    "price": "\u20b93299",
+                    "calls": "Truly Unlimited Calls",
+                    "validity": "365 Days",
+                    "data": "2.25GB/Day",
+                    "sms": "100 SMS/Day",
+                    "description": "Intermediate yearly plan"
+                }
+            ]
+        }
+    ],
+    "bestPrepaidPlans": [
+        [
+            {
+                "price": "\u20b9299",
+                "calls": "Truly Unlimited Calls",
+                "data": "1GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "28 Days"
+            },
+            {
+                "price": "\u20b9579",
+                "calls": "Truly Unlimited Calls",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "56 Days"
+            },
+            {
+                "price": "\u20b9799",
+                "calls": "Truly Unlimited Calls",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "70 Days"
+            },
+            {
+                "price": "\u20b9859",
+                "calls": "Truly Unlimited Calls",
+                "data": "1.5GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "84 Days"
+            },
+            {
+                "price": "\u20b9999",
+                "calls": "Truly Unlimited Calls",
+                "data": "2GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "90 Days"
+            },
+            {
+                "price": "\u20b91199",
+                "calls": "Truly Unlimited Calls",
+                "data": "2.5GB/Day",
+                "sms": "100 SMS/Day",
+                "validity": "120 Days"
+            }
+        ]
+    ]
+}

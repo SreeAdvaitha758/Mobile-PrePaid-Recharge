@@ -10,191 +10,122 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="/css/main.min.css" rel=stylesheet>
 
-    <style>
-        /* Custom CSS for plan cards */
-        .plan-card {
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .plan-header {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #030609;
-            margin-bottom: 10px;
-        }
-
-        .badge {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .btn-primary,
-        .btn-danger {
-            border-radius: 20px;
-            padding: 8px 20px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #0b5ed7;
-        }
-
-        .btn-danger:hover {
-            background-color: #bb2d3b;
-        }
-
-        .fadeIn {
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .banner {
-            background: #22273d;
-            /* Matching header dark color */
-            color: white;
-            /* Ensuring text visibility */
-            padding: 40px 0;
-            text-align: center;
-        }
-
-
-        .banner h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .banner p {
-            font-size: 1.5rem;
-        }
-
-        .plan-category {
-            background-color: success;
-            color: primary;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .plan-category a {
-            color: primary !important;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .plan-category a:hover {
-            color: #ffc107 !important;
-        }
-
-        @media (max-width: 768px) {
-            .banner h1 {
-                font-size: 2rem;
-            }
-
-            .banner p {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <link href="/User/plans.css" rel="stylesheet">
 </head>
 
 <body class="bg-danger">
-    <header class="text-light bg-primary">
-        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <i class="bi bi-phone-flip fs-4"></i>
-                </a>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="HomePage.html">
+                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/User/PrepaidPlans.html">Plans</a>
+                    </li>
 
-                <!-- Navbar Toggler Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Collapsible Navbar Content -->
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-light fs-4" href="HomePage.html">
-                                <i class="bi bi-house-door"></i>
-                            </a>
-                        </li>
-
-                        <!-- Search Box (Wrapped in Form) -->
-                        <li class="nav-item d-flex align-items-center ms-3">
-                            <form class="d-flex">
-                                <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-light" type="submit">Search</button>
-                            </form>
-                        </li>
-
-                        <!-- Profile Dropdown -->
-                        <li class="nav-item dropdown ms-3">
-                            <a class="nav-link dropdown-toggle btn text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle fs-4"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="UserPage.html">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="HomePage.html">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <div class="container-fluid p-0">
-        <div class="banner d-flex align-items-end justify-content-center">
-            <div class="text-center mb-5">
-                <h1 class="display-4"><b>Explore Various Plans</b></h1>
-                <p class="lead"><b>Discover amazing Plans and Offers tailored for you.</b></p>
+                    <li class="nav-item">
+                        <a class="nav-link " href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <!-- Animated Banner -->
+        <div class="banner d-flex align-items-end justify-content-center position-relative">
+            <div class="text-center mb-5">
+                <h1 class="display-4 banner-title animate-fade-in"><b>Explore Various Plans</b></h1>
+                <p class="lead banner-subtitle animate-slide-up"><b>Discover amazing Plans and Offers tailored for
+                        you.</b></p>
+            </div>
+            <!-- Animated Background Overlay -->
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" id="searchPlans" class="form-control" placeholder="Search plans..."
+                        onkeyup="filterPlans()">
+                </div>
+                <div class="col-md-2">
+                    <select id="filterValidity" class="form-control" onchange="filterPlans()">
+                        <option value="">Validity</option>
+                        <option value="7">Up to 7 Days</option>
+                        <option value="28">Up to 28 Days</option>
+                        <option value="90">Up to 90 Days</option>
+                        <option value="365">Annual</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select id="filterData" class="form-control" onchange="filterPlans()">
+                        <option value="">Data</option>
+                        <option value="1GB">1GB+</option>
+                        <option value="2GB">2GB+</option>
+                        <option value="5GB">5GB+</option>
+                        <option value="unlimited">Unlimited</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select id="filterSMS" class="form-control" onchange="filterPlans()">
+                        <option value="">SMS</option>
+                        <option value="50">50+</option>
+                        <option value="100">100+</option>
+                        <option value="300">300+</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select id="filterPrice" class="form-control" onchange="filterPlans()">
+                        <option value="">Price</option>
+                        <option value="100">Under ₹100</option>
+                        <option value="200">Under ₹200</option>
+                        <option value="500">Under ₹500</option>
+                        <option value="1000">Under ₹1000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Plans Section -->
         <div class="row mt-4 ms-2 me-2">
             <!-- Sidebar -->
-            <div class="col-md-3">
-                <div class="plan-category bg-success">
-                    <h5>Plan Category</h5>
+            <div class="col-md-3 text-primary">
+                <div class="plan-category bg-success p-3 rounded shadow ">
+                    <h5 class="text-primary">Plan Category</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none"
+                        <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('popular', 'Popular Plans')">Popular Plans</a></li>
-                        <li><a href="#" class="text-decoration-none" onclick="showPlans('data', 'Data Packs')">Data
-                                Packs</a></li>
-                        <li><a href="#" class="text-decoration-none"
+                        <li><a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('data', 'Data Packs')">Data Packs</a></li>
+                        <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('unlimited', 'Unlimited Plans')">Unlimited Plans</a></li>
-                        <li><a href="#" class="text-decoration-none"
+                        <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('validity', 'Validity Plans')">Validity Plans</a></li>
-                        <li><a href="#" class="text-decoration-none"
+                        <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('entertainment', 'Entertainment Plans')">Entertainment Plans</a></li>
-                        <li><a href="#" class="text-decoration-none"
+                        <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('annual', 'Annual Plans')">Annual Plans</a></li>
                     </ul>
                 </div>
@@ -209,7 +140,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal for View Details -->
     <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -222,7 +152,11 @@
                     <p><strong>Price:</strong> <span id="modal-price"></span></p>
                     <p><strong>Validity:</strong> <span id="modal-validity"></span></p>
                     <p><strong>Data:</strong> <span id="modal-data"></span></p>
+                    <p><strong>Calls:</strong> <span id="modal-calls"></span></p>
+                    <p><strong>SMS:</strong> <span id="modal-sms"></span></p>
                     <p><strong>Description:</strong> <span id="modal-description"></span></p>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
@@ -232,36 +166,70 @@
         </div>
     </div>
 
-    <footer class="bg-primary text-light mt-5">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Mobi-Comm Service Pvt Ltd</h5>
-                    <p>Connecting People, Anytime, Anywhere.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="About.html" class="text-light">About Us</a></li>
-                        <li><a href="#" class="text-light">Privacy Policy</a></li>
-                        <li><a href="#" class="text-light">Terms & Conditions</a></li>
-                        <li><a href="#" class="text-light">Refund Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 text-end">
-                    <h5>Connect With Us</h5>
-                    <p>Follow us on social media for the latest updates.</p>
-                    <div class="social-icons">
-                        <a href="#" class="me-2 text-light"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-2 text-light"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="me-2 text-light"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <!-- Footer Top Section -->
+        <div class="footer-top py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
+                        <p class="text-light">Connecting People, Anytime, Anywhere.</p>
+                        <p class="text-light"><i class="bi bi-geo-alt"></i> 123, Tech Park, Mumbai, India</p>
+                        <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
+                        <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Mobile Recharges</a></li>
+                            <li><a href="#">DTH Recharges</a></li>
+                            <li><a href="#">Bill Payments</a></li>
+                            <li><a href="#">Data Plans</a></li>
+                            <li><a href="#">International Roaming</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media & App Download -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white">Connect With Us</h5>
+                        <p class="text-light">Follow us on social media for the latest updates.</p>
+                        <div class="social-icons">
+                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                        <h5 class="text-white mt-4">Download Our App</h5>
+                        <div class="app-buttons">
+                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center py-3 ">
-            <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom py-3 text-center">
+            <div class="container">
+                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -269,7 +237,7 @@
         let plansData = {}; // To store fetched plans data
 
         // Fetch plans data from JSON file
-        fetch('plans.json')
+        fetch('../db.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -277,7 +245,8 @@
                 return response.json();
             })
             .then(data => {
-                plansData = data;
+                // Access the plans object from the JSON data
+                plansData = data.plans[0];
                 // Display Popular Plans by default on page load
                 showPlans('popular', 'Popular Plans');
             })
@@ -308,9 +277,14 @@
                                 <span class="badge bg-warning text-dark">Limited Time</span>
                                 <p><i class="bi bi-calendar"></i> Validity: ${plan.validity}</p>
                                 <p><i class="bi bi-wifi"></i> Data: ${plan.data}</p>
+                                <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
+                                <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
                                 <p class="text-muted">${plan.description}</p>
-                                <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.description}')">Recharge</button>
-                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.description}')">View Details</button>
+
+
+
+                                <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">Recharge</button>
+                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">View Details</button>
                             </div>
                         </div>
                     `;
@@ -324,24 +298,72 @@
             planHeading.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function goToPayment(price, validity, data, description) {
-            const url = `paymentPage.html?price=${encodeURIComponent(price)}&validity=${encodeURIComponent(validity)}&data=${encodeURIComponent(data)}&description=${encodeURIComponent(description)}`;
+        function goToPayment(price, validity, data, calls, sms, description) {
+            const url =
+                `paymentPage.html?price=${encodeURIComponent(price)}&validity=${encodeURIComponent(validity)}&data=${encodeURIComponent(data)}&calls=${encodeURIComponent(calls)}&sms=${encodeURIComponent(sms)}&description=${encodeURIComponent(description)}`;
             window.location.href = url;
         }
 
-        function viewDetails(price, validity, data, description) {
+        function viewDetails(price, validity, data, calls, sms, description) {
             document.getElementById('modal-price').textContent = price;
             document.getElementById('modal-validity').textContent = validity;
             document.getElementById('modal-data').textContent = data;
+            document.getElementById('modal-calls').textContent = calls;
+            document.getElementById('modal-sms').textContent = sms;
             document.getElementById('modal-description').textContent = description;
+
 
             const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
             proceedToPaymentBtn.onclick = () => {
-                goToPayment(price, validity, data, description);
+                goToPayment(price, validity, data, calls, sms, description);
             };
 
             const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
             modal.show();
+        }
+
+        function filterPlans() {
+            let searchQuery = document.getElementById("searchPlans").value.toLowerCase();
+            let validityFilter = document.getElementById("filterValidity").value;
+            let dataFilter = document.getElementById("filterData").value;
+            let smsFilter = document.getElementById("filterSMS").value;
+            let priceFilter = document.getElementById("filterPrice").value;
+
+            const plansContainer = document.getElementById("plans-container");
+            plansContainer.innerHTML = "";
+
+            let filteredPlans = Object.values(plansData).flat().filter(plan => {
+                let matchSearch = searchQuery === "" || plan.description.toLowerCase().includes(searchQuery);
+                let matchValidity = !validityFilter || parseInt(plan.validity) <= parseInt(validityFilter);
+                let matchData = !dataFilter || plan.data.includes(dataFilter);
+                let matchSMS = !smsFilter || parseInt(plan.sms) >= parseInt(smsFilter);
+                let matchPrice = !priceFilter || parseInt(plan.price.replace("₹", "")) <= parseInt(priceFilter);
+
+                return matchSearch && matchValidity && matchData && matchSMS && matchPrice;
+            });
+
+            if (filteredPlans.length === 0) {
+                plansContainer.innerHTML = "<h5 class='text-center mt-3'>No matching plans found.</h5>";
+                return;
+            }
+
+            filteredPlans.forEach(plan => {
+                const planCard = `
+                <div class="col-md-4">
+                    <div class="plan-card fadeIn">
+                        <div class="plan-header">${plan.price}</div>
+                        <p><i class="bi bi-calendar"></i> Validity: ${plan.validity}</p>
+                        <p><i class="bi bi-wifi"></i> Data: ${plan.data}</p>
+                        <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
+                        <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
+                        <p class="text-muted">${plan.description}</p>
+                        <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">Recharge</button>
+                        <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">View Details</button>
+                    </div>
+                </div>
+            `;
+                plansContainer.innerHTML += planCard;
+            });
         }
     </script>
 

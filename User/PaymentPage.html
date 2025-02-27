@@ -15,11 +15,33 @@
 
 <body class="bg-success d-flex flex-column min-vh-100">
 
-    <header class="text-light bg-primary">
-        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
-        <nav class="navbar navbar-expand-sm">
-        </nav>
-    </header><br>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/User/HomePage.html">
+                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/User/HomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/User/AboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Payment Options Heading -->
     <div class="container">
@@ -240,42 +262,68 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        <!-- Footer Top -->
-        <div class="footer-top">
-            <div class="content-container">
-                <div class="row d-flex align-items-start">
-                    <div class="col-md-4 text-start">
-                        <h5>Mobi-Comm Service Pvt Ltd</h5>
-                        <p>Connecting People, Anytime, Anywhere.</p>
+    <footer class="footer mt-auto">
+        <!-- Footer Top Section -->
+        <div class="footer-top py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
+                        <p class="text-light">Connecting People, Anytime, Anywhere.</p>
+                        <p class="text-light"><i class="bi bi-geo-alt"></i> 123, Tech Park, Mumbai, India</p>
+                        <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
+                        <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <h5>Quick Links</h5>
-                        <ul>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Quick Links</h5>
+                        <ul class="list-unstyled">
                             <li><a href="About.html">About Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4 text-end">
-                        <h5>Connect With Us</h5>
-                        <p>Follow us on social media for the latest updates.</p>
+
+                    <!-- Services -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Mobile Recharges</a></li>
+                            <li><a href="#">DTH Recharges</a></li>
+                            <li><a href="#">Bill Payments</a></li>
+                            <li><a href="#">Data Plans</a></li>
+                            <li><a href="#">International Roaming</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media & App Download -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white">Connect With Us</h5>
+                        <p class="text-light">Follow us on social media for the latest updates.</p>
                         <div class="social-icons">
-                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                        <h5 class="text-white mt-4">Download Our App</h5>
+                        <div class="app-buttons">
+                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="content-container text-center">
-                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom py-3 text-center">
+            <div class="container">
+                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

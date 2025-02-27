@@ -1,0 +1,166 @@
+.plan-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #030609;
+    margin-bottom: 10px;
+}
+
+.badge {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary,
+.btn-danger {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Banner Styles */
+.banner {
+    height: 250px;
+    /* Reduced height */
+    background: url('/Assets/Images/banner1.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.banner-subtitle {
+    font-size: 1.2rem;
+}
+
+/* Search & Filter Section */
+.container {
+    max-width: 1200px;
+}
+
+#searchPlans {
+    width: 300px;
+    margin-right: 15px;
+}
+
+
+.plan-category {
+    background-color: success;
+    color: primary;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-category a {
+    color: primary !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.plan-category a:hover {
+    color: #ffc107 !important;
+}
+
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+.footer {
+    background-color: #222;
+    color: white;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ff4b2b;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.store-btn {
+    width: 150px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.store-btn:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #111;
+}

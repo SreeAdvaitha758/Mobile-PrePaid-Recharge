@@ -41,39 +41,36 @@
 </head>
 
 <body class="bg-danger">
-    <!-- Header -->
-    <header class="text-light bg-primary shadow-sm">
-        <h2 class="text-center pt-3 pb-3">Mobi-Comm Prepaid Recharge</h2>
-        <nav class="navbar navbar-expand-sm">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <i class="bi bi-phone-flip fs-4 text-light"></i>
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Search Filter -->
-                        <li class="nav-item d-flex align-items-center">
-                            <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-light">Search</button>
-                        </li>
-                        <!-- Account Option Dropdown -->
-                        <li class="nav-item dropdown ms-3 text-light">
-                            <a class="nav-link dropdown-toggle btn" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-person-circle text-light fs-4"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><button class="dropdown-item" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal">Login</button></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="HomePage.html">
+                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="About.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Container Wrapper -->
     <div class="container-wrapper">
@@ -132,46 +129,97 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-auto">
-        <!-- Footer Top -->
-        <div class="footer-top">
+    <footer class="footer mt-auto">
+        <!-- Footer Top Section -->
+        <div class="footer-top py-5">
             <div class="container">
-                <div class="row d-flex align-items-start">
-                    <div class="col-md-4 text-start">
-                        <h5>Mobi-Comm Service Pvt Ltd</h5>
-                        <p>Connecting People, Anytime, Anywhere.</p>
+                <div class="row g-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
+                        <p class="text-light">Connecting People, Anytime, Anywhere.</p>
+                        <p class="text-light"><i class="bi bi-geo-alt"></i> 123, Tech Park, Mumbai, India</p>
+                        <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
+                        <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <h5>Quick Links</h5>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Quick Links</h5>
                         <ul class="list-unstyled">
                             <li><a href="About.html">About Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4 text-end">
-                        <h5>Connect With Us</h5>
-                        <p>Follow us on social media for the latest updates.</p>
+
+                    <!-- Services -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Mobile Recharges</a></li>
+                            <li><a href="#">DTH Recharges</a></li>
+                            <li><a href="#">Bill Payments</a></li>
+                            <li><a href="#">Data Plans</a></li>
+                            <li><a href="#">International Roaming</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media & App Download -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white">Connect With Us</h5>
+                        <p class="text-light">Follow us on social media for the latest updates.</p>
                         <div class="social-icons">
-                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                        <h5 class="text-white mt-4">Download Our App</h5>
+                        <div class="app-buttons">
+                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container text-center">
-                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom py-3 text-center">
+            <div class="container">
+                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="mobileNumber" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobileNumber"
+                                placeholder="Enter your mobile number" required>
+                            <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileForm = document.getElementById('mobileForm');
@@ -180,21 +228,16 @@
             const continueButton = document.getElementById('continueButton');
             const rechargeButton = document.getElementById('rechargeButton');
 
-            const mobileMessage = document.getElementById('mobileMessage'); // Mobile message container
-            const emailMessage = document.getElementById('emailMessage'); // Email message container
+            const mobileMessage = document.getElementById('mobileMessage');
+            const emailMessage = document.getElementById('emailMessage');
 
-            let usersData = []; // To store fetched user data
+            let usersData = [];
 
-            // Fetch user data from JSON file
-            fetch('users.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
+            // Fetch user data from db.json
+            fetch("../db.json")
+                .then(response => response.json())
                 .then(data => {
-                    usersData = data;
+                    usersData = data.users;
                 })
                 .catch(error => {
                     console.error('Error fetching user data:', error);
@@ -204,10 +247,11 @@
             // Handle mobile number submission
             mobileForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-                const mobileNumber = document.getElementById('mobile_num').value;
-                mobileMessage.textContent = ''; // Clear previous messages
+                const mobileNumber = document.getElementById('mobile_num').value.trim();
 
-                if (mobileNumber.trim() === '' || mobileNumber.length !== 10 || !/^\d+$/.test(mobileNumber)) {
+                mobileMessage.textContent = '';
+
+                if (mobileNumber.length !== 10 || !/^\d+$/.test(mobileNumber)) {
                     mobileMessage.textContent = 'Please enter a valid 10-digit mobile number.';
                     return;
                 }
@@ -215,31 +259,35 @@
                 // Check if mobile number exists in JSON
                 const user = usersData.find(user => user.mobile === mobileNumber);
                 if (user) {
-                    // Show email card
                     emailCard.style.display = 'block';
                     emailCard.classList.add('fadeIn');
                     continueButton.style.display = 'none';
-                    mobileMessage.textContent = ''; // Clear error message if valid
+                    mobileMessage.textContent = '';
                 } else {
-                    mobileMessage.textContent = 'This number is not a valid Mobi-Comm number.';
+                    mobileMessage.textContent = 'This number is not a registered Mobi-Comm number.';
                 }
             });
 
             // Handle email submission
             emailForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-                const email = document.getElementById('email').value;
-                const mobileNumber = document.getElementById('mobile_num').value;
-                emailMessage.textContent = ''; // Clear previous messages
+                const email = document.getElementById('email').value.trim();
+                const mobileNumber = document.getElementById('mobile_num').value.trim();
+
+                emailMessage.textContent = '';
 
                 // Find the user in the JSON data
                 const user = usersData.find(user => user.mobile === mobileNumber);
 
-                if (user && user.email === email) {
-                    emailMessage.classList.replace('text-danger', 'text-success'); // Update to success message
-                    window.location.href = 'HomePage.html'; // Redirect to home page
+                if (user && user.email.toLowerCase() === email.toLowerCase()) {
+                    emailMessage.textContent = "Validation successful! Redirecting...";
+                    emailMessage.style.color = "green";
+                    setTimeout(() => {
+                        window.location.href = "HomePage.html"; // Redirect to home page
+                    }, 1500);
                 } else {
                     emailMessage.textContent = 'Invalid email. Please enter the correct email associated with this number.';
+                    emailMessage.style.color = "red";
                 }
             });
         });

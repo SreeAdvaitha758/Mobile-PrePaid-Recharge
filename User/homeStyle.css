@@ -1,0 +1,526 @@
+/* Header Styling */
+header {
+    padding: 10px 0;
+}
+
+header h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Logo Styling */
+header img {
+    height: 40px;
+    /* Adjust logo height */
+    margin-left: 15px;
+    /* Add some space between logo and navbar */
+}
+
+
+/* Default Logo Size */
+.logo-img {
+    height: 80px;
+    /* Default height for larger screens */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Adjust Logo Size for Smaller Screens */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px;
+        /* Smaller height for mobile devices */
+    }
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    /* Slightly reduce font size */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    /* Highlight color on hover */
+}
+
+/* Mobile Navbar Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+/* Search Box Styling */
+.navbar .form-control {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.navbar .btn-light {
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.navbar .btn-light:hover {
+    background-color: #f8f9fa;
+}
+
+/* Mobile Navbar Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #007bff;
+}
+
+.carousel-image {
+    height: 600px;
+    object-fit: cover;
+}
+
+.custom-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.custom-caption h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.custom-caption p {
+    font-size: 1.25rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* User Validation Section */
+.section-spacing {
+    padding: 60px 0;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .card {
+    border: none;
+    background: #f8f9fa;
+}
+
+.form-container .card-title {
+    color: #1A4060;
+}
+
+.form-container .btn-danger {
+    background-color: #1A4060;
+    color: white;
+    border: none;
+}
+
+
+/* Why Choose Mobi-Comm Section */
+.card {
+    border-color: #0d6efd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    color: #1A4060;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.prepaid-card {
+    border: 2px solid #160608;
+    /* Attractive red border */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.prepaid-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-prepaid {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-prepaid:hover {
+    background-color: #b02a37;
+}
+
+.btn-view-all {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-view-all:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(255, 75, 43, 0.3);
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.plan-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.plan-details i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.btn-plan {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Enhanced View Plans Button */
+.btn-view-all {
+    background: linear-gradient(45deg, #0d6efd, #198754);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-view-all:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+}
+
+.btn-view-all::after {
+    content: '→';
+    margin-left: 10px;
+    transition: margin 0.3s ease;
+}
+
+.btn-view-all:hover::after {
+    margin-left: 15px;
+}
+
+/* Features Section */
+.text-container {
+    padding: 20px;
+}
+
+.text-container h2 {
+    color: #007bff;
+}
+
+.text-container p {
+    color: #6c757d;
+}
+
+/* FAQ Section */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+}
+
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ff4b2b;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.store-btn {
+    width: 150px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.store-btn:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #111;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .form-container {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        text-align: center;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.offers-container {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.offer-card {
+    background: linear-gradient(135deg, #130620, #57181b);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.offer-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-content h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.offer-content p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    animation: shine-effect 3s infinite linear;
+}
+
+@keyframes shine-effect {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offer-card {
+        margin: 0.25rem;
+        padding: 1rem;
+    }
+}
+
+.feature-img {
+    width: 75%;
+    max-width: 450px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.feature-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.animate-slide-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-spacing {
+    padding: 60px 0;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .feature-img {
+        width: 100%;
+    }
+
+    .text-justify {
+        text-align: center;
+    }
+}
