@@ -4,75 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="/css/main.min.css" rel=stylesheet>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
-
+        /* Custom CSS for sidebar and layout */
         .sidebar {
             width: 250px;
             height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #0b0c0c;
+            background-color: #343a40;
             color: white;
+            transition: transform 0.3s ease;
         }
 
-        .sidebar .nav-link {
-            color: white;
-            padding: 12px 20px;
-            transition: all 0.3s;
+        .sidebar.show {
+            transform: translateX(0);
         }
 
-        .sidebar .nav-link:hover {
-            background-color: #0056b3;
-            transform: translateX(5px);
+        .sidebar.hide {
+            transform: translateX(-250px);
         }
 
         .content {
             margin-left: 250px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            padding: 20px;
+            transition: margin 0.3s ease;
         }
 
-        .chart-container {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .content.expand {
+            margin-left: 0;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
         }
     </style>
 </head>
 
 <body class="bg-light">
+    <!-- Toggle Button for Sidebar -->
+    <button class="toggle-btn btn btn-primary d-md-none"><i class="bi bi-list"></i></button>
+
+    <!-- Sidebar -->
     <div class="sidebar">
         <h2 class="p-3 text-center">Mobi-Comm</h2>
-        <!-- Fix the swapped hrefs in the sidebar -->
         <nav class="nav flex-column">
             <a class="nav-link active" href="#" data-target="dashboard">Dashboard</a>
             <a class="nav-link" href="#" data-target="analysis">Analysis</a>
-            <a class="nav-link" href="/Admin/UserManagementPage.html">User Management</a>
-            <a class="nav-link" href="/Admin/PlanManagementPage.html">Plans Management</a>
+            <a class="nav-link" href="#" data-target="userManagement">User Management</a>
+            <a class="nav-link" href="#" data-target="planManagement">Plans Management</a>
         </nav>
     </div>
 
+    <!-- Main Content -->
     <div class="content">
-
-
         <!-- Dashboard Content -->
-        <div id="dashboard-content" class="flex-grow-1 p-4">
+        <div id="dashboard-content" class="p-4">
             <div class="carousel slide mb-4" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-3">
                     <div class="carousel-item active">
@@ -86,157 +98,359 @@
                 </div>
             </div>
 
-            <!-- Expiring Plans Table -->
-            <h4>Expiring Plans (Next 3 Days)</h4>
-            <table class="table table-bordered" id="expiringSubscribersTable">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Mobile</th>
-                        <th>Current Plan</th>
-                        <th>Expiry Date</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <!-- Analysis Content -->
-        <div id="analysis-content" class="flex-grow-1 p-4" style="display: none;">
-            <div class="row g-4">
-                <div class="col-md-8 chart-container">
-                    <canvas id="subscriptionTrends"></canvas>
+            <div class="row g-4 mb-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="card shadow-sm p-3">
+                        <h5>Total Users</h5>
+                        <h2 id="totalUsers">120</h2>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Key Metrics</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between">
-                                    Monthly Growth
-                                    <span class="text-success">+12%</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    Churn Rate
-                                    <span class="text-danger">-3.2%</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    ARPU
-                                    <span>$15.60</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-6 col-md-3">
+                    <div class="card shadow-sm p-3">
+                        <h5>Total Plans</h5>
+                        <h2 id="totalPlans">10</h2>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card shadow-sm p-3">
+                        <h5>Active Users</h5>
+                        <h2 id="activeUsers">108</h2>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card shadow-sm p-3">
+                        <h5>Inactive Users</h5>
+                        <h2 id="inactiveUsers">12</h2>
                     </div>
                 </div>
             </div>
+
+            <h4>Expiring Plans (Next 3 Days)</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Current Plan</th>
+                            <th>Expiry Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expiringSubscribersTable"></tbody>
+                </table>
+            </div>
         </div>
 
-        <footer class="bg-primary text-white p-3 mt-auto">
-            <p class="mb-0 text-center">&copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.</p>
-        </footer>
+        <!-- User Management Content -->
+        <div id="userManagement-content" class="p-4" style="display: none;">
+            <h4>User Management</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Plan Management Content -->
+        <div id="planManagement-content" class="p-4" style="display: none;">
+            <h4>Plan Management</h4>
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addPlanModal">
+                <i class="bi bi-plus-circle"></i> Add Plan
+            </button>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Validity</th>
+                            <th>Data</th>
+                            <th>Calls</th>
+                            <th>SMS</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="planTableBody"></tbody>
+                </table>
+            </div>
+        </div>
     </div>
+
+
+    <!-- Add/Edit Plan Modal -->
+    <div class="modal fade" id="addPlanModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add/Edit Plan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="planForm">
+                        <input type="hidden" id="planId">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="planName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Category</label>
+                                <select class="form-select" id="planCategory" required>
+                                    <option value="Popular Plans">Popular Plans</option>
+                                    <option value="Data Plans">Data Plans</option>
+                                    <option value="Unlimited Plans">Unlimited Plans</option>
+                                    <option value="Validity Plans">Validity Plans</option>
+                                    <option value="Entertainment Plans">Entertainment Plans</option>
+                                    <option value="Annual Plans">Annual Plans</option>
+                                    <option value="Best Prepaid Plans">Best Prepaid Plans</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Price</label>
+                                <input type="text" class="form-control" id="planPrice" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Validity</label>
+                                <input type="text" class="form-control" id="planValidity" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Data</label>
+                                <input type="text" class="form-control" id="planData" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Calls</label>
+                                <input type="text" class="form-control" id="planCalls" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">SMS</label>
+                                <input type="text" class="form-control" id="planSMS" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" id="planDescription" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" id="planStatus" required>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Save Plan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white p-3 text-center mt-auto">
+        &copy; 2025 Mobi-Comm Services Ltd. | Connecting People, Anytime, Anywhere.
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let chart = null;
+            const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+            const toggleBtn = document.querySelector('.toggle-btn');
 
-            function createChart() {
-                const ctx = document.getElementById('subscriptionTrends').getContext('2d');
-                return new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                        datasets: [{
-                            label: 'New Subscriptions',
-                            data: [65, 59, 80, 81, 56, 55],
-                            borderColor: '#007bff',
-                            tension: 0.4,
-                            fill: false
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'top',
-                            }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
+            // Toggle sidebar on button click
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('show');
+                content.classList.toggle('expand');
+            });
+
+            // Handle navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.dataset.target;
+
+                    // Hide all content sections
+                    document.querySelectorAll('.content > div').forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    // Show the selected content section
+                    document.getElementById(`${target}-content`).style.display = 'block';
+
+                    // Load data for the selected section
+                    if (target === 'userManagement') {
+                        loadUsers();
+                    } else if (target === 'planManagement') {
+                        loadPlans();
                     }
+                });
+            });
+
+            // Load users from db.json
+            function loadUsers() {
+                fetch('../db.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const users = data.users;
+                        const userTableBody = document.getElementById('userTableBody');
+                        userTableBody.innerHTML = '';
+
+                        users.forEach(user => {
+                            const row = `
+                                <tr>
+                                    <td>${user.name}</td>
+                                    <td>${user.email}</td>
+                                    <td>${user.mobile}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" onclick="viewUserDetails('${user.mobile}')">View History</button>
+                                    </td>
+                                </tr>
+                            `;
+                            userTableBody.innerHTML += row;
+                        });
+                    })
+                    .catch(error => console.error('Error loading users:', error));
+            }
+
+            let plansData = [];
+
+            // Load plans from db.json
+            function loadPlans() {
+                fetch('../db.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Combine all plan categories into one array with their respective category and default status
+                        plansData = [
+                            ...data.popularPlans.map(plan => ({ ...plan, category: 'Popular Plans', status: 'Active' })),
+                            ...data.dataPlans.map(plan => ({ ...plan, category: 'Data Plans', status: 'Active' })),
+                            ...data.unlimited.map(plan => ({ ...plan, category: 'Unlimited Plans', status: 'Active' })),
+                            ...data.validity.map(plan => ({ ...plan, category: 'Validity Plans', status: 'Active' })),
+                            ...data.entertainment.map(plan => ({ ...plan, category: 'Entertainment Plans', status: 'Active' })),
+                            ...data.annual.map(plan => ({ ...plan, category: 'Annual Plans', status: 'Active' })),
+                            ...data.bestPrepaidPlans.map(plan => ({ ...plan, category: 'Best Prepaid Plans', status: 'Active' }))
+                        ];
+                        renderPlansTable();
+                    })
+                    .catch(error => console.error('Error loading plans:', error));
+            }
+
+            // Render plans table
+            function renderPlansTable() {
+                const planTableBody = document.getElementById('planTableBody');
+                planTableBody.innerHTML = '';
+
+                plansData.forEach((plan, index) => {
+                    const row = `
+                <tr>
+                    <td>${plan.id}</td>
+                    <td>${plan.name}</td>
+                    <td>${plan.price}</td>
+                    <td>${plan.validity}</td>
+                    <td>${plan.data}</td>
+                    <td>${plan.calls}</td>
+                    <td>${plan.sms}</td>
+                    <td>${plan.description}</td>
+                    <td>${plan.category}</td>
+                    <td>
+                        <span class="badge ${plan.status === 'Active' ? 'bg-success' : 'bg-danger'}">
+                            ${plan.status}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="editPlan(${index})">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="deletePlan(${index})">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `;
+                    planTableBody.innerHTML += row;
                 });
             }
 
-            // Update the click handler to only prevent default for tabs
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    // Only prevent default for links with data-target
-                    if (this.dataset.target) {
-                        e.preventDefault();
+            // Add or Edit Plan
+            document.getElementById('planForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const planId = document.getElementById('planId').value;
+                const plan = {
+                    id: planId || `plan-${plansData.length + 1}`,
+                    name: document.getElementById('planName').value,
+                    price: document.getElementById('planPrice').value,
+                    validity: document.getElementById('planValidity').value,
+                    data: document.getElementById('planData').value,
+                    calls: document.getElementById('planCalls').value,
+                    sms: document.getElementById('planSMS').value,
+                    description: document.getElementById('planDescription').value,
+                    category: document.getElementById('planCategory').value,
+                    status: document.getElementById('planStatus').value
+                };
 
-                        // Original tab switching code
-                        const target = this.dataset.target;
-                        document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
-                        this.classList.add('active');
+                if (planId) {
+                    // Edit existing plan
+                    const index = plansData.findIndex(p => p.id === planId);
+                    plansData[index] = plan;
+                } else {
+                    // Add new plan
+                    plansData.push(plan);
+                }
 
-                        document.querySelectorAll('#dashboard-content, #analysis-content')
-                            .forEach(el => el.style.display = 'none');
-                        document.getElementById(`${target}-content`).style.display = 'block';
-
-                        if (target === 'analysis' && !chart) {
-                            chart = createChart();
-                        }
-                    }
-                    // Allow normal navigation for other links without data-target
-                });
+                renderPlansTable();
+                bootstrap.Modal.getInstance(document.getElementById('addPlanModal')).hide();
+                document.getElementById('planForm').reset();
             });
-        });
 
-        function showExpiringUsers() {
-            fetch('../db.json')
-                .then(response => response.json())
-                .then(data => {
-                    const now = new Date();
-                    const threeDaysLater = new Date();
-                    threeDaysLater.setDate(now.getDate() + 3);
-                    const expiringUsers = data.users.filter(user => {
-                        const expiryDate = new Date(user.expiry_date);
-                        return expiryDate >= now && expiryDate <= threeDaysLater;
-                    });
+            // Edit Plan
+            window.editPlan = function (index) {
+                const plan = plansData[index];
+                document.getElementById('planId').value = plan.id;
+                document.getElementById('planName').value = plan.name;
+                document.getElementById('planPrice').value = plan.price;
+                document.getElementById('planValidity').value = plan.validity;
+                document.getElementById('planData').value = plan.data;
+                document.getElementById('planCalls').value = plan.calls;
+                document.getElementById('planSMS').value = plan.sms;
+                document.getElementById('planDescription').value = plan.description;
+                document.getElementById('planCategory').value = plan.category;
+                document.getElementById('planStatus').value = plan.status;
 
-                    const expiringTable = document.querySelector('#expiringSubscribersTable tbody');
-                    expiringTable.innerHTML = '';
-                    expiringUsers.forEach(user => {
-                        const row = `<tr>
-                            <td>${user.name}</td>
-                            <td>${user.mobile}</td>
-                            <td>${user.current_plan.description}</td>
-                            <td>${user.expiry_date}</td>
-                            <td><button class="btn btn-sm btn-info" onclick="viewUserDetails('${user.mobile}')">View</button></td>
-                        </tr>`;
-                        expiringTable.innerHTML += row;
-                    });
-                })
-                .catch(error => console.error('Error fetching expiring users:', error));
-        }
+                new bootstrap.Modal(document.getElementById('addPlanModal')).show();
+            };
 
-        function viewUserDetails(mobile) {
-            fetch('../db.json')
-                .then(response => response.json())
-                .then(data => {
-                    const user = data.users.find(u => u.mobile == mobile);
-                    alert(JSON.stringify(user, null, 2));
-                })
-                .catch(error => console.error('Error fetching user details:', error));
-        }
+            // Delete Plan
+            window.deletePlan = function (index) {
+                if (confirm('Are you sure you want to delete this plan?')) {
+                    plansData.splice(index, 1);
+                    renderPlansTable();
+                }
+            };
 
-        document.addEventListener('DOMContentLoaded', () => {
+            // Load plans when the page loads
+            document.addEventListener('DOMContentLoaded', loadPlans);
 
-            showExpiringUsers();
         });
     </script>
 </body>

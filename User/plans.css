@@ -95,6 +95,9 @@
 
 
 .plan-category {
+    position: sticky;
+    top: 80px;
+    z-index: 1000;
     background-color: success;
     color: primary;
     border-radius: 12px;
@@ -103,6 +106,7 @@
 }
 
 .plan-category a {
+
     color: primary !important;
     text-decoration: none;
     transition: color 0.3s ease;

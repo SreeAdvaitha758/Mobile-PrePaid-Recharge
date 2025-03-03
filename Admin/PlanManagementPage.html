@@ -1,122 +1,198 @@
-</html>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="/css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/User/HomePage.html">
-                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><i class="bi bi-phone-flip"></i> Mobi-Comm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="/Admin/Dashboard.html">Dashboard</a>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/UserManagementPage.html">User Management</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/Admin/UserManagementPage.html">User Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/Admin/PlanManagementPage.html">Plan Management</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="/Admin/PlanManagementPage.html">Plan
+                            Management</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    <!--Plan Managemet-->
     <div class="container mt-4">
-        <h2 class="mb-4">Admin Dashboard</h2>
+        <div class="card">
+            <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+                <h5 class="mb-2 mb-md-0">Plan Management</h5>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPlanModal">
+                    <i class="bi bi-plus-circle"></i> Add Plan
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover text-center" id="plansTable">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>SMS</th>
+                                <th>Calls</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        Plans Table
-        <h4>Plans Management</h4>
-        <table class="table table-bordered" id="plansTable">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Data</th>
-                    <th>Validity</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+    <!-- Add/Edit Plan Modal -->
+    <div class="modal fade" id="addPlanModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add/Edit Plan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPlanForm">
+                        <input type="hidden" id="planIndex">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Description</label>
+                                <input type="text" class="form-control" id="description" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">SMS</label>
+                                <input type="number" class="form-control" id="sms" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Calls</label>
+                                <input type="number" class="form-control" id="calls" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Data</label>
+                                <input type="text" class="form-control" id="data" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" id="active">
+                                    <option value="true">Active</option>
+                                    <option value="false">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        let plansData = [];
+        function fetchPlans() {
+            fetch('plans.json')
+                .then(response => response.json())
+                .then(data => {
+                    plansData = data;
+                    populatePlansTable();
+                })
+                .catch(error => console.error('Error loading plans:', error));
+        }
 
-        <script>
-            function loadPlans() {
-                fetch('../db.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const plans = data.plans;
-                        const plansTable = document.querySelector('#plansTable tbody');
-                        plansTable.innerHTML = '';
-                        plans.forEach((plan, index) => {
-                            const row = `<tr>
-                            <td>${plan.name || 'N/A'}</td>
-                            <td>${plan.category || 'N/A'}</td>
-                            <td>${plan.price || 'N/A'}</td>
-                            <td>${plan.data || 'N/A'}</td>
-                            <td>${plan.validity || 'N/A'}</td>
-                            <td><span class="badge ${plan.status === 'Inactive' ? 'bg-danger' : 'bg-success'}">${plan.status || 'Active'}</span></td>
-                            <td>
-                                <button class="btn btn-warning btn-sm" onclick="editPlan(${index})">Edit</button>
-                                <button class="btn btn-danger btn-sm" onclick="togglePlanStatus(${index})">${plan.status === 'Inactive' ? 'Activate' : 'Deactivate'}</button>
-                            </td>
-                        </tr>`;
-                            plansTable.innerHTML += row;
-                        });
-                    })
-                    .catch(error => console.error('Error fetching plans:', error));
-            }
-
-            function togglePlanStatus(index) {
-                fetch('../db.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        data.plans[index].status = data.plans[index].status === 'Inactive' ? 'Active' : 'Inactive';
-                        console.log('Plan status updated:', data.plans[index]);
-                        loadPlans();
-                    })
-                    .catch(error => console.error('Error toggling status:', error));
-            }
-
-
-
-
-            document.addEventListener('DOMContentLoaded', () => {
-
-                loadPlans();
-
+        function populatePlansTable() {
+            const tbody = document.querySelector('#plansTable tbody');
+            tbody.innerHTML = '';
+            plansData.forEach((plan, index) => {
+                const row = `<tr>
+                    <td>${plan.id}</td>
+                    <td>${plan.name}</td>
+                    <td>${plan.description}</td>
+                    <td>${plan.price}</td>
+                    <td>${plan.sms}</td>
+                    <td>${plan.calls}</td>
+                    <td>${plan.data}</td>
+                    <td><span class="badge ${plan.active ? 'bg-primary' : 'bg-danger'}">${plan.active ? 'Active' : 'Inactive'}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="editPlan(${index})"><i class="bi bi-pencil-square"></i></button>
+                        <button class="btn btn-sm btn-danger" onclick="deletePlan(${index})"><i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>`;
+                tbody.innerHTML += row;
             });
-        </script>
+        }
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-            </script>
+        function deletePlan(index) {
+            if (confirm("Are you sure you want to delete this plan?")) {
+                plansData.splice(index, 1);
+                populatePlansTable();
+            }
+        }
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        function editPlan(index) {
+            const plan = plansData[index];
+            document.getElementById('planIndex').value = index;
+            document.getElementById('name').value = plan.name;
+            document.getElementById('description').value = plan.description;
+            document.getElementById('price').value = plan.price;
+            document.getElementById('sms').value = plan.sms;
+            document.getElementById('calls').value = plan.calls;
+            document.getElementById('data').value = plan.data;
+            document.getElementById('active').value = plan.active;
+            new bootstrap.Modal(document.getElementById('addPlanModal')).show();
+        }
+
+        document.getElementById('addPlanForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const index = document.getElementById('planIndex').value;
+            const newPlan = {
+                id: index ? plansData[index].id : plansData.length + 1,
+                name: document.getElementById('name').value,
+                description: document.getElementById('description').value,
+                price: document.getElementById('price').value,
+                sms: document.getElementById('sms').value,
+                calls: document.getElementById('calls').value,
+                data: document.getElementById('data').value,
+                active: document.getElementById('active').value === 'true'
+            };
+            if (index) plansData[index] = newPlan;
+            else plansData.push(newPlan);
+            populatePlansTable();
+            bootstrap.Modal.getInstance(document.getElementById('addPlanModal')).hide();
+        });
+
+        fetchPlans();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

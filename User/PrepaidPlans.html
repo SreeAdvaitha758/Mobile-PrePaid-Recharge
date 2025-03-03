@@ -8,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/css/main.min.css" rel=stylesheet>
-
+    <link href="/css/main.min.css" rel="stylesheet">
     <link href="/User/plans.css" rel="stylesheet">
 </head>
 
@@ -32,12 +31,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/User/PrepaidPlans.html">Plans</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link " href="About.html">About Us</a>
+                        <a class="nav-link" href="/User/AboutUs.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                        <a class="nav-link" href="/User/contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
@@ -63,62 +61,36 @@
         </div>
 
         <!-- Search and Filter Section -->
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-4">
-                    <input type="text" id="searchPlans" class="form-control" placeholder="Search plans..."
-                        onkeyup="filterPlans()">
-                </div>
-                <div class="col-md-2">
-                    <select id="filterValidity" class="form-control" onchange="filterPlans()">
-                        <option value="">Validity</option>
-                        <option value="7">Up to 7 Days</option>
-                        <option value="28">Up to 28 Days</option>
-                        <option value="90">Up to 90 Days</option>
-                        <option value="365">Annual</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select id="filterData" class="form-control" onchange="filterPlans()">
-                        <option value="">Data</option>
-                        <option value="1GB">1GB+</option>
-                        <option value="2GB">2GB+</option>
-                        <option value="5GB">5GB+</option>
-                        <option value="unlimited">Unlimited</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select id="filterSMS" class="form-control" onchange="filterPlans()">
-                        <option value="">SMS</option>
-                        <option value="50">50+</option>
-                        <option value="100">100+</option>
-                        <option value="300">300+</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select id="filterPrice" class="form-control" onchange="filterPlans()">
-                        <option value="">Price</option>
-                        <option value="100">Under ₹100</option>
-                        <option value="200">Under ₹200</option>
-                        <option value="500">Under ₹500</option>
-                        <option value="1000">Under ₹1000</option>
-                    </select>
+        <div class="row mt-4 me-2">
+            <div class="col-md-9 offset-md-3">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <!-- Search Bar -->
+                    <div class="input-group" style="max-width: 400px;">
+                        <input type="text" id="searchInput" class="form-control"
+                            placeholder="Search plans by price, validity, data, or name...">
+                        <button class="btn btn-primary" onclick="searchPlans()">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <!-- Filter Icon -->
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                        <i class="bi bi-funnel"></i> Filter
+                    </button>
                 </div>
             </div>
         </div>
-
 
         <!-- Plans Section -->
         <div class="row mt-4 ms-2 me-2">
             <!-- Sidebar -->
             <div class="col-md-3 text-primary">
-                <div class="plan-category bg-success p-3 rounded shadow ">
+                <div class="plan-category bg-success p-3 rounded shadow">
                     <h5 class="text-primary">Plan Category</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('popular', 'Popular Plans')">Popular Plans</a></li>
+                                onclick="showPlans('popularPlans', 'Popular Plans')">Popular Plans</a></li>
                         <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('data', 'Data Packs')">Data Packs</a></li>
+                                onclick="showPlans('dataPlans', 'Data Packs')">Data Packs</a></li>
                         <li><a href="#" class="text-decoration-none text-primary"
                                 onclick="showPlans('unlimited', 'Unlimited Plans')">Unlimited Plans</a></li>
                         <li><a href="#" class="text-decoration-none text-primary"
@@ -140,6 +112,7 @@
             </div>
         </div>
     </div>
+
     <!-- Modal for View Details -->
     <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -155,12 +128,44 @@
                     <p><strong>Calls:</strong> <span id="modal-calls"></span></p>
                     <p><strong>SMS:</strong> <span id="modal-sms"></span></p>
                     <p><strong>Description:</strong> <span id="modal-description"></span></p>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
                     <button id="proceed-to-payment" class="btn btn-danger">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">Filter Plans</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Price Filter -->
+                    <div class="mb-3">
+                        <label for="priceFilter" class="form-label">Price (₹)</label>
+                        <input type="number" id="priceFilter" class="form-control" placeholder="Enter maximum price">
+                    </div>
+                    <!-- Validity Filter -->
+                    <div class="mb-3">
+                        <label for="validityFilter" class="form-label">Validity (Days)</label>
+                        <input type="number" id="validityFilter" class="form-control"
+                            placeholder="Enter minimum validity">
+                    </div>
+                    <!-- Data Filter -->
+                    <div class="mb-3">
+                        <label for="dataFilter" class="form-label">Data (GB)</label>
+                        <input type="number" id="dataFilter" class="form-control" placeholder="Enter minimum data">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
                 </div>
             </div>
         </div>
@@ -236,28 +241,39 @@
     <script>
         let plansData = {}; // To store fetched plans data
 
-        // Fetch plans data from JSON file
-        fetch('../db.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Access the plans object from the JSON data
-                plansData = data.plans[0];
-                // Display Popular Plans by default on page load
-                showPlans('popular', 'Popular Plans');
-            })
-            .catch(error => {
-                console.error('Error fetching plans data:', error);
-                alert('Failed to load plans. Please try again later.');
-            });
+        // Fetch plans data from JSON Server
+        function fetchPlans() {
+            const categories = ['popularPlans', 'dataPlans', 'unlimited', 'validity', 'entertainment', 'annual'];
+            const fetchPromises = categories.map(category =>
+                fetch(`http://localhost:3000/${category}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        plansData[category] = data; // Store the data for each category
+                    })
+                    .catch(error => {
+                        console.error(`Error fetching ${category} data:`, error);
+                        alert(`Failed to load ${category} plans. Please try again later.`);
+                    })
+            );
+
+            Promise.all(fetchPromises)
+                .then(() => {
+                    showPlans('popularPlans', 'Popular Plans'); // Default to showing popular plans
+                })
+                .catch(error => {
+                    console.error('Error fetching plans data:', error);
+                    alert('Failed to load plans. Please try again later.');
+                });
+        }
 
         // Function to dynamically update plans and heading
         function showPlans(category, heading) {
-            const plans = plansData[category];
+            const plans = plansData[category]; // Access the specific category
             const plansContainer = document.getElementById('plans-container');
             const planHeading = document.getElementById('plan-heading');
 
@@ -270,88 +286,11 @@
             if (plans) {
                 plans.forEach(plan => {
                     const planCard = `
-                        <div class="col-md-4">
-                            <div class="plan-card fadeIn">
-                                <div class="plan-header">${plan.price}</div>
-                                <span class="badge bg-secondary">Best Seller</span>
-                                <span class="badge bg-warning text-dark">Limited Time</span>
-                                <p><i class="bi bi-calendar"></i> Validity: ${plan.validity}</p>
-                                <p><i class="bi bi-wifi"></i> Data: ${plan.data}</p>
-                                <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
-                                <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
-                                <p class="text-muted">${plan.description}</p>
-
-
-
-                                <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">Recharge</button>
-                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">View Details</button>
-                            </div>
-                        </div>
-                    `;
-                    plansContainer.innerHTML += planCard;
-                });
-            } else {
-                plansContainer.innerHTML = '<h5>No plans available for this category.</h5>';
-            }
-
-            // Scroll to the plan heading
-            planHeading.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function goToPayment(price, validity, data, calls, sms, description) {
-            const url =
-                `paymentPage.html?price=${encodeURIComponent(price)}&validity=${encodeURIComponent(validity)}&data=${encodeURIComponent(data)}&calls=${encodeURIComponent(calls)}&sms=${encodeURIComponent(sms)}&description=${encodeURIComponent(description)}`;
-            window.location.href = url;
-        }
-
-        function viewDetails(price, validity, data, calls, sms, description) {
-            document.getElementById('modal-price').textContent = price;
-            document.getElementById('modal-validity').textContent = validity;
-            document.getElementById('modal-data').textContent = data;
-            document.getElementById('modal-calls').textContent = calls;
-            document.getElementById('modal-sms').textContent = sms;
-            document.getElementById('modal-description').textContent = description;
-
-
-            const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
-            proceedToPaymentBtn.onclick = () => {
-                goToPayment(price, validity, data, calls, sms, description);
-            };
-
-            const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
-            modal.show();
-        }
-
-        function filterPlans() {
-            let searchQuery = document.getElementById("searchPlans").value.toLowerCase();
-            let validityFilter = document.getElementById("filterValidity").value;
-            let dataFilter = document.getElementById("filterData").value;
-            let smsFilter = document.getElementById("filterSMS").value;
-            let priceFilter = document.getElementById("filterPrice").value;
-
-            const plansContainer = document.getElementById("plans-container");
-            plansContainer.innerHTML = "";
-
-            let filteredPlans = Object.values(plansData).flat().filter(plan => {
-                let matchSearch = searchQuery === "" || plan.description.toLowerCase().includes(searchQuery);
-                let matchValidity = !validityFilter || parseInt(plan.validity) <= parseInt(validityFilter);
-                let matchData = !dataFilter || plan.data.includes(dataFilter);
-                let matchSMS = !smsFilter || parseInt(plan.sms) >= parseInt(smsFilter);
-                let matchPrice = !priceFilter || parseInt(plan.price.replace("₹", "")) <= parseInt(priceFilter);
-
-                return matchSearch && matchValidity && matchData && matchSMS && matchPrice;
-            });
-
-            if (filteredPlans.length === 0) {
-                plansContainer.innerHTML = "<h5 class='text-center mt-3'>No matching plans found.</h5>";
-                return;
-            }
-
-            filteredPlans.forEach(plan => {
-                const planCard = `
                 <div class="col-md-4">
                     <div class="plan-card fadeIn">
                         <div class="plan-header">${plan.price}</div>
+                        <span class="badge bg-secondary">Best Seller</span>
+                        <span class="badge bg-warning text-dark">Limited Time</span>
                         <p><i class="bi bi-calendar"></i> Validity: ${plan.validity}</p>
                         <p><i class="bi bi-wifi"></i> Data: ${plan.data}</p>
                         <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
@@ -362,9 +301,96 @@
                     </div>
                 </div>
             `;
-                plansContainer.innerHTML += planCard;
+                    plansContainer.innerHTML += planCard;
+                });
+            } else {
+                plansContainer.innerHTML = '<h5>No plans available for this category.</h5>';
+            }
+
+            // Smooth scroll to plans section
+            planHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Redirect to payment page with plan details
+        function goToPayment(price, validity, data, calls, sms, description) {
+            const queryParams = new URLSearchParams({
+                price: price,
+                validity: validity,
+                data: data,
+                calls: calls,
+                sms: sms,
+                description: description
+            }).toString();
+
+            window.location.href = `/User/PaymentPage.html?${queryParams}`;
+        }
+
+        // Show plan details in modal
+        function viewDetails(price, validity, data, calls, sms, description) {
+            document.getElementById('modal-price').textContent = price;
+            document.getElementById('modal-validity').textContent = validity;
+            document.getElementById('modal-data').textContent = data;
+            document.getElementById('modal-calls').textContent = calls;
+            document.getElementById('modal-sms').textContent = sms;
+            document.getElementById('modal-description').textContent = description;
+
+            const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
+            proceedToPaymentBtn.onclick = () => {
+                goToPayment(price, validity, data, calls, sms, description);
+            };
+
+            const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
+            modal.show();
+        }
+
+        // Function to search plans
+        function searchPlans() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const plansContainer = document.getElementById('plans-container');
+            const plans = plansContainer.querySelectorAll('.plan-card');
+
+            plans.forEach(plan => {
+                const planText = plan.textContent.toLowerCase();
+                if (planText.includes(searchQuery)) {
+                    plan.style.display = 'block';
+                } else {
+                    plan.style.display = 'none';
+                }
             });
         }
+
+        // Function to apply filters
+        function applyFilters() {
+            const priceFilter = document.getElementById('priceFilter').value;
+            const validityFilter = document.getElementById('validityFilter').value;
+            const dataFilter = document.getElementById('dataFilter').value;
+
+            const plansContainer = document.getElementById('plans-container');
+            const plans = plansContainer.querySelectorAll('.plan-card');
+
+            plans.forEach(plan => {
+                const price = parseFloat(plan.querySelector('.plan-header').textContent.replace('₹', ''));
+                const validity = parseInt(plan.querySelector('p:nth-child(3)').textContent.replace('Validity: ', '').replace(' days', ''));
+                const data = parseFloat(plan.querySelector('p:nth-child(4)').textContent.replace('Data: ', '').replace(' GB', ''));
+
+                const matchesPrice = priceFilter ? price <= parseFloat(priceFilter) : true;
+                const matchesValidity = validityFilter ? validity >= parseInt(validityFilter) : true;
+                const matchesData = dataFilter ? data >= parseFloat(dataFilter) : true;
+
+                if (matchesPrice && matchesValidity && matchesData) {
+                    plan.style.display = 'block';
+                } else {
+                    plan.style.display = 'none';
+                }
+            });
+
+            // Close the modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('filterModal'));
+            modal.hide();
+        }
+
+        // Fetch plans when the page loads
+        document.addEventListener('DOMContentLoaded', fetchPlans);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

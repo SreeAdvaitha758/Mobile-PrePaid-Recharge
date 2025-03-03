@@ -167,18 +167,7 @@
 
             <div id="prepaidCarousel" class="carousel slide ms-3" data-bs-ride="carousel">
                 <div class="carousel-inner" id="carouselContent">
-                    <!-- Example of a single card -->
-                    <div class="carousel-item active">
-                        <div class="card prepaid-card">
-                            <div class="card-header bg-danger text-white fw-bold">Special Pack</div>
-                            <div class="card-body">
-                                <h5 class="card-title text-danger">₹299</h5>
-                                <p class="card-text">Unlimited Calls | 2GB/Day | 28 Days</p>
-                                <a href="#" class="btn btn-prepaid">Recharge Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add more cards dynamically -->
+                    <!-- Slides will be dynamically inserted here -->
                 </div>
 
                 <!-- Carousel Controls -->
@@ -533,7 +522,6 @@
             </div>
         </div>
     </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -542,99 +530,26 @@
     <!-- Custom Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            fetch('../db.json')
+            fetch('http://localhost:3000/bestPrepaidPlans')
                 .then(response => response.json())
                 .then(data => {
-                    const bestPlans = data.bestPrepaidPlans[0];
-                    const carouselContent = document.getElementById('carouselContent');
-                    let slides = '';
-                    let slideIndex = 0;
-
-                    while (slideIndex < bestPlans.length) {
-                        const activeClass = slideIndex === 0 ? 'active' : '';
-                        slides += `
-                        <div class="carousel-item ${activeClass}">
-                            <div class="row justify-content-center g-4">`;
-
-                        for (let i = 0; i < 3; i++) {
-                            const plan = bestPlans[slideIndex + i];
-                            if (!plan) break;
-
-                            slides += `
-                            <div class="col-lg-4 col-md-6">
-                                <div class="prepaid-card p-4 h-100">
-                                    <div class="ribbon">Most Popular</div>
-                                    <h3 class="card-title">${plan.price}</h3>
-                                    <div class="plan-details">
-                                        <p><i class="bi bi-telephone-fill"></i> ${plan.calls}</p>
-                                        <p><i class="bi bi-file-earmark-bar-graph"></i> ${plan.data}</p>
-                                        <p><i class="bi bi-chat-dots-fill"></i> ${plan.sms}</p>
-                                        <p><i class="bi bi-calendar-date"></i> ${plan.validity}</p>
-                                    </div>
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-plan" 
-                                            onclick="redirectToPayment('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.calls}', '${plan.sms}')">
-                                            Buy Now
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>`;
-                        }
-
-                        slides += `</div></div>`;
-                        slideIndex += 3;
-                    }
-
-                    carouselContent.innerHTML = slides;
-                })
-                .catch(error => console.error('Error loading prepaid plans:', error));
-        });
-
-        // Redirect to payment page with plan details
-        function redirectToPayment(price, validity, data, calls, sms) {
-            const queryParams = new URLSearchParams({
-                price: price,
-                validity: validity,
-                data: data,
-                calls: calls,
-                sms: sms
-            }).toString();
-
-            window.location.href = `/User/PaymentPage.html?${queryParams}`;
-        }
-
-        // Show plan details in modal
-        function showPlanDetails(price, validity, data, calls, sms) {
-            const planDetailsBody = document.getElementById('planDetailsBody');
-            planDetailsBody.innerHTML = `
-                <p><strong>Price:</strong> ${price}</p>
-                <p><strong>Validity:</strong> ${validity}</p>
-                <p><strong>Data:</strong> ${data}</p>
-                <p><strong>Calls:</strong> ${calls}</p>
-                <p><strong>SMS:</strong> ${sms}</p>
-            `;
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('../db.json')
-                .then(response => response.json())
-                .then(data => {
-                    const bestPlans = data.bestPrepaidPlans[0];
+                    const bestPlans = data; // Ensure this is the correct array
                     const carouselContent = document.getElementById('carouselContent');
                     let slides = '';
                     let slideIndex = 0;
 
                     // Create groups of 3 plans per slide
                     while (slideIndex < bestPlans.length) {
-                        const activeClass = slideIndex === 0 ? 'active' : '';
+                        const activeClass = slideIndex === 0 ? 'active' : ''; // Mark the first slide as active
                         slides += `
                     <div class="carousel-item ${activeClass}">
                         <div class="row justify-content-center">
                 `;
 
-                        // Add 3 plans to current slide
+                        // Add 3 plans to the current slide
                         for (let i = 0; i < 3; i++) {
                             const plan = bestPlans[slideIndex + i];
-                            if (!plan) break;
+                            if (!plan) break; // Stop if there are no more plans
 
                             slides += `
                         <div class="col-md-4 mb-4">
@@ -665,10 +580,36 @@
                         slideIndex += 3;
                     }
 
+                    // Insert the slides into the carousel
                     carouselContent.innerHTML = slides;
                 })
                 .catch(error => console.error('Error loading prepaid plans:', error));
         });
+
+        // Redirect to payment page with plan details
+        function redirectToPayment(price, validity, data, calls, sms) {
+            const queryParams = new URLSearchParams({
+                price: price,
+                validity: validity,
+                data: data,
+                calls: calls,
+                sms: sms
+            }).toString();
+
+            window.location.href = `/User/PaymentPage.html?${queryParams}`;
+        }
+
+        // Show plan details in modal
+        function showPlanDetails(price, validity, data, calls, sms) {
+            const planDetailsBody = document.getElementById('planDetailsBody');
+            planDetailsBody.innerHTML = `
+        <p><strong>Price:</strong> ${price}</p>
+        <p><strong>Validity:</strong> ${validity}</p>
+        <p><strong>Data:</strong> ${data}</p>
+        <p><strong>Calls:</strong> ${calls}</p>
+        <p><strong>SMS:</strong> ${sms}</p>
+    `;
+        }
 
     </script>
 </body>
