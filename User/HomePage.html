@@ -14,41 +14,37 @@
     <link href="/User/homeStyle.css" rel="stylesheet">
     <link href="/css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-success">
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="/User/HomePage.html">
-                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="ms-2">Mobi-Comm</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-2">
                         <a class="nav-link active" href="/User/HomePage.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/User/PrepaidPlans.html">Plans</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/User/PrepaidPlans.html">Recharge Plans</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="/User/AboutUs.html">About Us</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/User/AboutUs.html">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-2">
                         <a class="nav-link" href="/User/contact.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">
-                            <i class="bi bi-person-circle"></i>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light fs-5" href="#" id="userActionLink" onclick="logout()">
+                            <i class="bi bi-box-arrow-right"></i> Logout
                         </a>
                     </li>
                 </ul>
@@ -56,22 +52,18 @@
         </div>
     </nav>
 
-
-
-
-
     <!-- Carousel -->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/Assets/Images/carousel.jpg" class="d-block w-100 carousel-image">
+                <img src="/Assets/Images/carousel.jpg" class="d-block w-100 carousel-image" alt="Carousel Image 1">
                 <div class="carousel-caption custom-caption">
                     <h2><b>Stay connected anytime, anywhere</b></h2>
                     <p class="lead">Recharge your mobile prepaid instantly and hassle-free!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/Assets/Images/carousel1.jpg" class="d-block w-100 carousel-image">
+                <img src="/Assets/Images/carousel1.jpg" class="d-block w-100 carousel-image" alt="Carousel Image 2">
                 <div class="carousel-caption custom-caption">
                     <h2><b>Stay connected anytime, anywhere</b></h2>
                     <p class="lead">Recharge your mobile prepaid instantly and hassle-free!</p>
@@ -90,19 +82,18 @@
         </button>
     </div>
 
-
+    <!-- Special Offers Section -->
     <section class="section-spacing bg-danger py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="offers-container bg-white rounded-4 p-4 shadow-lg">
-                        <h3 class="text-center text-primary mb-4 animate-pop-in"> Special Offers </h3>
+                        <h3 class="text-center text-primary mb-4 animate-pop-in">Special Offers</h3>
                         <div class="row g-4">
-                            <!-- Offer 1 -->
                             <div class="col-12 col-md-6">
                                 <div class="offer-card animated-card">
                                     <div class="offer-icon bg-danger text-white">
-                                        <i class="fas fa-rocket"></i>
+                                        <i class="bi bi-rocket"></i>
                                     </div>
                                     <div class="offer-content">
                                         <h5>25% Extra Credit</h5>
@@ -111,12 +102,10 @@
                                     <div class="shine"></div>
                                 </div>
                             </div>
-
-                            <!-- Offer 2 -->
                             <div class="col-12 col-md-6">
                                 <div class="offer-card animated-card">
                                     <div class="offer-icon bg-danger text-white">
-                                        <i class="fas fa-film"></i>
+                                        <i class="bi bi-film"></i>
                                     </div>
                                     <div class="offer-content">
                                         <h5>Free OTT Subscription</h5>
@@ -125,12 +114,10 @@
                                     <div class="shine"></div>
                                 </div>
                             </div>
-
-                            <!-- Offer 3 -->
                             <div class="col-12 col-md-6">
                                 <div class="offer-card animated-card">
                                     <div class="offer-icon bg-danger text-white">
-                                        <i class="fas fa-database"></i>
+                                        <i class="bi bi-database"></i>
                                     </div>
                                     <div class="offer-content">
                                         <h5>Double Data</h5>
@@ -139,12 +126,10 @@
                                     <div class="shine"></div>
                                 </div>
                             </div>
-
-                            <!-- Offer 4 -->
                             <div class="col-12 col-md-6">
                                 <div class="offer-card animated-card">
                                     <div class="offer-icon bg-danger text-white">
-                                        <i class="fas fa-calendar-plus"></i>
+                                        <i class="bi bi-calendar-plus"></i>
                                     </div>
                                     <div class="offer-content">
                                         <h5>+10 Days Validity</h5>
@@ -169,8 +154,6 @@
                 <div class="carousel-inner" id="carouselContent">
                     <!-- Slides will be dynamically inserted here -->
                 </div>
-
-                <!-- Carousel Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#prepaidCarousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -181,14 +164,13 @@
                 </button>
             </div>
 
-            <!-- Updated View All Plans Button -->
             <div class="mt-5 text-center">
-                <a href="/User/PrepaidPlans.html" class="btn btn-view-all">
-                    Explore All Plans
-                </a>
+                <a href="/User/PrepaidPlans.html" class="btn btn-view-all">Explore All Plans</a>
             </div>
         </div>
     </section>
+
+    <!-- Why Mobi-Comm Section -->
     <section class="section-spacing bg-danger">
         <div class="container">
             <h2 class="text-center text-primary mb-5 position-relative">Why Mobi-Comm?
@@ -196,7 +178,6 @@
                     style="width: 100px; height: 3px;"></span>
             </h2>
             <div class="row g-4 justify-content-center">
-                <!-- Card 1: Instant Recharge -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card h-100 text-center p-4 border-0 shadow hover-effect">
                         <img src="/Assets/Images/instant recharge.jpeg" class="card-img-top img-fluid rounded-4"
@@ -204,13 +185,10 @@
                         <div class="card-body">
                             <i class="bi bi-lightning-fill text-warning fs-3 mb-3"></i>
                             <h5 class="card-title text-primary">Instant Recharge</h5>
-                            <p class="card-text text-muted">Recharge your mobile in seconds, anytime, anywhere. No
-                                delays, no hassles.</p>
+                            <p class="card-text text-muted">Recharge your mobile in seconds, anytime, anywhere.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 2: Secure Payments -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card h-100 text-center p-4 border-0 shadow hover-effect">
                         <img src="/Assets/Images/securePayment.jpeg" class="card-img-top img-fluid rounded-4"
@@ -218,13 +196,10 @@
                         <div class="card-body">
                             <i class="bi bi-shield-lock-fill text-success fs-3 mb-3"></i>
                             <h5 class="card-title text-primary">Secure Payments</h5>
-                            <p class="card-text text-muted">Safe and secure payment options for hassle-free
-                                transactions.</p>
+                            <p class="card-text text-muted">Safe and secure payment options.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 3: 24/7 Support -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card h-100 text-center p-4 border-0 shadow hover-effect">
                         <img src="/Assets/Images/customerSupport.jpeg" class="card-img-top img-fluid rounded-4"
@@ -232,12 +207,10 @@
                         <div class="card-body">
                             <i class="bi bi-headset text-info fs-3 mb-3"></i>
                             <h5 class="card-title text-primary">24/7 Support</h5>
-                            <p class="card-text text-muted">Our customer support team is always here to help you.</p>
+                            <p class="card-text text-muted">Always here to help you.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 4: Exclusive Offers -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card h-100 text-center p-4 border-0 shadow hover-effect">
                         <img src="/Assets/Images/offers.jpeg" class="card-img-top img-fluid rounded-4"
@@ -245,7 +218,7 @@
                         <div class="card-body">
                             <i class="bi bi-gift-fill text-danger fs-3 mb-3"></i>
                             <h5 class="card-title text-primary">Exclusive Offers</h5>
-                            <p class="card-text text-muted">Get access to exclusive recharge plans and discounts.</p>
+                            <p class="card-text text-muted">Access exclusive plans and discounts.</p>
                         </div>
                     </div>
                 </div>
@@ -257,49 +230,30 @@
     <section class="section-spacing py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <!-- First Feature -->
                 <div class="col-md-6 order-md-2 text-center">
                     <img src="/Assets/Images/speed.jpg" alt="Unlimited entertainment"
                         class="img-fluid rounded shadow feature-img animate-slide-in">
                 </div>
                 <div class="col-md-6 order-md-1 d-flex flex-column justify-content-center text-justify">
                     <h2 class="fw-bold mb-3 text-dark">Unlimited Data and Entertainment</h2>
-                    <p class="fs-6 text-dark mb-3">
-                        Experience the freedom of unlimited data with 5G connectivity, empowering you to explore,
-                        stream, and enjoy without interruptions. Whether it's watching your favorite shows in
-                        high-definition or exploring the vast world of the internet, you’ll never run out of
-                        possibilities.
-                    </p>
-                    <p class="fs-6 text-dark">
-                        Say goodbye to data limits and hello to seamless entertainment. Stay connected to what matters
-                        most, anytime and anywhere.
-                    </p>
+                    <p class="fs-6 text-dark mb-3">Experience the freedom of unlimited data with 5G connectivity.</p>
+                    <p class="fs-6 text-dark">Say goodbye to data limits and hello to seamless entertainment.</p>
                 </div>
-
-                <!-- Second Feature -->
                 <div class="col-md-6 text-center">
                     <img src="/Assets/Images/home1.jpg" alt="Reliable connectivity"
                         class="img-fluid rounded shadow feature-img animate-slide-in">
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center text-justify">
                     <h2 class="fw-bold mb-3 text-dark">High-speed, Reliable Connectivity</h2>
-                    <p class="fs-6 text-dark mb-3">
-                        With 5G technology, enjoy high-speed internet like never before. Say goodbye to buffering and
-                        slow download speeds. Stay ahead with fast, reliable connectivity that keeps you linked to
-                        family, friends, and the digital world.
-                    </p>
-                    <p class="fs-6 text-dark">
-                        Alongside blazing-fast internet, take advantage of unlimited data, free calls, and SMS for
-                        seamless communication at your fingertips.
-                    </p>
+                    <p class="fs-6 text-dark mb-3">Enjoy high-speed internet with 5G technology.</p>
+                    <p class="fs-6 text-dark">Take advantage of unlimited data, free calls, and SMS.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- FAQ Section -->
-    <section class="section-spacing bg-danger ">
+    <section class="section-spacing bg-danger">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto w-100">
@@ -312,11 +266,11 @@
                                     <b>What is Popular Plan?</b>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A commonly used plan that offers a balance of data, talk time, and sometimes SMS
-                                    at an affordable rate, popular among a wide range of users.
+                                    A commonly used plan offering a balance of data, talk time, and SMS at an affordable
+                                    rate.
                                 </div>
                             </div>
                         </div>
@@ -324,19 +278,14 @@
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <b>What should I do if my recharge fails but the amount is deducted?</b>
+                                    <b>What if my recharge fails but the amount is deducted?</b>
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    If your recharge fails and the amount is deducted:
-                                    <br>
-                                    Check your transaction status in the "Transaction History" section of the app.
-                                    If the recharge status shows "Failed," the deducted amount will be automatically
-                                    refunded to your payment method within 3–5 business days.
-                                    For further assistance, you can contact customer support through the app's
-                                    "Help" or "Contact Us" section.
+                                    Check transaction status in "Transaction History." Refunds are processed within 3–5
+                                    days if failed.
                                 </div>
                             </div>
                         </div>
@@ -344,17 +293,13 @@
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <b>Can I recharge for someone else using the app?</b>
+                                    <b>Can I recharge for someone else?</b>
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Yes, you can recharge for someone else. Simply enter their mobile number during
-                                    the recharge process or select it from your contacts. Choose their service provider,
-                                    select a plan, and proceed with payment as usual. The recharge will be applied to
-                                    the
-                                    entered number.
+                                    Yes, enter their mobile number, choose a plan, and proceed with payment.
                                 </div>
                             </div>
                         </div>
@@ -362,17 +307,13 @@
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <b>How do I check my current plan details?</b>
+                                    <b>How do I check my current plan?</b>
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    You can check your current plan details by logging into the app and navigating
-                                    to the
-                                    "My Account" section. There, you will find details about your active plan,
-                                    including
-                                    data balance, validity, and talk time.
+                                    Log in and check "My Account" for active plan details.
                                 </div>
                             </div>
                         </div>
@@ -386,9 +327,8 @@
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    We accept a variety of payment methods, including credit/debit cards, net
-                                    banking,
-                                    UPI, and popular digital wallets like Paytm, Google Pay, and PhonePe.
+                                    Credit/debit cards, net banking, UPI, and digital wallets like Paytm, Google Pay,
+                                    etc.
                                 </div>
                             </div>
                         </div>
@@ -402,8 +342,7 @@
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    You can contact our customer support team by visiting the "Help" or "Contact Us"
-                                    section in the app. Alternatively, you can email us at support@mobi-comm.com.
+                                    Use the "Contact Us" section or email support@mobi-comm.com.
                                 </div>
                             </div>
                         </div>
@@ -415,11 +354,9 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto">
-        <!-- Footer Top Section -->
-        <div class="footer-top py-5">
+        <div class="footer-top py-5 bg-primary">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Company Info -->
                     <div class="col-lg-4 col-md-6">
                         <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
                         <p class="text-light">Connecting People, Anytime, Anywhere.</p>
@@ -427,82 +364,51 @@
                         <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
                         <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
                     </div>
-
-                    <!-- Quick Links -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="About.html">About Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="/User/AboutUs.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Privacy Policy</a></li>
+                            <li><a href="#" class="text-light">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-light">Refund Policy</a></li>
+                            <li><a href="#" class="text-light">FAQs</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
-
-                    <!-- Services -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Our Services</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#">Mobile Recharges</a></li>
-                            <li><a href="#">DTH Recharges</a></li>
-                            <li><a href="#">Bill Payments</a></li>
-                            <li><a href="#">Data Plans</a></li>
-                            <li><a href="#">International Roaming</a></li>
+                            <li><a href="#" class="text-light">Mobile Recharges</a></li>
+                            <li><a href="#" class="text-light">DTH Recharges</a></li>
+                            <li><a href="#" class="text-light">Bill Payments</a></li>
+                            <li><a href="#" class="text-light">Data Plans</a></li>
+                            <li><a href="#" class="text-light">International Roaming</a></li>
                         </ul>
                     </div>
-
-                    <!-- Social Media & App Download -->
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white">Connect With Us</h5>
                         <p class="text-light">Follow us on social media for the latest updates.</p>
                         <div class="social-icons">
-                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-linkedin"></i></a>
                         </div>
                         <h5 class="text-white mt-4">Download Our App</h5>
                         <div class="app-buttons">
-                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
+                            <a href="#"><i class="bi bi-google-play text-light" alt="Google Play"
+                                    class="store-btn"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom py-3 text-center">
+        <div class="footer-bottom py-3 text-center bg-dark">
             <div class="container">
-                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+                <p class="mb-0 text-light">© 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
-
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="loginForm">
-                        <div class="mb-3">
-                            <label for="mobileNumber" class="form-label">Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNumber"
-                                placeholder="Enter your mobile number" required>
-                            <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Plan Details Modal -->
     <div class="modal fade" id="planDetailsModal" tabindex="-1" aria-labelledby="planDetailsModalLabel"
@@ -522,95 +428,147 @@
             </div>
         </div>
     </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
 
-    <!-- Custom Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            fetch('http://localhost:3000/bestPrepaidPlans')
-                .then(response => response.json())
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            const jwtToken = localStorage.getItem('jwtToken');
+            const userActionLink = document.getElementById('userActionLink');
+
+            // Check authentication
+            if (!loggedInUser || !jwtToken) {
+                alert('Please log in first');
+                window.location.href = '/User/UserValidation.html';
+                return;
+            }
+
+            // Update navbar
+            userActionLink.innerHTML = `<i class="bi bi-box-arrow-right"></i> Logout`;
+            userActionLink.onclick = logout;
+
+            // Decode JWT
+            function decodeJwt(token) {
+                try {
+                    const base64Url = token.split('.')[1];
+                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                    const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                    return JSON.parse(jsonPayload);
+                } catch (e) {
+                    console.error('Error decoding JWT:', e);
+                    return null;
+                }
+            }
+
+            // Check token expiration
+            function isTokenExpired(token) {
+                const decoded = decodeJwt(token);
+                return !decoded || !decoded.exp || new Date(decoded.exp * 1000) < new Date();
+            }
+
+            if (isTokenExpired(jwtToken)) {
+                alert('Your session has expired. Please log in again.');
+                logout();
+                return;
+            }
+
+            // Fetch plans
+            fetch('http://localhost:8081/api/subscriber/plans', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${jwtToken}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 401 || response.status === 403) throw new Error('Session expired. Please log in again.');
+                        if (response.status === 204) return [];
+                        throw new Error('Failed to load plans.');
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    const bestPlans = data; // Ensure this is the correct array
+                    const bestPlans = data.filter(plan => plan.category.name === "Best Prepaid Plan" && plan.isActive);
                     const carouselContent = document.getElementById('carouselContent');
                     let slides = '';
                     let slideIndex = 0;
 
-                    // Create groups of 3 plans per slide
                     while (slideIndex < bestPlans.length) {
-                        const activeClass = slideIndex === 0 ? 'active' : ''; // Mark the first slide as active
-                        slides += `
-                    <div class="carousel-item ${activeClass}">
-                        <div class="row justify-content-center">
-                `;
+                        const activeClass = slideIndex === 0 ? 'active' : '';
+                        slides += `<div class="carousel-item ${activeClass}"><div class="row justify-content-center">`;
 
-                        // Add 3 plans to the current slide
-                        for (let i = 0; i < 3; i++) {
+                        for (let i = 0; i < 3 && (slideIndex + i) < bestPlans.length; i++) {
                             const plan = bestPlans[slideIndex + i];
-                            if (!plan) break; // Stop if there are no more plans
-
                             slides += `
-                        <div class="col-md-4 mb-4">
-                            <div class="card p-4 text-center h-100">
-                                <p class="Mobi-comm">Mobi-comm</p>
-                                <h3 class="card-title">${plan.price}</h3>
-                                <hr>
-                                <p><i class="bi bi-telephone-fill"></i> ${plan.calls}</p>
-                                <p><i class="bi bi-file-earmark-bar-graph"></i> ${plan.data}</p>
-                                <p><i class="bi bi-chat-dots-fill"></i> ${plan.sms}</p>
-                                <p><i class="bi bi-calendar-date"></i> ${plan.validity}</p>
-                                <button class="btn btn-primary text-light" 
-                                    onclick="redirectToPayment('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.calls}', '${plan.sms}')">
-                                    Buy Now
-                                </button>
-                                <a href="#" class="details-link mt-4" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#planDetailsModal" 
-                                    onclick="showPlanDetails('${plan.price}', '${plan.validity}', '${plan.data}', '${plan.calls}', '${plan.sms}')">
-                                    More details
-                                </a>
+                            <div class="col-md-4 mb-4">
+                                <div class="card p-4 text-center h-100">
+                                    <p class="Mobi-comm">Mobi-Comm</p>
+                                    <h3 class="card-title">₹${plan.price}</h3>
+                                    <hr>
+                                    <p><i class="bi bi-telephone-fill"></i> ${plan.calls}</p>
+                                    <p><i class="bi bi-file-earmark-bar-graph"></i> ${plan.data} GB/Day</p>
+                                    <p><i class="bi bi-chat-dots-fill"></i> ${plan.sms}</p>
+                                    <p><i class="bi bi-calendar-date"></i> ${plan.validityDays} Days</p>
+                                    <button class="btn btn-primary text-light" 
+                                        onclick="redirectToPayment('${plan.planId}', '${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">
+                                        Buy Now
+                                    </button>
+                                    <a href="#" class="details-link mt-4" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#planDetailsModal" 
+                                        onclick="showPlanDetails('${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">
+                                        More details
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
                         }
 
                         slides += `</div></div>`;
                         slideIndex += 3;
                     }
 
-                    // Insert the slides into the carousel
-                    carouselContent.innerHTML = slides;
+                    carouselContent.innerHTML = slides || '<div class="text-center"><h5>No active Best Prepaid Plans available.</h5></div>';
                 })
-                .catch(error => console.error('Error loading prepaid plans:', error));
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('carouselContent').innerHTML = `<div class="text-center"><h5>${error.message}</h5></div>`;
+                    if (error.message.includes('Session expired')) setTimeout(logout, 1500);
+                });
+
+            // Logout
+            function logout() {
+                localStorage.removeItem('jwtToken');
+                localStorage.removeItem('loggedInUser');
+                window.location.href = '/User/UserValidation.html';
+            }
+
+            // Redirect to payment
+            window.redirectToPayment = function (planId, price, validity, data, calls, sms, description) {
+                const queryParams = new URLSearchParams({
+                    mobileNumber: loggedInUser.mobileNumber,
+                    planId, price, validity, data, calls, sms, description
+                }).toString();
+                window.location.href = `/User/PaymentPage.html?${queryParams}`;
+            };
+
+            // Show plan details
+            window.showPlanDetails = function (price, validity, data, calls, sms, description) {
+                document.getElementById('planDetailsBody').innerHTML = `
+                <p><strong>Price:</strong> ₹${price}</p>
+                <p><strong>Validity:</strong> ${validity} Days</p>
+                <p><strong>Data:</strong> ${data} GB/Day</p>
+                <p><strong>Calls:</strong> ${calls}</p>
+                <p><strong>SMS:</strong> ${sms}</p>
+                <p><strong>Description:</strong> ${description || 'N/A'}</p>
+            `;
+            };
         });
-
-        // Redirect to payment page with plan details
-        function redirectToPayment(price, validity, data, calls, sms) {
-            const queryParams = new URLSearchParams({
-                price: price,
-                validity: validity,
-                data: data,
-                calls: calls,
-                sms: sms
-            }).toString();
-
-            window.location.href = `/User/PaymentPage.html?${queryParams}`;
-        }
-
-        // Show plan details in modal
-        function showPlanDetails(price, validity, data, calls, sms) {
-            const planDetailsBody = document.getElementById('planDetailsBody');
-            planDetailsBody.innerHTML = `
-        <p><strong>Price:</strong> ${price}</p>
-        <p><strong>Validity:</strong> ${validity}</p>
-        <p><strong>Data:</strong> ${data}</p>
-        <p><strong>Calls:</strong> ${calls}</p>
-        <p><strong>SMS:</strong> ${sms}</p>
-    `;
-        }
-
     </script>
 </body>
 

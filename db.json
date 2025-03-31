@@ -4,155 +4,488 @@
       "id": "user-1",
       "name": "Riaan Mand",
       "mobile": "9876515400",
-      "email": "maniaaryahi@anand-malhotra.com"
+      "email": "maniaaryahi@anand-malhotra.com",
+      "status": "Active",
+      "current_plan": "Premium",
+      "expiry_date": "2025-07-15",
+      "history": [
+        {
+          "date": "2025-05-19",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-07-14",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        },
+        {
+          "date": "2025-06-17",
+          "plan": "Premium Unlimited Plan",
+          "amount": "₹1499",
+          "validity": "56 Days",
+          "expired_on": "2025-08-12",
+          "data": "Unlimited",
+          "category": "Unlimited Plan"
+        }
+      ]
     },
     {
       "id": "user-2",
       "name": "Jivika Sarin",
       "mobile": "9876554218",
-      "email": "azad70@gmail.com"
+      "email": "azad70@gmail.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-11-01",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2024-11-25",
+          "data": "No Data",
+          "category": "Validity Plan"
+        }
+      ]
     },
     {
       "id": "user-3",
       "name": "Mehul Seth",
       "mobile": "9876581553",
-      "email": "aradhyalad@hotmail.com"
+      "email": "aradhyalad@hotmail.com",
+      "status": "Active",
+      "current_plan": "Standard",
+      "expiry_date": "2024-12-10",
+      "history": [
+        {
+          "date": "2024-10-12",
+          "plan": "Affordable Data Pack",
+          "amount": "₹99",
+          "validity": "28 Days",
+          "expired_on": "2024-11-09",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        },
+        {
+          "date": "2024-11-10",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-01-05",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-4",
       "name": "Damini Sehgal",
       "mobile": "9876587277",
-      "email": "sharmaranbir@kant.info"
+      "email": "sharmaranbir@kant.info",
+      "status": "Active",
+      "current_plan": "Basic",
+      "expiry_date": "2024-09-20",
+      "history": [
+        {
+          "date": "2024-08-23",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2024-09-16",
+          "data": "No Data",
+          "category": "Validity Plan"
+        }
+      ]
     },
     {
       "id": "user-5",
       "name": "Umang Chaudhary",
       "mobile": "9876539928",
-      "email": "alisha78@kapoor.com"
+      "email": "alisha78@kapoor.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-12-01",
+          "plan": "Premium Unlimited Plan",
+          "amount": "₹1499",
+          "validity": "56 Days",
+          "expired_on": "2025-01-26",
+          "data": "Unlimited",
+          "category": "Unlimited Plan"
+        }
+      ]
     },
     {
       "id": "user-6",
       "name": "Aradhya Jhaveri",
       "mobile": "9876578512",
-      "email": "ojas34@yahoo.com"
+      "email": "ojas34@yahoo.com",
+      "status": "Active",
+      "current_plan": "Premium",
+      "expiry_date": "2025-06-01",
+      "history": [
+        {
+          "date": "2025-03-15",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-05-10",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        },
+        {
+          "date": "2025-05-11",
+          "plan": "Premium Unlimited Plan",
+          "amount": "₹1499",
+          "validity": "56 Days",
+          "expired_on": "2025-07-06",
+          "data": "Unlimited",
+          "category": "Unlimited Plan"
+        }
+      ]
     },
     {
       "id": "user-7",
       "name": "Damini Contractor",
       "mobile": "9876557011",
-      "email": "raghav34@yahoo.com"
+      "email": "raghav34@yahoo.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-09-10",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2024-10-04",
+          "data": "No Data",
+          "category": "Validity Plan"
+        }
+      ]
     },
     {
       "id": "user-8",
       "name": "Rati Acharya",
       "mobile": "9876558156",
-      "email": "chadamanikya@hotmail.com"
+      "email": "chadamanikya@hotmail.com",
+      "status": "Active",
+      "current_plan": "Standard",
+      "expiry_date": "2025-01-30",
+      "history": [
+        {
+          "date": "2024-11-05",
+          "plan": "Affordable Data Pack",
+          "amount": "₹99",
+          "validity": "28 Days",
+          "expired_on": "2024-12-03",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        },
+        {
+          "date": "2024-12-04",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-01-29",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-9",
       "name": "Manikya Bobal",
       "mobile": "9876554159",
-      "email": "heer90@hotmail.com"
+      "email": "heer90@hotmail.com",
+      "status": "Active",
+      "current_plan": "Premium",
+      "expiry_date": "2025-08-18",
+      "history": [
+        {
+          "date": "2025-05-20",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-07-15",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        },
+        {
+          "date": "2025-07-16",
+          "plan": "Premium Unlimited Plan",
+          "amount": "₹1499",
+          "validity": "56 Days",
+          "expired_on": "2025-09-10",
+          "data": "Unlimited",
+          "category": "Unlimited Plan"
+        }
+      ]
     },
     {
       "id": "user-10",
       "name": "Gokul Kaul",
       "mobile": "9876590110",
-      "email": "parinaazbera@yahoo.com"
+      "email": "parinaazbera@yahoo.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-10-15",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2024-11-08",
+          "data": "No Data",
+          "category": "Validity Plan"
+        }
+      ]
     },
     {
       "id": "user-11",
       "name": "Sumer Hayer",
       "mobile": "9876513274",
-      "email": "qbhavsar@gade.com"
+      "email": "qbhavsar@gade.com",
+      "status": "Active",
+      "current_plan": "Basic",
+      "expiry_date": "2024-11-05",
+      "history": [
+        {
+          "date": "2024-09-12",
+          "plan": "Affordable Data Pack",
+          "amount": "₹99",
+          "validity": "28 Days",
+          "expired_on": "2024-10-10",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-12",
       "name": "Oorja Kanda",
       "mobile": "9876521160",
-      "email": "bahrijhanvi@bhat-chanda.com"
+      "email": "bahrijhanvi@bhat-chanda.com",
+      "status": "Active",
+      "current_plan": "Standard",
+      "expiry_date": "2025-04-17",
+      "history": [
+        {
+          "date": "2025-01-10",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2025-02-03",
+          "data": "No Data",
+          "category": "Validity Plan"
+        },
+        {
+          "date": "2025-02-04",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-04-01",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-13",
       "name": "Yashvi Anand",
       "mobile": "9876557660",
-      "email": "azadchand@yahoo.com"
+      "email": "azadchand@yahoo.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-12-01",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-01-26",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-14",
       "name": "Prisha Wali",
       "mobile": "9876539782",
-      "email": "evakorpal@bhargava-butala.com"
+      "email": "evakorpal@bhargava-butala.com",
+      "status": "Active",
+      "current_plan": "Premium",
+      "expiry_date": "2025-10-12",
+      "history": [
+        {
+          "date": "2025-07-15",
+          "plan": "Best Prepaid 6-Month Plan",
+          "amount": "₹1499",
+          "validity": "180 Days",
+          "expired_on": "2025-10-12",
+          "data": "1.5GB/Day",
+          "category": "Best Prepaid Plan"
+        }
+      ]
     },
     {
       "id": "user-15",
       "name": "Ela Uppal",
       "mobile": "9876529999",
-      "email": "xdalal@gmail.com"
+      "email": "xdalal@gmail.com",
+      "status": "Active",
+      "current_plan": "Standard",
+      "expiry_date": "2025-03-22",
+      "history": [
+        {
+          "date": "2024-12-25",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2025-01-18",
+          "data": "No Data",
+          "category": "Validity Plan"
+        },
+        {
+          "date": "2025-01-19",
+          "plan": "Affordable Data Pack",
+          "amount": "₹99",
+          "validity": "28 Days",
+          "expired_on": "2025-02-16",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     },
     {
       "id": "user-16",
       "name": "Badal Uppal",
       "mobile": "9876523717",
-      "email": "shlok57@gmail.com"
+      "email": "shlok57@gmail.com",
+      "status": "Inactive",
+      "current_plan": "None",
+      "expiry_date": "N/A",
+      "history": [
+        {
+          "date": "2024-11-15",
+          "plan": "Premium Unlimited Plan",
+          "amount": "₹1499",
+          "validity": "56 Days",
+          "expired_on": "2025-01-10",
+          "data": "Unlimited",
+          "category": "Unlimited Plan"
+        }
+      ]
     },
     {
       "id": "user-17",
       "name": "Hiran Ratta",
       "mobile": "9876537003",
-      "email": "ivarghese@hotmail.com"
+      "email": "ivarghese@hotmail.com",
+      "status": "Active",
+      "current_plan": "Basic",
+      "expiry_date": "2024-10-28",
+      "history": [
+        {
+          "date": "2024-09-01",
+          "plan": "Super Saver Plan",
+          "amount": "₹99",
+          "validity": "14 Days",
+          "expired_on": "2024-09-15",
+          "data": "No Data",
+          "category": "Validity Plan"
+        }
+      ]
     },
     {
       "id": "user-18",
       "name": "Nitya Rattan",
       "mobile": "9876550962",
-      "email": "ishita00@chaudhari.info"
+      "email": "ishita00@chaudhari.info",
+      "status": "Active",
+      "current_plan": "Standard",
+      "expiry_date": "2025-05-06",
+      "history": [
+        {
+          "date": "2025-01-10",
+          "plan": "Basic Plan",
+          "amount": "₹149",
+          "validity": "24 Days",
+          "expired_on": "2025-02-03",
+          "data": "No Data",
+          "category": "Validity Plan"
+        },
+        {
+          "date": "2025-02-04",
+          "plan": "Best-Selling Plan",
+          "amount": "₹399",
+          "validity": "56 Days",
+          "expired_on": "2025-04-01",
+          "data": "1GB/Day",
+          "category": "Popular Plan"
+        }
+      ]
     }
   ],
-  "popularPlans": [
+  "Plans": [
     {
       "id": "plan-1",
-      "name": "Basic Plan",
-      "price": "₹199",
-      "calls": "Truly Unlimited Calls",
+      "name": "Affordable Data Pack",
+      "price": "₹99",
       "validity": "28 Days",
       "data": "1GB/Day",
+      "calls": "Truly Unlimited Calls",
       "sms": "100 SMS/Day",
-      "description": "A budget-friendly plan with daily data and unlimited calls."
+      "description": "Great value for users who need more daily data at a low cost.",
+      "category": "Popular Plan",
+      "status": "Active"
     },
     {
       "id": "plan-2",
       "name": "Affordable Data Pack",
       "price": "₹299",
-      "calls": "Truly Unlimited Calls",
       "validity": "28 Days",
       "data": "1.5GB/Day",
+      "calls": "Truly Unlimited Calls",
       "sms": "100 SMS/Day",
-      "description": "Great value for users who need more daily data at a low cost."
+      "description": "Great value for users who need more daily data at a low cost.",
+      "category": "Popular Plan",
+      "status": "Active"
     },
     {
       "id": "plan-3",
       "name": "Best-Selling Plan",
       "price": "₹399",
-      "calls": "Truly Unlimited Calls",
       "validity": "56 Days",
       "data": "1GB/Day",
+      "calls": "Truly Unlimited Calls",
       "sms": "100 SMS/Day",
-      "description": "A popular choice for those who want a long validity plan."
+      "description": "A popular choice for those who want a long validity plan.",
+      "category": "Popular Plan",
+      "status": "Active"
     },
     {
       "id": "plan-4",
       "name": "Super Saver Pack",
+      "category": "Popular Plan",
       "price": "₹499",
       "calls": "Truly Unlimited Calls",
       "validity": "70 Days",
       "data": "1.5GB/Day",
       "sms": "100 SMS/Day",
-      "description": "An extended plan offering affordable data and call benefits."
+      "description": "An extended plan offering affordable data and call benefits.",
+      "status": "Inactive"
     },
     {
       "id": "plan-5",
       "name": "Value Booster Plan",
+      "category": "Popular Plan",
       "price": "₹599",
       "calls": "Truly Unlimited Calls",
       "validity": "84 Days",
@@ -163,6 +496,7 @@
     {
       "id": "plan-6",
       "name": "Long-Term Popular Plan",
+      "category": "Popular Plan",
       "price": "₹999",
       "calls": "Truly Unlimited Calls",
       "validity": "180 Days",
@@ -174,53 +508,18 @@
       "id": "plan-7",
       "name": "Family Special Plan",
       "price": "₹1299",
-      "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
       "data": "1GB/Day",
-      "sms": "100 SMS/Day",
-      "description": "Perfect for families who need a reliable year-long plan."
-    },
-    {
-      "id": "c459",
-      "name": "Basic Plan",
-      "price": "₹590",
-      "validity": "28 Days",
-      "data": "1GB/Day",
       "calls": "Truly Unlimited Calls",
       "sms": "100 SMS/Day",
-      "description": "True 5G",
-      "category": "Best Prepaid Plans",
+      "description": "Perfect for families who need a reliable year-long plan.",
+      "category": "Popular Plans",
       "status": "Active"
     },
     {
-      "name": "Basic Plan",
-      "price": "₹990",
-      "validity": "88 Days",
-      "data": "1GB/Day",
-      "calls": "Truly Unlimited Calls",
-      "sms": "100 SMS/Day",
-      "description": "True 5G",
-      "category": "Best Prepaid Plans",
-      "status": "Active",
-      "id": "abd6"
-    },
-    {
-      "name": "Basic Plan",
-      "price": "₹990",
-      "validity": "88 Days",
-      "data": "1GB/Day",
-      "calls": "Truly Unlimited Calls",
-      "sms": "100 SMS/Day",
-      "description": "True 5G annual",
-      "category": "Annual Plans",
-      "status": "Active",
-      "id": "3f5d"
-    }
-  ],
-  "dataPlans": [
-    {
       "id": "data-1",
       "name": "High-Speed Data Pack",
+      "category": "Data Plan",
       "price": "₹249",
       "calls": "Truly Unlimited Calls",
       "validity": "30 Days",
@@ -231,6 +530,7 @@
     {
       "id": "data-2",
       "name": "For Occasional Users",
+      "category": "Data Plan",
       "price": "₹499",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
@@ -241,6 +541,7 @@
     {
       "id": "data-3",
       "name": "Weekend Data Booster",
+      "category": "Data Plan",
       "price": "₹299",
       "calls": "Truly Unlimited Calls",
       "validity": "28 Days",
@@ -251,6 +552,7 @@
     {
       "id": "data-4",
       "name": "Heavy User Data Plan",
+      "category": "Data Plan",
       "price": "₹799",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
@@ -261,18 +563,18 @@
     {
       "id": "data-5",
       "name": "Night Owl Plan",
+      "category": "Data Plan",
       "price": "₹199",
       "calls": "Truly Unlimited Calls",
       "validity": "28 Days",
       "data": "Unlimited (12 AM - 6 AM)",
       "sms": "100 SMS/Day",
       "description": "Unlimited data access during late-night hours for night owls."
-    }
-  ],
-  "unlimited": [
+    },
     {
       "id": "unlimited-1",
       "name": "Unlimited Data & Calls",
+      "category": "Unlimited Plan",
       "price": "₹999",
       "calls": "Truly Unlimited Calls",
       "validity": "28 Days",
@@ -283,6 +585,7 @@
     {
       "id": "unlimited-2",
       "name": "Premium Unlimited Plan",
+      "category": "Unlimited Plan",
       "price": "₹1499",
       "calls": "Truly Unlimited Calls",
       "validity": "56 Days",
@@ -293,6 +596,7 @@
     {
       "id": "unlimited-3",
       "name": "Super Unlimited Pack",
+      "category": "Unlimited Plan",
       "price": "₹1999",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
@@ -303,6 +607,7 @@
     {
       "id": "unlimited-4",
       "name": "Long-Term Unlimited Plan",
+      "category": "Unlimited Plan",
       "price": "₹2999",
       "calls": "Truly Unlimited Calls",
       "validity": "180 Days",
@@ -313,18 +618,18 @@
     {
       "id": "unlimited-5",
       "name": "Business Ultra Plan",
+      "category": "Unlimited Plan",
       "price": "₹4999",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
       "data": "Unlimited",
       "sms": "100 SMS/Day",
       "description": "Tailored for business professionals requiring unlimited connectivity."
-    }
-  ],
-  "validity": [
+    },
     {
       "id": "validity-1",
       "name": "Talktime Recharge",
+      "category": "Validity Plan",
       "price": "₹199",
       "calls": "Truly Unlimited Calls",
       "validity": "28 Days",
@@ -335,6 +640,7 @@
     {
       "id": "validity-2",
       "name": "Basic Plan",
+      "category": "Validity Plan",
       "price": "₹149",
       "calls": "Truly Unlimited Calls",
       "validity": "24 Days",
@@ -345,6 +651,7 @@
     {
       "id": "validity-3",
       "name": "Long Validity Talktime Plan",
+      "category": "Validity Plan",
       "price": "₹499",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
@@ -355,6 +662,7 @@
     {
       "id": "validity-4",
       "name": "Super Saver Plan",
+      "category": "Validity Plan",
       "price": "₹99",
       "calls": "Limited 250 Minutes",
       "validity": "14 Days",
@@ -365,6 +673,7 @@
     {
       "id": "validity-5",
       "name": "Extended Validity Plan",
+      "category": "Validity Plan",
       "price": "₹999",
       "calls": "Truly Unlimited Calls",
       "validity": "180 Days",
@@ -375,18 +684,18 @@
     {
       "id": "validity-6",
       "name": "Annual Talktime Plan",
+      "category": "Validity Plan",
       "price": "₹1799",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
       "data": "No Data",
       "sms": "100 SMS/Day",
       "description": "A one-time recharge plan for users seeking a full year of unlimited calls."
-    }
-  ],
-  "entertainment": [
+    },
     {
       "id": "entertainment-1",
       "name": "OTT Subscription Plan",
+      "category": "Entertainment Plan",
       "price": "₹899",
       "calls": "Truly Unlimited Calls",
       "validity": "84 Days",
@@ -397,6 +706,7 @@
     {
       "id": "entertainment-2",
       "name": "Netflix & Prime Plan",
+      "category": "Entertainment Plan",
       "price": "₹1199",
       "calls": "Truly Unlimited Calls",
       "validity": "56 Days",
@@ -407,6 +717,7 @@
     {
       "id": "entertainment-3",
       "name": "Disney+ Hotstar Plan",
+      "category": "Entertainment Plan",
       "price": "₹999",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
@@ -417,6 +728,7 @@
     {
       "id": "entertainment-4",
       "name": "YouTube Premium Plan",
+      "category": "Entertainment Plan",
       "price": "₹699",
       "calls": "Truly Unlimited Calls",
       "validity": "60 Days",
@@ -427,18 +739,18 @@
     {
       "id": "entertainment-5",
       "name": "Gaming & Streaming Plan",
+      "category": "Entertainment Plan",
       "price": "₹1599",
       "calls": "Truly Unlimited Calls",
       "validity": "90 Days",
       "data": "3GB/Day",
       "sms": "100 SMS/Day",
       "description": "A plan designed for gaming enthusiasts and HD video streamers."
-    }
-  ],
-  "annual": [
+    },
     {
       "id": "annual-1",
       "name": "Annual Pack",
+      "category": "Annual Plan",
       "price": "₹2999",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
@@ -449,6 +761,7 @@
     {
       "id": "annual-2",
       "name": "Premium Annual Plan",
+      "category": "Annual Plan",
       "price": "₹3599",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
@@ -459,6 +772,7 @@
     {
       "id": "annual-3",
       "name": "Budget Annual Plan",
+      "category": "Annual Plan",
       "price": "₹2399",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
@@ -469,6 +783,7 @@
     {
       "id": "annual-4",
       "name": "Ultimate Annual Plan",
+      "category": "Annual Plan",
       "price": "₹4199",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
@@ -479,18 +794,18 @@
     {
       "id": "annual-5",
       "name": "Lite Annual Pack",
+      "category": "Annual Plan",
       "price": "₹1999",
       "calls": "Truly Unlimited Calls",
       "validity": "365 Days",
       "data": "1GB/Day",
       "sms": "100 SMS/Day",
       "description": "A basic annual plan designed for light data users."
-    }
-  ],
-  "bestPrepaidPlans": [
+    },
     {
       "id": "prepaid-1",
       "name": "Best Prepaid Monthly Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹299",
       "calls": "Truly Unlimited Calls",
       "data": "1GB/Day",
@@ -501,6 +816,7 @@
     {
       "id": "prepaid-2",
       "name": "Best Prepaid 3-Month Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹799",
       "calls": "Truly Unlimited Calls",
       "data": "2GB/Day",
@@ -511,6 +827,7 @@
     {
       "id": "prepaid-3",
       "name": "Best Prepaid 6-Month Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹1499",
       "calls": "Truly Unlimited Calls",
       "data": "1.5GB/Day",
@@ -521,6 +838,7 @@
     {
       "id": "prepaid-4",
       "name": "Best Prepaid Yearly Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹2499",
       "calls": "Truly Unlimited Calls",
       "data": "2GB/Day",
@@ -531,6 +849,7 @@
     {
       "id": "prepaid-5",
       "name": "Best Budget Prepaid Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹199",
       "calls": "Truly Unlimited Calls",
       "data": "500MB/Day",
@@ -541,6 +860,7 @@
     {
       "id": "prepaid-6",
       "name": "Best High-Speed Prepaid Plan",
+      "category": "Best Prepaid Plan",
       "price": "₹999",
       "calls": "Truly Unlimited Calls",
       "data": "3GB/Day",

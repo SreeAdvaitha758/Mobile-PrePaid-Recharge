@@ -1,4 +1,23 @@
-/* General Styles */
+.navbar-nav {
+    gap: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;

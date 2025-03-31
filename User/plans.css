@@ -1,3 +1,23 @@
+.navbar-nav {
+    gap: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
 .plan-card {
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -55,10 +75,8 @@
     }
 }
 
-/* Banner Styles */
 .banner {
     height: 250px;
-    /* Reduced height */
     background: url('/Assets/Images/banner1.jpg') no-repeat center center/cover;
     position: relative;
     color: white;
@@ -83,7 +101,6 @@
     font-size: 1.2rem;
 }
 
-/* Search & Filter Section */
 .container {
     max-width: 1200px;
 }
@@ -163,6 +180,15 @@
 
 .store-btn:hover {
     transform: scale(1.1);
+}
+
+
+.fixed-sidebar {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
 }
 
 .footer-bottom {

@@ -7,17 +7,9 @@
     <title>User Validation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="/css/main.min.css" rel=stylesheet>
+    <link href="/css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
-        .fadeIn {
-            transition: opacity 1s ease-in;
-        }
-
-        #emailCard {
-            margin-top: none;
-        }
-
         .form-container {
             margin: auto;
             max-width: 800px;
@@ -37,6 +29,20 @@
             padding-top: 3rem;
             padding-bottom: 3rem;
         }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .error-message {
+            color: #dc3545;
+        }
+
+        .success-message {
+            color: #28a745;
+        }
     </style>
 </head>
 
@@ -53,14 +59,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item">
-                        <a class="nav-link " href="/User/AboutUs.html">About Us</a>
+                        <a class="nav-link" href="/User/AboutUs.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/User/contact.html">Contact Us</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
                             data-bs-target="#loginModal">
@@ -92,32 +96,19 @@
                                 <h5 class="card-title text-center text-primary">User Validation</h5>
                                 <form id="mobileForm">
                                     <div class="mb-3">
-                                        <label for="mobile_num" class="form-label text-primary">Mobile Number</label>
-                                        <input type="tel" id="mobile_num" class="form-control bg-light text-primary"
-                                            placeholder="Enter Mobile Number" required>
-                                        <div id="mobileMessage" class="form-text text-secondary"></div>
+                                        <label for="mobileNumber" class="form-label text-primary">Mobile Number</label>
+                                        <input type="tel" id="mobileNumber" class="form-control bg-light text-primary"
+                                            placeholder="Enter Mobile Number" maxlength="10" required>
+                                        <div id="mobileMessage" class="form-text"></div>
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-danger"
                                             id="continueButton">Continue</button>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- Email Card -->
-                        <div class="card fadeIn p-2 w-100 border-0" id="emailCard" style="display: none;">
-                            <div class="card-body">
-                                <form id="emailForm">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label text-primary">Email</label>
-                                        <input type="email" id="email" class="form-control bg-light text-primary"
-                                            placeholder="Enter Email" required>
-                                        <div id="emailMessage" class="form-text text-secondary"></div>
-                                    </div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-danger"
-                                            id="rechargeButton">Validate</button>
+                                    <div class="loading" id="mobileLoading">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -130,11 +121,9 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto">
-        <!-- Footer Top Section -->
-        <div class="footer-top py-5">
+        <div class="footer-top py-5 bg-primary">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Company Info -->
                     <div class="col-lg-4 col-md-6">
                         <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
                         <p class="text-light">Connecting People, Anytime, Anywhere.</p>
@@ -142,60 +131,51 @@
                         <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
                         <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
                     </div>
-
-                    <!-- Quick Links -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="About.html">About Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="About.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Privacy Policy</a></li>
+                            <li><a href="#" class="text-light">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-light">Refund Policy</a></li>
+                            <li><a href="#" class="text-light">FAQs</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
-
-                    <!-- Services -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Our Services</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#">Mobile Recharges</a></li>
-                            <li><a href="#">DTH Recharges</a></li>
-                            <li><a href="#">Bill Payments</a></li>
-                            <li><a href="#">Data Plans</a></li>
-                            <li><a href="#">International Roaming</a></li>
+                            <li><a href="#" class="text-light">Mobile Recharges</a></li>
+                            <li><a href="#" class="text-light">DTH Recharges</a></li>
+                            <li><a href="#" class="text-light">Bill Payments</a></li>
+                            <li><a href="#" class="text-light">Data Plans</a></li>
+                            <li><a href="#" class="text-light">International Roaming</a></li>
                         </ul>
                     </div>
-
-                    <!-- Social Media & App Download -->
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white">Connect With Us</h5>
                         <p class="text-light">Follow us on social media for the latest updates.</p>
                         <div class="social-icons">
-                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-linkedin"></i></a>
                         </div>
                         <h5 class="text-white mt-4">Download Our App</h5>
                         <div class="app-buttons">
-                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
+                            <a href="#"><i class="bi bi-google-play text-light" alt="Google Play"
+                                    class="store-btn"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom py-3 text-center">
+        <div class="footer-bottom py-3 text-center bg-dark">
             <div class="container">
-                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+                <p class="mb-0 text-light">© 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
-
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -208,12 +188,17 @@
                 <div class="modal-body">
                     <form id="loginForm">
                         <div class="mb-3">
-                            <label for="mobileNumber" class="form-label">Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNumber"
-                                placeholder="Enter your mobile number" required>
-                            <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+                            <label for="modalMobileNumber" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="modalMobileNumber"
+                                placeholder="Enter your mobile number" maxlength="10" required>
+                            <div id="errorMessage" class="form-text"></div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <div class="loading" id="modalLoading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -223,73 +208,109 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileForm = document.getElementById('mobileForm');
-            const emailCard = document.getElementById('emailCard');
-            const emailForm = document.getElementById('emailForm');
-            const continueButton = document.getElementById('continueButton');
-            const rechargeButton = document.getElementById('rechargeButton');
-
             const mobileMessage = document.getElementById('mobileMessage');
-            const emailMessage = document.getElementById('emailMessage');
+            const mobileLoading = document.getElementById('mobileLoading');
+            const loginForm = document.getElementById('loginForm');
+            const modalLoading = document.getElementById('modalLoading');
+            const errorMessage = document.getElementById('errorMessage');
 
-            let usersData = [];
+            // Function to decode JWT token
+            function decodeJwt(token) {
+                try {
+                    const base64Url = token.split('.')[1];
+                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    }).join(''));
+                    return JSON.parse(jsonPayload);
+                } catch (e) {
+                    console.error('Error decoding JWT:', e);
+                    return null;
+                }
+            }
 
-            // Fetch user data from db.json
-            fetch("../db.json")
-                .then(response => response.json())
-                .then(data => {
-                    usersData = data.users;
-                })
-                .catch(error => {
-                    console.error('Error fetching user data:', error);
-                    mobileMessage.textContent = 'Failed to load user data. Please try again later.';
-                });
+            // Function to check if token is expired
+            function isTokenExpired(token) {
+                const decoded = decodeJwt(token);
+                if (!decoded || !decoded.exp) return true;
+                return new Date(decoded.exp * 1000) < new Date();
+            }
 
-            // Handle mobile number submission
-            mobileForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                const mobileNumber = document.getElementById('mobile_num').value.trim();
+            // Reusable login function
+            async function loginUser(mobileNumber, messageElement, loadingElement) {
+                messageElement.textContent = '';
+                messageElement.className = 'form-text';
+                loadingElement.style.display = 'block';
 
-                mobileMessage.textContent = '';
-
+                // Client-side validation
                 if (mobileNumber.length !== 10 || !/^\d+$/.test(mobileNumber)) {
-                    mobileMessage.textContent = 'Please enter a valid 10-digit mobile number.';
+                    messageElement.textContent = 'Please enter a valid 10-digit mobile number.';
+                    messageElement.className = 'form-text error-message';
+                    loadingElement.style.display = 'none';
                     return;
                 }
 
-                // Check if mobile number exists in JSON
-                const user = usersData.find(user => user.mobile === mobileNumber);
-                if (user) {
-                    emailCard.style.display = 'block';
-                    emailCard.classList.add('fadeIn');
-                    continueButton.style.display = 'none';
-                    mobileMessage.textContent = '';
-                } else {
-                    mobileMessage.textContent = 'This number is not a registered Mobi-Comm number.';
-                }
-            });
+                try {
+                    const response = await fetch('http://localhost:8081/api/subscriber/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ mobileNumber })
+                    });
 
-            // Handle email submission
-            emailForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                const email = document.getElementById('email').value.trim();
-                const mobileNumber = document.getElementById('mobile_num').value.trim();
+                    if (!response.ok) {
+                        if (response.status === 401) {
+                            throw new Error('This number is not registered with Mobi-Comm.');
+                        }
+                        throw new Error('Login failed. Please try again.');
+                    }
 
-                emailMessage.textContent = '';
+                    const data = await response.json();
+                    const jwtToken = data.token;
 
-                // Find the user in the JSON data
-                const user = usersData.find(user => user.mobile === mobileNumber);
+                    if (!jwtToken || isTokenExpired(jwtToken)) {
+                        throw new Error('Invalid or expired session. Please try again.');
+                    }
 
-                if (user && user.email.toLowerCase() === email.toLowerCase()) {
-                    emailMessage.textContent = "Validation successful! Redirecting...";
-                    emailMessage.style.color = "green";
+                    // Store token and user data in localStorage
+                    localStorage.setItem('jwtToken', jwtToken);
+                    const subscriberData = {
+                        id: data.id,
+                        mobileNumber: data.mobileNumber,
+                        username: data.username,
+                        email: data.email
+                    };
+                    localStorage.setItem('loggedInUser', JSON.stringify(subscriberData));
+
+                    messageElement.textContent = 'Login successful! Redirecting...';
+                    messageElement.className = 'form-text success-message';
                     setTimeout(() => {
-                        window.location.href = "HomePage.html"; // Redirect to home page
+                        window.location.href = '/User/HomePage.html';
                     }, 1500);
-                } else {
-                    emailMessage.textContent = 'Invalid email. Please enter the correct email associated with this number.';
-                    emailMessage.style.color = "red";
+
+                } catch (error) {
+                    console.error('Login error:', error);
+                    messageElement.textContent = error.message;
+                    messageElement.className = 'form-text error-message';
+                } finally {
+                    loadingElement.style.display = 'none';
                 }
+            }
+
+            // Main form submission
+            mobileForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const mobileNumber = document.getElementById('mobileNumber').value.trim();
+                loginUser(mobileNumber, mobileMessage, mobileLoading);
             });
+
+            // Modal form submission
+            if (loginForm) {
+                loginForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const mobileNumber = document.getElementById('modalMobileNumber').value.trim();
+                    loginUser(mobileNumber, errorMessage, modalLoading);
+                });
+            }
         });
     </script>
 

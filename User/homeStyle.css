@@ -1,36 +1,20 @@
-/* Header Styling */
-header {
-    padding: 10px 0;
+.navbar-nav {
+    gap: 1rem;
 }
 
-header h2 {
-    font-size: 1.8rem;
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
 }
 
-/* Logo Styling */
-header img {
-    height: 40px;
-    /* Adjust logo height */
-    margin-left: 15px;
-    /* Add some space between logo and navbar */
-}
-
-
-/* Default Logo Size */
-.logo-img {
-    height: 80px;
-    /* Default height for larger screens */
-    width: auto;
-    /* Maintain aspect ratio */
-}
-
-/* Adjust Logo Size for Smaller Screens */
-@media (max-width: 768px) {
-    .logo-img {
-        height: 60px;
-        /* Smaller height for mobile devices */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem;
+        text-align: center;
     }
 }
 

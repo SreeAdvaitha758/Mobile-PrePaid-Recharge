@@ -13,34 +13,32 @@
 </head>
 
 <body class="bg-danger">
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="HomePage.html">
-                <i class="bi bi-phone-flip fs-4"></i> Mobi-Comm
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="ms-2">Mobi-Comm</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="HomePage.html">Home</a>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/User/HomePage.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/User/PrepaidPlans.html">Plans</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="/User/PrepaidPlans.html">Recharge Plans</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-2">
                         <a class="nav-link" href="/User/AboutUs.html">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-2">
                         <a class="nav-link" href="/User/contact.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-5" href="#" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">
-                            <i class="bi bi-person-circle"></i>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light fs-5" href="#" onclick="logout()">
+                            <i class="bi bi-box-arrow-right"></i> Logout
                         </a>
                     </li>
                 </ul>
@@ -56,23 +54,20 @@
                 <p class="lead banner-subtitle animate-slide-up"><b>Discover amazing Plans and Offers tailored for
                         you.</b></p>
             </div>
-            <!-- Animated Background Overlay -->
             <div class="banner-overlay"></div>
         </div>
 
         <!-- Search and Filter Section -->
-        <div class="row mt-4 me-2">
-            <div class="col-md-9 offset-md-3">
+        <div class="row mt-4 me-2 ms-2">
+            <div class="col-md-12">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <!-- Search Bar -->
                     <div class="input-group" style="max-width: 400px;">
-                        <input type="text" id="searchInput" class="form-control"
-                            placeholder="Search plans by price, validity, data, or name...">
-                        <button class="btn btn-primary" onclick="searchPlans()">
+                        <input type="text" id="categorySearch" class="form-control"
+                            placeholder="Search by category name...">
+                        <button class="btn btn-primary" onclick="searchByCategory()">
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
-                    <!-- Filter Icon -->
                     <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">
                         <i class="bi bi-funnel"></i> Filter
                     </button>
@@ -80,25 +75,38 @@
             </div>
         </div>
 
-        <!-- Plans Section -->
-        <div class="row mt-4 ms-2 me-2">
+        <!-- Plans Section with Sidebar -->
+        <div class="row mt-4 ms-2 me-2 sidebar-container">
             <!-- Sidebar -->
-            <div class="col-md-3 text-primary">
+            <div class="col-md-3">
                 <div class="plan-category bg-success p-3 rounded shadow">
                     <h5 class="text-primary">Plan Category</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('popularPlans', 'Popular Plans')">Popular Plans</a></li>
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('dataPlans', 'Data Packs')">Data Packs</a></li>
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('unlimited', 'Unlimited Plans')">Unlimited Plans</a></li>
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('validity', 'Validity Plans')">Validity Plans</a></li>
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('entertainment', 'Entertainment Plans')">Entertainment Plans</a></li>
-                        <li><a href="#" class="text-decoration-none text-primary"
-                                onclick="showPlans('annual', 'Annual Plans')">Annual Plans</a></li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Popular Plans', 'Popular Plans')">Popular Plans</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Data Plans', 'Data Packs')">Data Packs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Unlimited Plans', 'Unlimited Plans')">Unlimited Plans</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Validity Plans', 'Validity Plans')">Validity Plans</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Entertainment Plans', 'Entertainment Plans')">Entertainment
+                                Plans</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none text-primary"
+                                onclick="showPlans('Annual Plans', 'Annual Plans')">Annual Plans</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -146,20 +154,24 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Price Filter -->
                     <div class="mb-3">
-                        <label for="priceFilter" class="form-label">Price (₹)</label>
-                        <input type="number" id="priceFilter" class="form-control" placeholder="Enter maximum price">
+                        <label for="priceMinFilter" class="form-label">Price Range (₹)</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="number" id="priceMinFilter" class="form-control" placeholder="Min">
+                            </div>
+                            <div class="col">
+                                <input type="number" id="priceMaxFilter" class="form-control" placeholder="Max">
+                            </div>
+                        </div>
                     </div>
-                    <!-- Validity Filter -->
                     <div class="mb-3">
-                        <label for="validityFilter" class="form-label">Validity (Days)</label>
+                        <label for="validityFilter" class="form-label">Minimum Validity (Days)</label>
                         <input type="number" id="validityFilter" class="form-control"
                             placeholder="Enter minimum validity">
                     </div>
-                    <!-- Data Filter -->
                     <div class="mb-3">
-                        <label for="dataFilter" class="form-label">Data (GB)</label>
+                        <label for="dataFilter" class="form-label">Minimum Data (GB)</label>
                         <input type="number" id="dataFilter" class="form-control" placeholder="Enter minimum data">
                     </div>
                 </div>
@@ -173,11 +185,9 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto">
-        <!-- Footer Top Section -->
-        <div class="footer-top py-5">
+        <div class="footer-top py-5 bg-primary">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Company Info -->
                     <div class="col-lg-4 col-md-6">
                         <h4 class="text-white fw-bold">Mobi-Comm Service Pvt Ltd</h4>
                         <p class="text-light">Connecting People, Anytime, Anywhere.</p>
@@ -185,214 +195,234 @@
                         <p class="text-light"><i class="bi bi-envelope"></i> support@mobi-comm.com</p>
                         <p class="text-light"><i class="bi bi-telephone"></i> +91 98765 43210</p>
                     </div>
-
-                    <!-- Quick Links -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="About.html">About Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="/User/AboutUs.html" class="text-light">About Us</a></li>
+                            <li><a href="#" class="text-light">Privacy Policy</a></li>
+                            <li><a href="#" class="text-light">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-light">Refund Policy</a></li>
+                            <li><a href="#" class="text-light">FAQs</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
-
-                    <!-- Services -->
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white">Our Services</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#">Mobile Recharges</a></li>
-                            <li><a href="#">DTH Recharges</a></li>
-                            <li><a href="#">Bill Payments</a></li>
-                            <li><a href="#">Data Plans</a></li>
-                            <li><a href="#">International Roaming</a></li>
+                            <li><a href="#" class="text-light">Mobile Recharges</a></li>
+                            <li><a href="#" class="text-light">DTH Recharges</a></li>
+                            <li><a href="#" class="text-light">Bill Payments</a></li>
+                            <li><a href="#" class="text-light">Data Plans</a></li>
+                            <li><a href="#" class="text-light">International Roaming</a></li>
                         </ul>
                     </div>
-
-                    <!-- Social Media & App Download -->
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white">Connect With Us</h5>
                         <p class="text-light">Follow us on social media for the latest updates.</p>
                         <div class="social-icons">
-                            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="me-2 text-light"><i class="bi bi-linkedin"></i></a>
                         </div>
                         <h5 class="text-white mt-4">Download Our App</h5>
                         <div class="app-buttons">
-                            <a href="#"><i class="bi bi-google-play" alt="Google Play" class="store-btn"></i></a>
+                            <a href="#"><i class="bi bi-google-play text-light" alt="Google Play"
+                                    class="store-btn"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom py-3 text-center">
+        <div class="footer-bottom py-3 text-center bg-dark">
             <div class="container">
-                <p class="mb-0 text-light">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
+                <p class="mb-0 text-light">© 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
     <script>
-        let plansData = {}; // To store fetched plans data
+        let plansData = [];
+        let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        const jwtToken = localStorage.getItem('jwtToken');
 
-        // Fetch plans data from JSON Server
+        function decodeJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                console.error('Error decoding JWT:', e);
+                return null;
+            }
+        }
+
+        function isTokenExpired(token) {
+            const decoded = decodeJwt(token);
+            return !decoded || !decoded.exp || new Date(decoded.exp * 1000) < new Date();
+        }
+
+        function logout() {
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('loggedInUser');
+            window.location.href = '/User/UserValidation.html';
+        }
+
         function fetchPlans() {
-            const categories = ['popularPlans', 'dataPlans', 'unlimited', 'validity', 'entertainment', 'annual'];
-            const fetchPromises = categories.map(category =>
-                fetch(`http://localhost:3000/${category}`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        plansData[category] = data; // Store the data for each category
-                    })
-                    .catch(error => {
-                        console.error(`Error fetching ${category} data:`, error);
-                        alert(`Failed to load ${category} plans. Please try again later.`);
-                    })
-            );
+            if (!jwtToken || isTokenExpired(jwtToken)) {
+                alert('Your session has expired. Please log in again.');
+                logout();
+                return;
+            }
 
-            Promise.all(fetchPromises)
-                .then(() => {
-                    showPlans('popularPlans', 'Popular Plans'); // Default to showing popular plans
+            fetch('http://localhost:8081/api/subscriber/plans', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${jwtToken}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 401 || response.status === 403) throw new Error('Session expired. Please log in again.');
+                        if (response.status === 204) return [];
+                        throw new Error('Failed to load plans.');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    plansData = data.filter(plan => plan.isActive);
+                    showPlans('Popular Plans', 'Popular Plans');
                 })
                 .catch(error => {
-                    console.error('Error fetching plans data:', error);
-                    alert('Failed to load plans. Please try again later.');
+                    console.error('Error:', error);
+                    document.getElementById('plans-container').innerHTML = `<h5 class="text-danger">${error.message}</h5>`;
+                    if (error.message.includes('Session expired')) setTimeout(logout, 1500);
                 });
         }
 
-        // Function to dynamically update plans and heading
         function showPlans(category, heading) {
-            const plans = plansData[category]; // Access the specific category
+            const filteredPlans = plansData.filter(plan => plan.category.name === category);
             const plansContainer = document.getElementById('plans-container');
             const planHeading = document.getElementById('plan-heading');
 
-            // Update the heading text
             planHeading.textContent = heading;
-
-            // Clear and populate the plans container
             plansContainer.innerHTML = '';
 
-            if (plans) {
-                plans.forEach(plan => {
-                    const planCard = `
-                <div class="col-md-4">
-                    <div class="plan-card fadeIn">
-                        <div class="plan-header">${plan.price}</div>
-                        <span class="badge bg-secondary">Best Seller</span>
-                        <span class="badge bg-warning text-dark">Limited Time</span>
-                        <p><i class="bi bi-calendar"></i> Validity: ${plan.validity}</p>
-                        <p><i class="bi bi-wifi"></i> Data: ${plan.data}</p>
-                        <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
-                        <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
-                        <p class="text-muted">${plan.description}</p>
-                        <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">Recharge</button>
-                        <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.price}', '${plan.validity}', '${plan.data}','${plan.calls}','${plan.sms}', '${plan.description}')">View Details</button>
-                    </div>
-                </div>
-            `;
-                    plansContainer.innerHTML += planCard;
+            if (filteredPlans.length > 0) {
+                filteredPlans.forEach(plan => {
+                    plansContainer.innerHTML += `
+                        <div class="col-md-4 mb-4">
+                            <div class="plan-card fadeIn">
+                                <div class="plan-header">₹${plan.price}</div>
+                                <span class="badge bg-secondary">${plan.category.name}</span>
+                                <p><i class="bi bi-calendar"></i> Validity: ${plan.validityDays} Days</p>
+                                <p><i class="bi bi-wifi"></i> Data: ${plan.data} GB/Day</p>
+                                <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
+                                <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
+                                <p class="text-muted">${plan.description || 'N/A'}</p>
+                                <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.planId}', '${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">Recharge</button>
+                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.planId}', '${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">View Details</button>
+                            </div>
+                        </div>
+                    `;
                 });
             } else {
-                plansContainer.innerHTML = '<h5>No plans available for this category.</h5>';
+                plansContainer.innerHTML = '<h5>No active plans available for this category.</h5>';
             }
 
-            // Smooth scroll to plans section
             planHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // Redirect to payment page with plan details
-        function goToPayment(price, validity, data, calls, sms, description) {
+        window.goToPayment = function (planId, price, validity, data, calls, sms, description) {
+            if (!loggedInUser || !jwtToken) {
+                alert('Please log in first');
+                window.location.href = '/User/UserValidation.html';
+                return;
+            }
+
             const queryParams = new URLSearchParams({
-                price: price,
-                validity: validity,
-                data: data,
-                calls: calls,
-                sms: sms,
-                description: description
+                mobileNumber: loggedInUser.mobileNumber,
+                planId, price, validity, data, calls, sms, description
             }).toString();
-
             window.location.href = `/User/PaymentPage.html?${queryParams}`;
-        }
+        };
 
-        // Show plan details in modal
-        function viewDetails(price, validity, data, calls, sms, description) {
-            document.getElementById('modal-price').textContent = price;
-            document.getElementById('modal-validity').textContent = validity;
-            document.getElementById('modal-data').textContent = data;
+        window.viewDetails = function (planId, price, validity, data, calls, sms, description) {
+            document.getElementById('modal-price').textContent = `₹${price}`;
+            document.getElementById('modal-validity').textContent = `${validity} Days`;
+            document.getElementById('modal-data').textContent = `${data} GB/Day`;
             document.getElementById('modal-calls').textContent = calls;
             document.getElementById('modal-sms').textContent = sms;
-            document.getElementById('modal-description').textContent = description;
+            document.getElementById('modal-description').textContent = description || 'N/A';
 
-            const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
-            proceedToPaymentBtn.onclick = () => {
-                goToPayment(price, validity, data, calls, sms, description);
-            };
+            document.getElementById('proceed-to-payment').onclick = () => goToPayment(planId, price, validity, data, calls, sms, description);
+            new bootstrap.Modal(document.getElementById('planDetailsModal')).show();
+        };
 
-            const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
-            modal.show();
-        }
+        window.searchByCategory = function () {
+            const searchQuery = document.getElementById('categorySearch').value.toLowerCase().trim();
+            const matchedCategory = plansData.find(plan => plan.category.name.toLowerCase().includes(searchQuery));
 
-        // Function to search plans
-        function searchPlans() {
-            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
-            const plansContainer = document.getElementById('plans-container');
-            const plans = plansContainer.querySelectorAll('.plan-card');
+            if (matchedCategory) {
+                showPlans(matchedCategory.category.name, matchedCategory.category.name);
+            } else {
+                document.getElementById('plan-heading').textContent = 'Search Results';
+                document.getElementById('plans-container').innerHTML = '<h5>No plans found for this category.</h5>';
+            }
+        };
 
-            plans.forEach(plan => {
-                const planText = plan.textContent.toLowerCase();
-                if (planText.includes(searchQuery)) {
-                    plan.style.display = 'block';
-                } else {
-                    plan.style.display = 'none';
-                }
-            });
-        }
+        window.applyFilters = function () {
+            const priceMin = parseFloat(document.getElementById('priceMinFilter').value) || 0;
+            const priceMax = parseFloat(document.getElementById('priceMaxFilter').value) || Infinity;
+            const validityFilter = parseInt(document.getElementById('validityFilter').value) || 0;
+            const dataFilter = parseFloat(document.getElementById('dataFilter').value) || 0;
 
-        // Function to apply filters
-        function applyFilters() {
-            const priceFilter = document.getElementById('priceFilter').value;
-            const validityFilter = document.getElementById('validityFilter').value;
-            const dataFilter = document.getElementById('dataFilter').value;
+            const filteredPlans = plansData.filter(plan =>
+                parseFloat(plan.price) >= priceMin && parseFloat(plan.price) <= priceMax &&
+                parseInt(plan.validityDays) >= validityFilter &&
+                parseFloat(plan.data) >= dataFilter
+            );
 
             const plansContainer = document.getElementById('plans-container');
-            const plans = plansContainer.querySelectorAll('.plan-card');
+            document.getElementById('plan-heading').textContent = 'Filtered Plans';
+            plansContainer.innerHTML = '';
 
-            plans.forEach(plan => {
-                const price = parseFloat(plan.querySelector('.plan-header').textContent.replace('₹', ''));
-                const validity = parseInt(plan.querySelector('p:nth-child(3)').textContent.replace('Validity: ', '').replace(' days', ''));
-                const data = parseFloat(plan.querySelector('p:nth-child(4)').textContent.replace('Data: ', '').replace(' GB', ''));
+            if (filteredPlans.length > 0) {
+                filteredPlans.forEach(plan => {
+                    plansContainer.innerHTML += `
+                        <div class="col-md-4 mb-4">
+                            <div class="plan-card fadeIn">
+                                <div class="plan-header">₹${plan.price}</div>
+                                <span class="badge bg-secondary">${plan.category.name}</span>
+                                <p><i class="bi bi-calendar"></i> Validity: ${plan.validityDays} Days</p>
+                                <p><i class="bi bi-wifi"></i> Data: ${plan.data} GB/Day</p>
+                                <p><i class="bi bi-telephone"></i> Calls: ${plan.calls}</p>
+                                <p><i class="bi bi-chat-dots"></i> SMS: ${plan.sms}</p>
+                                <p class="text-muted">${plan.description || 'N/A'}</p>
+                                <button class="btn btn-primary btn-sm" onclick="goToPayment('${plan.planId}', '${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">Recharge</button>
+                                <button class="btn btn-danger btn-sm" onclick="viewDetails('${plan.planId}', '${plan.price}', '${plan.validityDays}', '${plan.data}', '${plan.calls}', '${plan.sms}', '${plan.description}')">View Details</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                plansContainer.innerHTML = '<h5>No plans match the selected filters.</h5>';
+            }
 
-                const matchesPrice = priceFilter ? price <= parseFloat(priceFilter) : true;
-                const matchesValidity = validityFilter ? validity >= parseInt(validityFilter) : true;
-                const matchesData = dataFilter ? data >= parseFloat(dataFilter) : true;
+            bootstrap.Modal.getInstance(document.getElementById('filterModal')).hide();
+        };
 
-                if (matchesPrice && matchesValidity && matchesData) {
-                    plan.style.display = 'block';
-                } else {
-                    plan.style.display = 'none';
-                }
-            });
-
-            // Close the modal
-            const modal = bootstrap.Modal.getInstance(document.getElementById('filterModal'));
-            modal.hide();
-        }
-
-        // Fetch plans when the page loads
-        document.addEventListener('DOMContentLoaded', fetchPlans);
+        document.addEventListener('DOMContentLoaded', () => {
+            loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (!loggedInUser || !jwtToken) {
+                alert('Please log in first');
+                window.location.href = '/User/UserValidation.html';
+            } else {
+                fetchPlans();
+            }
+        });
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>

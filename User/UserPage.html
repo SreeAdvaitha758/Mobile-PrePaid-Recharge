@@ -4,245 +4,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link href="/css/main.min.css" rel=stylesheet>
-
+    <title>User Profile - Mobi-Comm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(to right, #007bff, #00c4ff);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff !important;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 400;
+            margin: 0 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #f8f9fa !important;
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* Profile Card Styling */
+        .profile-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-header {
+            background: linear-gradient(to right, #007bff, #00c4ff);
+            color: #fff;
+            padding: 30px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.2;
+        }
+
+        .profile-header h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        /* User Details Styling */
+        .user-details {
+            margin-top: 30px;
+        }
+
+        .user-details h4 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .user-details h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        .user-details-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #17a2b8;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .user-details-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-details-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .user-details-item strong {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* Recharge History Styling */
+        .recharge-history {
+            margin-top: 30px;
+        }
+
+        .recharge-history h4 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .recharge-history h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        .history-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #007bff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .history-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .history-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .history-item .plan-details {
+            font-weight: 500;
+            color: #007bff;
+        }
+
+        /* Settings Styling */
+        .settings {
+            margin-top: 40px;
+        }
+
+        .settings h4 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .settings h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #007bff;
+            border-radius: 2px;
+        }
+
+        .settings-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #28a745;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .settings-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .btn-custom {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .edit-email {
+            display: none;
+            margin-top: 15px;
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-card {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .profile-header h2 {
+                font-size: 22px;
+            }
+
+            .profile-header p {
+                font-size: 14px;
+            }
+
+            .history-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .history-item p {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .user-details-item p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-success">
-
-    <!-- Header -->
-    <header class="text-light bg-primary">
-        <h2 class="text-center pt-3">Mobi-Comm Prepaid Recharge</h2>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <i class="bi bi-phone-flip fs-4"></i>
-                </a>
-
-                <!-- Navbar Toggler Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Collapsible Navbar Content -->
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-light fs-4" href="HomePage.html">
-                                <i class="bi bi-house-door"></i>
-                            </a>
-                        </li>
-
-                        <!-- Search Box (Wrapped in Form) -->
-                        <li class="nav-item d-flex align-items-center ms-3">
-                            <form class="d-flex">
-                                <input type="text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-light" type="submit">Search</button>
-                            </form>
-                        </li>
-
-                        <!-- Profile Dropdown -->
-                        <li class="nav-item dropdown ms-3">
-                            <a class="nav-link dropdown-toggle btn text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle fs-4"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="UserPage.html">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="HomePage.html">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <div class="container mt-5">
-        <!-- First Row: User Profile -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 offset-lg-3">
-                <h3 class="mb-3 text-center">User Profile</h3>
-                <div class="card shadow border-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 text-center p-3">
-                            <img src="/Assets/Images/account.jpg" class="img-fluid rounded shadow" alt="Account Image">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <h5 class="fw-bold">Sree Advaitha Manivannan</h5>
-                                        <p class="mb-2 text-muted">Prepaid 5G</p>
-                                        <p class="fw-semibold">9944234237</p>
-                                        <p class="text-muted small">Last used on iQOO Z7s 5G</p>
-                                    </div>
-                                    <button class="btn btn-primary btn-sm rounded-circle shadow-sm"
-                                        data-bs-toggle="modal" data-bs-target="#settingsModal">
-                                        <i class="bi bi-gear-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mobi-Comm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/HomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/Recharge.html">Recharge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/User/Profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Second Row: Data Usage -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 offset-lg-3">
-                <h3 class="mb-3 text-center">Data Usage</h3>
-                <div class="card shadow border-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 text-center p-3">
-                            <img src="/Assets/Images/data.jpg" class="img-fluid rounded shadow" alt="Data Usage Image">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h6 class="fw-bold">Data</h6>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <span class="h4 fw-bold mb-0">1.80 GB</span>
-                                    <span class="text-muted">left of 2 GB</span>
-                                </div>
-                                <div class="progress mb-3" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"
-                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="text-muted small">Renews in 13 hours</p>
-                                <div class="d-flex justify-content-between">
-                                    <button class="btn btn-primary btn-sm rounded-pill px-4">Check Usage</button>
-                                    <button class="btn btn-outline-primary btn-sm rounded-pill px-4">Add Data</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Profile Section -->
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2>Welcome, <span id="userName"></span></h2>
+                <p id="userMobile"></p>
+            </div>
+
+            <!-- User Details Section -->
+            <div class="user-details">
+                <h4>User Details</h4>
+                <div class="user-details-item">
+                    <p><strong>Username:</strong> <span id="userNameDetail"></span></p>
+                    <p><strong>Mobile Number:</strong> <span id="userMobileDetail"></span></p>
+                    <p><strong>Email:</strong> <span id="userEmailDetail">Not set</span></p>
+                    <p><strong>Account Status:</strong> <span id="userStatus">Active</span></p>
+                    <p><strong>Last Login:</strong> <span id="lastLogin">N/A</span></p>
                 </div>
             </div>
-        </div>
 
-
-        <!-- Third Row: Current Active Plan -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 offset-lg-3">
-                <h3 class="mb-3 text-center">Current Active Plan</h3>
-                <div class="card shadow border-0">
-                    <div class="row g-0">
-                        <div class="col-md-4 text-center p-3">
-                            <img src="/Assets/Images/currentPlan.jpg" class="img-fluid rounded shadow" alt="Plan Image">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h6 class="fw-bold mb-1">Plan</h6>
-                                        <h4 class="fw-bold text-dark mb-2">₹899</h4>
-                                        <p class="text-muted small mb-1">Expires on</p>
-                                        <p class="text-muted small mb-0">+1 active plan</p>
-                                    </div>
-                                    <div class="text-end">
-                                        <p class="fw-bold mb-0">13th Mar, 2025</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-3">
-                                    <a href="PaymentPage.html" class="btn btn-primary btn-sm rounded-pill">Recharge</a>
-                                    <a href="PlanPage.html" class="btn btn-outline-primary btn-sm rounded-pill">View
-                                        Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Recharge History Section -->
+            <div class="recharge-history">
+                <h4>Recharge History</h4>
+                <div id="historyList">
+                    <!-- Dynamically populated -->
                 </div>
             </div>
-        </div>
 
-
-        <!-- Modal for Settings -->
-        <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="settingsModalLabel">User Settings</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="settingsForm">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" value="Sree Advaitha Manivannan"
-                                    readonly>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mobileNumber" class="form-label">Mobile Number</label>
-                                <input type="text" class="form-control" id="mobileNumber" value="9944234237" readonly>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">New Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter new email">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-                        </form>
+            <!-- Settings Section -->
+            <div class="settings">
+                <h4>Settings</h4>
+                <div class="settings-item">
+                    <p><strong>Email:</strong> <span id="userEmail">Not set</span></p>
+                    <button class="btn btn-custom" onclick="toggleEditEmail()">Edit Email</button>
+                    <div class="edit-email" id="editEmailSection">
+                        <input type="email" class="form-control mt-2" id="newEmail" placeholder="Enter new email">
+                        <button class="btn btn-primary mt-2" onclick="saveEmail()">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <!-- Footer Top -->
-        <div class="footer-top">
-            <div class="content-container">
-                <div class="row d-flex align-items-start">
-                    <div class="col-md-4 text-start">
-                        <h5>Mobi-Comm Service Pvt Ltd</h5>
-                        <p>Connecting People, Anytime, Anywhere.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h5>Quick Links</h5>
-                        <ul>
-                            <li><a href="About.html">About Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-end">
-                        <h5>Connect With Us</h5>
-                        <p>Follow us on social media for the latest updates.</p>
-                        <div class="social-icons">
-                            <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="content-container text-center">
-                <p class="mb-0">&copy; 2025 Mobi-Comm Service Pvt Ltd. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (!loggedInUser) {
+                window.location.href = '/User/HomePage.html';
+                return;
+            }
 
+            // Log the loggedInUser object to debug
+            console.log('Logged in user:', loggedInUser);
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+            // Populate header
+            document.getElementById('userName').textContent = loggedInUser.username || 'User';
+            document.getElementById('userMobile').textContent = loggedInUser.mobileNumber || 'N/A';
+
+            // Populate user details
+            document.getElementById('userNameDetail').textContent = loggedInUser.username || 'User';
+            document.getElementById('userMobileDetail').textContent = loggedInUser.mobileNumber || 'N/A'; // Use mobileNumber field
+            if (loggedInUser.email) {
+                document.getElementById('userEmailDetail').textContent = loggedInUser.email;
+                document.getElementById('userEmail').textContent = loggedInUser.email;
+            }
+            document.getElementById('userStatus').textContent = loggedInUser.status || 'Active';
+            document.getElementById('lastLogin').textContent = loggedInUser.lastLogin || 'N/A';
+
+            // Fetch recharge history dynamically using subscriberId
+            const historyList = document.getElementById('historyList');
+            historyList.innerHTML = '<p>Loading recharge history...</p>';
+
+            // Use the correct endpoint: /api/subscriber/{subscriberId}/history
+            const subscriberId = loggedInUser.subscriberId; // Assuming subscriberId is stored in loggedInUser
+            if (!subscriberId) {
+                historyList.innerHTML = '<p>Subscriber ID not found. Please log in again.</p>';
+                return;
+            }
+
+            fetch(`http://localhost:8081/api/subscriber/${subscriberId}/history`, {
+                headers: {
+                    'Authorization': `Bearer ${loggedInUser.token}`, // Include JWT token for authentication
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(history => {
+                    historyList.innerHTML = ''; // Clear loading message
+                    if (history && history.length > 0) {
+                        history.forEach(item => {
+                            // Adjust field names based on PaymentTransaction model
+                            const transactionDate = new Date(item.transactionDate).toISOString().split('T')[0]; // Format date as YYYY-MM-DD
+                            const amount = item.amount ? `₹${item.amount}` : 'N/A';
+                            const plan = item.plan?.planName || 'N/A'; // Use planName from RechargePlan
+
+                            historyList.innerHTML += `
+                                <div class="history-item">
+                                    <div>
+                                        <p><strong>Date:</strong> ${transactionDate}</p>
+                                        <p><strong>Amount:</strong> ${amount}</p>
+                                    </div>
+                                    <div>
+                                        <p class="plan-details"><strong>Plan:</strong> ${plan}</p>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        historyList.innerHTML = '<p>No recharge history found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching recharge history:', error);
+                    historyList.innerHTML = '<p>Failed to load recharge history. Please try again later.</p>';
+                });
+        });
+
+        function toggleEditEmail() {
+            const editSection = document.getElementById('editEmailSection');
+            editSection.style.display = editSection.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function saveEmail() {
+            const newEmail = document.getElementById('newEmail').value;
+            if (newEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmail)) {
+                const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+                loggedInUser.email = newEmail;
+                localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+                document.getElementById('userEmail').textContent = newEmail;
+                document.getElementById('userEmailDetail').textContent = newEmail;
+                toggleEditEmail();
+                alert('Email updated successfully!');
+            } else {
+                alert('Please enter a valid email address');
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = '/User/HomePage.html';
+        }
+    </script>
 </body>
 
 </html>
