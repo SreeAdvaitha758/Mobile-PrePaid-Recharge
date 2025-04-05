@@ -1,0 +1,95 @@
+.navbar-nav {
+    gap: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #007bff;
+}
+
+/* About Hero Section */
+.about-hero {
+    background-color: #EABF9F;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+}
+
+/* Our Story Section */
+.our-story img {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.our-story h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.our-story p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Mission and Vision Section */
+.mission-vision .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision i {
+    color: #007bff;
+}
+
+/* Values Section */
+.values .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.values .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-spacing {
+    padding: 60px 0;
+}
