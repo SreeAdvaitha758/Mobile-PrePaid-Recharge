@@ -219,14 +219,14 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="card p-3">
-                        <h5>Active Users</h5>
-                        <h2 id="activeUsers">0</h2>
+                        <h5>Active Plans</h5>
+                        <h2 id="activePlans">0</h2>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="card p-3">
-                        <h5>Inactive Users</h5>
-                        <h2 id="inactiveUsers">0</h2>
+                        <h5>Inactive Plans</h5>
+                        <h2 id="inactivePlans">0</h2>
                     </div>
                 </div>
             </div>
@@ -247,6 +247,7 @@
                 </table>
             </div>
         </div>
+
 
         <!-- Analysis Section (Plan Usage and Subscribers) -->
         <div id="analysis-content" class="p-4" style="display: none;">
@@ -453,7 +454,7 @@
         function authenticatedFetch(url, options = {}) {
             const token = localStorage.getItem('adminToken');
             if (!token) {
-                window.location.href = '/Admin/Login.html'; // Redirect to login if no token
+                window.location.href = '/Admin/Login.html';
                 throw new Error('No authentication token found');
             }
 
@@ -468,14 +469,14 @@
                 .then(response => {
                     if (response.status === 401 || response.status === 403) {
                         localStorage.removeItem('adminToken');
-                        window.location.href = '/Admin/Login.html'; // Redirect on unauthorized
+                        window.location.href = '/Admin/Login.html';
                         throw new Error('Session expired or unauthorized');
                     }
                     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                    return response.status === 204 ? null : response.json(); // Handle 204 No Content
+                    const contentType = response.headers.get('content-type');
+                    return contentType && contentType.includes('application/json') ? response.json() : response.text();
                 });
         }
-
         // Initialize page and sidebar navigation
         document.addEventListener('DOMContentLoaded', function () {
             const sidebar = document.querySelector('.sidebar');
@@ -533,15 +534,15 @@
             authenticatedFetch('http://localhost:8081/api/admin/subscribers')
                 .then(data => {
                     if (!data) data = [];
-                    const today = new Date();
                     document.getElementById('totalUsers').textContent = data.length || 0;
-                    document.getElementById('activeUsers').textContent = data.filter(u => u.status === 'ACTIVE').length || 0;
-                    document.getElementById('inactiveUsers').textContent = data.filter(u => u.status === 'INACTIVE').length || 0;
 
                     return authenticatedFetch('http://localhost:8081/api/admin/plans');
                 })
                 .then(plans => {
-                    document.getElementById('totalPlans').textContent = plans?.length || 0;
+                    if (!plans) plans = [];
+                    document.getElementById('totalPlans').textContent = plans.length || 0;
+                    document.getElementById('activePlans').textContent = plans.filter(plan => plan.isActive).length || 0;
+                    document.getElementById('inactivePlans').textContent = plans.filter(plan => !plan.isActive).length || 0;
                 })
                 .catch(error => {
                     console.error('Error loading dashboard stats:', error);
@@ -563,13 +564,13 @@
                         if (validExpiring.length > 0) {
                             validExpiring.forEach(user => {
                                 const row = `
-                                        <tr>
-                                            <td>${user.username || 'N/A'}</td>
-                                            <td>${user.mobileNumber || 'N/A'}</td>
-                                            <td>${user.currentPlan || 'N/A'}</td>
-                                            <td>${new Date(user.planExpiryDate).toLocaleDateString() || 'N/A'}</td>
-                                            <td><button class="btn btn-warning btn-sm" onclick="notifyUser('${user.mobileNumber}')">Notify</button></td>
-                                        </tr>`;
+                            <tr>
+                                <td>${user.username || 'N/A'}</td>
+                                <td>${user.mobileNumber || 'N/A'}</td>
+                                <td>${user.currentPlan || 'N/A'}</td>
+                                <td>${new Date(user.planExpiryDate).toLocaleDateString() || 'N/A'}</td>
+                                <td><button class="btn btn-warning btn-sm" onclick="notifyUser('${user.mobileNumber}')">Notify</button></td>
+                            </tr>`;
                                 expiringTable.innerHTML += row;
                             });
                         } else {
@@ -605,7 +606,13 @@
                     });
                 })
                 .then(data => {
-                    alert(`SMS sent successfully to ${mobileNumber}: ${data}`);
+                    if (typeof data === 'string') {
+                        alert(`SMS sent successfully to ${mobileNumber}: ${data}`);
+                    } else if (data && typeof data === 'object') {
+                        alert(`SMS sent successfully to ${mobileNumber}: ${data.message || data.status || 'Success'}`);
+                    } else {
+                        alert(`SMS sent successfully to ${mobileNumber}: Unknown response`);
+                    }
                 })
                 .catch(error => {
                     console.error('Error notifying user:', error);
@@ -670,15 +677,17 @@
                                 history.forEach(entry => {
                                     const expiryDate = new Date(entry.transactionDate);
                                     expiryDate.setDate(expiryDate.getDate() + (entry.plan?.validityDays || 0));
+                                    // Use 'transaction_id' as per the PaymentTransaction entity
+                                    const transactionId = entry.transaction_id || 'TXN-' + Date.now(); // Fallback if transaction_id is missing
                                     const row = `
-                                            <tr>
-                                                <td>${entry.transactionId || 'N/A'}</td>
-                                                <td>${new Date(entry.transactionDate).toLocaleDateString() || 'N/A'}</td>
-                                                <td>${entry.plan?.planName || 'N/A'}</td>
-                                                <td>₹${entry.amount || 'N/A'}</td>
-                                                <td>${entry.plan?.validityDays || 'N/A'} days</td>
-                                                <td>${entry.transactionStatus === 'SUCCESSFUL' ? expiryDate.toLocaleDateString() : 'N/A'}</td>
-                                            </tr>`;
+                                <tr>
+                                    <td>${transactionId}</td>
+                                    <td>${new Date(entry.transactionDate).toLocaleDateString() || 'N/A'}</td>
+                                    <td>${entry.plan?.planName || 'N/A'}</td>
+                                    <td>₹${entry.amount || 'N/A'}</td>
+                                    <td>${entry.plan?.validityDays || 'N/A'} days</td>
+                                    <td>${entry.transactionStatus === 'SUCCESSFUL' ? expiryDate.toLocaleDateString() : 'N/A'}</td>
+                                </tr>`;
                                     historyTable.innerHTML += row;
                                 });
                             } else {
@@ -698,7 +707,6 @@
                     alert(`Failed to load user details: ${error.message}`);
                 });
         };
-
         // Functionality 4: Load Plan Management Data
         function loadPlans() {
             const planTableBody = document.getElementById('planTableBody');

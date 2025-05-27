@@ -205,6 +205,7 @@
 
         .history-item .plan-details {
             font-weight: 500;
+
             color: #007bff;
         }
 
@@ -464,7 +465,7 @@
                 return;
             }
 
-            fetch(`http://localhost:8081/api/subscriber/${subscriberId}/history`, {
+            fetch(`http://localhost:8081/api/admin/subscribers/${user.subscriberId}/history`, {
                 headers: {
                     'Authorization': `Bearer ${loggedInUser.token}`, // Include JWT token for authentication
                     'Content-Type': 'application/json'
